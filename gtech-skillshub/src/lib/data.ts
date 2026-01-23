@@ -65,6 +65,23 @@ export const siteData = {
             outcomes: ["Data Literacy", "AI Awareness", "Global Opportunities"]
         }
     ],
+    testimonials: [
+        {
+            quote: "GTech SkillsHub gave me the confidence to code. I never thought I could build apps, but now I am applying for remote jobs.",
+            author: "Program Graduate",
+            role: "Alumni, Cohort 1"
+        },
+        {
+            quote: "GTech SkillsHub gave me the confidence to code. I never thought I could build apps, but now I am applying for remote jobs.",
+            author: "Program Graduate",
+            role: "Alumni, Cohort 1"
+        },
+        {
+            quote: "GTech SkillsHub gave me the confidence to code. I never thought I could build apps, but now I am applying for remote jobs.",
+            author: "Program Graduate",
+            role: "Alumni, Cohort 1"
+        },
+    ],
     team: {
         founders: [
             {
