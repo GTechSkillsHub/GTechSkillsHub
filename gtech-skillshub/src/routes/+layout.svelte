@@ -14,7 +14,7 @@
 			href="/"
 			class="flex items-center gap-2 text-xl font-bold tracking-tighter transition-opacity hover:opacity-80"
 		>
-			<div class="h-8 w-8 rounded-lg bg-blue-600"></div>
+			<img src="/favicon.svg" alt="GTech SkillsHub" class="h-8 w-8 object-contain" />
 			{siteData.general.name}.
 		</a>
 
@@ -41,7 +41,7 @@
 		<div class="relative z-10 mx-auto mb-32 grid max-w-7xl gap-12 px-6 md:grid-cols-4">
 			<div class="col-span-1 md:col-span-2">
 				<div class="mb-6 flex items-center gap-2 text-2xl font-bold tracking-tighter">
-					<div class="h-8 w-8 rounded-lg bg-blue-600"></div>
+					<img src="/favicon.svg" alt="GTech SkillsHub" class="h-8 w-8 object-contain" />
 					{siteData.general.name}.
 				</div>
 				<p class="mb-8 max-w-sm leading-relaxed text-slate-500">

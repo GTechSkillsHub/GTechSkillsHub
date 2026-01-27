@@ -46,14 +46,14 @@
 		</Motion>
 	</div>
 
-	<div class="mx-auto max-w-7xl px-4 md:px-12">
+	<div class="mx-auto max-w-7xl px-6 md:px-12">
 		<Motion initial="hidden" animate="show" variants={containerVariants} let:motion>
-			<div use:motion class="grid gap-6 md:grid-cols-2 md:gap-10">
+			<div use:motion class="grid gap-8 md:grid-cols-2 lg:gap-10">
 				{#each siteData.programs as program}
 					<Motion variants={cardVariants} let:motion>
 						<div
 							use:motion
-							class="group relative flex h-full w-full flex-col rounded-3xl border border-slate-100 bg-slate-50 p-6 transition-all duration-300 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100/50 md:rounded-[2rem] md:p-10"
+							class="group relative flex h-full w-full flex-col rounded-[2rem] border border-slate-100 bg-slate-50 p-8 transition-all duration-300 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100/50 md:p-10"
 						>
 							<div class="mb-8 flex flex-wrap items-start justify-between gap-4">
 								<div
@@ -63,7 +63,7 @@
 								</div>
 
 								<div
-									class="flex shrink-0 items-center gap-3 rounded-full border border-slate-100 bg-white px-4 py-2 shadow-sm md:px-6 md:py-3"
+									class="flex shrink-0 items-center gap-3 rounded-full border border-slate-100 bg-white px-6 py-2.5 shadow-sm"
 								>
 									<Clock size={16} class="text-slate-400" />
 									<span class="text-sm font-bold tracking-wide whitespace-nowrap text-slate-700"
@@ -73,20 +73,18 @@
 							</div>
 
 							<h2
-								class="mb-4 text-2xl font-bold tracking-tight break-words text-slate-900 transition-colors group-hover:text-blue-600 md:text-3xl"
+								class="mb-4 text-3xl font-bold tracking-tight break-words text-slate-900 transition-colors group-hover:text-blue-600"
 							>
 								{program.title}
 							</h2>
 
-							<p
-								class="mb-8 flex-grow text-base leading-relaxed text-slate-600 md:mb-10 md:text-lg"
-							>
+							<p class="mb-10 flex-grow text-lg leading-relaxed text-slate-600">
 								{program.description}
 							</p>
 
 							<div class="mb-8 h-px w-full bg-slate-200/60"></div>
 
-							<div class="mb-8 space-y-6 md:mb-10 md:space-y-8">
+							<div class="mb-10 space-y-8">
 								<div>
 									<div
 										class="mb-3 flex items-center gap-2 text-xs font-bold tracking-widest text-slate-400 uppercase"
@@ -94,7 +92,7 @@
 										<Users size={14} />
 										Who is this for?
 									</div>
-									<p class="text-base font-medium text-slate-900 md:text-lg">
+									<p class="text-lg font-medium text-slate-900">
 										{program.audience}
 									</p>
 								</div>
@@ -109,7 +107,7 @@
 									<div class="flex flex-wrap gap-2">
 										{#each program.outcomes as outcome}
 											<span
-												class="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 shadow-sm md:px-4 md:py-2"
+												class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium whitespace-nowrap text-slate-600 shadow-sm"
 											>
 												{outcome}
 											</span>
@@ -118,10 +116,10 @@
 								</div>
 							</div>
 
-							<div class="mt-auto w-full pt-2 md:pt-4">
+							<div class="mt-auto w-full pt-4">
 								<a
 									href="/contact"
-									class="flex w-full items-center justify-center rounded-xl bg-slate-900 py-3.5 text-sm font-bold text-white shadow-lg shadow-slate-200 transition-all group-hover:shadow-blue-200 hover:-translate-y-1 hover:bg-blue-600 md:py-4 md:text-base"
+									class="flex w-full items-center justify-center rounded-xl bg-slate-900 py-4 font-bold text-white shadow-lg shadow-slate-200 transition-all group-hover:shadow-blue-200 hover:-translate-y-1 hover:bg-blue-600"
 								>
 									Apply for this Program
 								</a>
@@ -133,8 +131,8 @@
 		</Motion>
 	</div>
 
-	<div class="mx-auto mt-24 max-w-3xl px-6 text-center md:mt-40">
-		<h3 class="mb-6 text-2xl font-bold text-slate-900 md:text-3xl">Not sure where to start?</h3>
+	<div class="mx-auto mt-40 max-w-3xl px-6 text-center">
+		<h3 class="mb-6 text-3xl font-bold text-slate-900">Not sure where to start?</h3>
 		<p class="mb-8 text-lg text-slate-600">
 			Our team can help assess your skills and place you in the right cohort.
 		</p>

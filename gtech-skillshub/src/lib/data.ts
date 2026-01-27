@@ -5,7 +5,7 @@ export const siteData = {
     general: {
         name: "GTech SkillsHub",
         tagline: "Bridging the digital gap for refugee and underserved youth through learning and opportunity.",
-        email: "contact@gtechskillshub.org",
+        email: "gtechskillhub@gmail.com",
         whatsapp: "https://chat.whatsapp.com/IdNGD9CgqCWKNa1ODqqPC7",
         socials: {
             instagram: "https://www.instagram.com/gtechskillhub/",
