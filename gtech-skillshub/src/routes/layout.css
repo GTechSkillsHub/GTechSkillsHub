@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+
+
+:root {
+	/* 2. Define the Careons Color Palette */
+	--font-main: 'Outfit', sans-serif;
+
+	/* Deep Navy (Text & Headings) */
+	--color-primary: #0f172a;
+
+	/* Bright Blue (Buttons & Accents) */
+	--color-accent: #2563eb;
+
+	/* Very Light Blue-Gray (Backgrounds) */
+	--color-bg-soft: #f8fafc;
+}
+
+/* 3. Apply globally */
+body {
+	font-family: var(--font-main);
+	background-color: white;
+	color: var(--color-primary);
+	/* "antialiased" makes fonts look crisp on Mac/iOS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional: Smooth scrolling for the whole site */
+html {
+	scroll-behavior: smooth;
+}
