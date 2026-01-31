@@ -1,6 +1,7 @@
 import { 
     BookOpen, Code, Lightbulb, Rocket, 
-    Users, Heart, Hand, MessageCircle, Globe 
+    Users, Heart, Hand, MessageCircle, Globe,
+    Mail, Phone, MapPin 
 } from 'lucide-svelte';
 
 export const siteData = {
@@ -61,6 +62,33 @@ export const siteData = {
             subtitle: "Curriculum designed to uplift communities through education, healthcare, and live support.",
             image: "/programs-hero.jpg"
         }
+    },
+    contactPage: {
+        hero: {
+            tag: "Contact",
+            title: "Reach Out. We're Here Always",
+            subtitle: "Have questions, ideas, or need support? Connect with us we're ready to listen & help."
+        },
+        infoCards: [
+            { 
+                icon: Mail, 
+                title: "Our Mail", 
+                value: "gtechskillhub@gmail.com",
+                link: "mailto:gtechskillhub@gmail.com"
+            },
+            { 
+                icon: Phone, 
+                title: "Our Contact", 
+                value: "+250 788 000 000",
+                link: "tel:+250788000000"
+            },
+            { 
+                icon: MapPin, 
+                title: "Our Address", 
+                value: "Mahama Refugee Camp, Kirehe, Rwanda",
+                link: "#"
+            }
+        ]
     },
     home: {
         hero: {
