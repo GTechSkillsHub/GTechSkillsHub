@@ -16,6 +16,44 @@ export const siteData = {
         },
         location: 'Based near Mahama Refugee Camp, Rwanda'
     },
+    aboutPage: {
+        hero: {
+            title: "Driven By Purpose And Impact",
+            subtitle: "A purpose driven non-profit organization working to create lasting change in communities.",
+            image: "/about-hero.jpg",
+            stats: [
+                { value: "11,000+", label: "People Impacted" },
+                { value: "240+", label: "Active Volunteers" },
+                { value: "1,200+", label: "Missions Completed" },
+                { value: "62+", label: "Global Partners" }
+            ]
+        },
+        mission: {
+            title: "Together for Lasting Hope and Humanity",
+            description: "We are united by a single goal: to bridge the digital divide. Through technology, education, and mentorship, we are building a future where every young person has the opportunity to thrive.",
+            image: "/mission-image.jpg"
+        },
+        vision: {
+            title: "Opportunity and Equality for All",
+            description: "We envision a world where location does not dictate potential. By providing access to world-class digital skills, we are leveling the playing field for refugees and underserved communities.",
+            image: "/vision-image.jpg"
+        },
+        team: [
+             // Founders (Optional - kept from before just in case, remove if unwanted)
+            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: '/team-gervais.jpg' },
+            { name: 'Ishiwe Alistide', role: 'Co-Founder & Operations Lead', image: '/team-ishiwe.jpg' },
+            // Your New List
+            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: '/team-monia.jpg' },
+            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: '/team-latia.jpg' },
+            { name: 'Theonest Bizuru', role: 'Career Growth Support', image: '/team-theonest.jpg' },
+            { name: 'Don Divin Niyukuri', role: 'Program & Activity Coordination', image: '/team-don.jpg' },
+            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling Support', image: '/team-joseph.jpg' },
+            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: '/team-eleciella.jpg' },
+            { name: 'Dominique Kwizera', role: 'Community Outreach', image: '/team-dominique.jpg' },
+            { name: 'Frank Murwaneza', role: 'Digital Systems & Website', image: '/team-frank.jpg' },
+            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: '/team-vestine.jpg' }
+        ]
+    },
     home: {
         hero: {
             title: 'Unite. Act. Transform.',
