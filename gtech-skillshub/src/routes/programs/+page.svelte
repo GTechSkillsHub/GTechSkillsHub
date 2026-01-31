@@ -1,114 +1,95 @@
 <script lang="ts">
-	import { Motion } from 'svelte-motion';
+	import Reveal from '$lib/components/Reveal.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import { siteData } from '$lib/data';
-	import { CheckCircle2, Clock, Users } from 'lucide-svelte';
+	import { ArrowRight, CheckCircle2 } from 'lucide-svelte';
 
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		show: {
-			opacity: 1,
-			transition: { staggerChildren: 0.1 }
-		}
-	};
-
-	const cardVariants = {
-		hidden: { y: 20, opacity: 0 },
-		show: {
-			y: 0,
-			opacity: 1,
-			transition: { type: 'spring', stiffness: 50, damping: 20 }
-		}
-	};
+	const { hero } = siteData.programsPage;
 </script>
 
-<div class="min-h-screen overflow-x-hidden bg-white pb-32 font-sans">
-	<div class="mx-auto max-w-7xl px-6 pt-32 pb-24 md:px-12">
-		<Motion
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.5 }}
-			let:motion
-		>
-			<div use:motion class="max-w-3xl">
-				<h1
-					class="mb-8 text-5xl leading-tight font-extrabold tracking-tight text-slate-900 md:text-7xl"
+<div class="min-h-screen overflow-x-hidden bg-slate-50 font-sans text-slate-900">
+	<section
+		class="relative overflow-hidden rounded-b-[3rem] bg-[#0F172A] px-6 pt-48 pb-32 text-white md:px-12"
+	>
+		<div
+			class="pointer-events-none absolute top-0 right-0 h-full w-2/3 bg-gradient-to-l from-blue-900/20 to-transparent"
+		></div>
+
+		<div class="relative z-10 mx-auto max-w-7xl">
+			<Reveal>
+				<span
+					class="mb-8 inline-block rounded-full border border-white/20 bg-white/5 px-3 py-1 text-sm font-bold tracking-widest text-[#4ADE80] uppercase"
 				>
-					Future-Ready <br />
-					<span class="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"
-						>Curriculum.</span
-					>
+					{hero.tag}
+				</span>
+				<h1 class="mb-8 max-w-4xl text-5xl leading-tight font-bold md:text-7xl">
+					{hero.title}
 				</h1>
-				<p class="max-w-2xl text-xl leading-relaxed text-slate-600">
-					Our programs are designed to take you from zero to job-ready. Free, hands-on, and tailored
-					for the real world.
+				<p class="max-w-2xl text-xl leading-relaxed text-slate-400">
+					{hero.subtitle}
 				</p>
-			</div>
-		</Motion>
-	</div>
+			</Reveal>
+		</div>
+	</section>
 
-	<div class="mx-auto max-w-7xl px-6 md:px-12">
-		<Motion initial="hidden" animate="show" variants={containerVariants} let:motion>
-			<div use:motion class="grid gap-8 md:grid-cols-2 lg:gap-10">
-				{#each siteData.programs as program}
-					<Motion variants={cardVariants} let:motion>
+	<section class="px-6 md:px-12 mt-12 pb-32">
+		<div class="mx-auto flex max-w-7xl flex-col gap-8">
+			{#each siteData.programs as program, i}
+				<Reveal delay={i * 0.1}>
+					<div
+						class="group flex flex-col items-center gap-8 rounded-[2rem] border border-slate-100 bg-white p-6 shadow-sm transition-all duration-500 hover:shadow-2xl md:p-8 lg:flex-row lg:gap-12"
+					>
 						<div
-							use:motion
-							class="group relative flex h-full w-full flex-col rounded-[2rem] border border-slate-100 bg-slate-50 p-8 transition-all duration-300 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100/50 md:p-10"
+							class="relative aspect-video w-full shrink-0 overflow-hidden rounded-3xl bg-slate-100 lg:aspect-[4/3] lg:w-[40%]"
 						>
-							<div class="mb-8 flex flex-wrap items-start justify-between gap-4">
-								<div
-									class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-white text-blue-600 shadow-sm"
-								>
-									<svelte:component this={program.icon} size={32} strokeWidth={1.5} />
-								</div>
+							<div
+								class="absolute inset-0 flex items-center justify-center bg-slate-200 text-slate-400 transition-transform duration-700 group-hover:scale-105"
+							>
+								[Image: {program.image}]
+							</div>
+							<div
+								class="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-blue-600 shadow-md"
+							>
+								<svelte:component this={program.icon} size={24} />
+							</div>
+						</div>
 
-								<div
-									class="flex shrink-0 items-center gap-3 rounded-full border border-slate-100 bg-white px-6 py-2.5 shadow-sm"
+						<div class="flex w-full flex-col justify-center py-2">
+							<div class="mb-4">
+								<span
+									class="rounded-full bg-blue-50 px-4 py-1.5 text-xs font-bold tracking-widest text-blue-600 uppercase"
 								>
-									<Clock size={16} class="text-slate-400" />
-									<span class="text-sm font-bold tracking-wide whitespace-nowrap text-slate-700"
-										>{program.duration}</span
-									>
-								</div>
+									{program.duration} Program
+								</span>
 							</div>
 
-							<h2
-								class="mb-4 text-3xl font-bold tracking-tight break-words text-slate-900 transition-colors group-hover:text-blue-600"
+							<h3
+								class="mb-4 text-3xl font-bold text-slate-900 transition-colors group-hover:text-blue-600"
 							>
 								{program.title}
-							</h2>
+							</h3>
 
-							<p class="mb-10 flex-grow text-lg leading-relaxed text-slate-600">
+							<p class="mb-8 text-lg leading-relaxed text-slate-600">
 								{program.description}
 							</p>
 
-							<div class="mb-8 h-px w-full bg-slate-200/60"></div>
-
-							<div class="mb-10 space-y-8">
+							<div class="mb-8 grid grid-cols-2 gap-6 border-t border-slate-100 pt-6">
 								<div>
-									<div
-										class="mb-3 flex items-center gap-2 text-xs font-bold tracking-widest text-slate-400 uppercase"
-									>
-										<Users size={14} />
-										Who is this for?
-									</div>
-									<p class="text-lg font-medium text-slate-900">
-										{program.audience}
+									<p class="mb-1 text-xs font-bold tracking-widest text-slate-400 uppercase">
+										Target Audience
 									</p>
+									<p class="text-lg font-bold text-slate-900">{program.audience}</p>
 								</div>
-
 								<div>
-									<div
-										class="mb-4 flex items-center gap-2 text-xs font-bold tracking-widest text-slate-400 uppercase"
-									>
-										<CheckCircle2 size={14} />
-										Skills you gain
-									</div>
+									<p class="mb-1 text-xs font-bold tracking-widest text-slate-400 uppercase">
+										Key Outcomes
+									</p>
 									<div class="flex flex-wrap gap-2">
-										{#each program.outcomes as outcome}
+										{#each program.outcomes.slice(0, 2) as outcome}
 											<span
-												class="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium whitespace-nowrap text-slate-600 shadow-sm"
+												class="inline-flex items-center gap-1 text-sm font-medium text-slate-700"
 											>
+												<CheckCircle2 size={14} class="text-[#4ADE80]" />
 												{outcome}
 											</span>
 										{/each}
@@ -116,45 +97,36 @@
 								</div>
 							</div>
 
-							<div class="mt-auto w-full pt-4">
-								<a
-									href="/contact"
-									class="flex w-full items-center justify-center rounded-xl bg-slate-900 py-4 font-bold text-white shadow-lg shadow-slate-200 transition-all group-hover:shadow-blue-200 hover:-translate-y-1 hover:bg-blue-600"
-								>
-									Apply for this Program
-								</a>
+							<div>
+								<Button href="/contact" variant="outline">
+									Learn More <ArrowRight size={18} />
+								</Button>
 							</div>
 						</div>
-					</Motion>
-				{/each}
-			</div>
-		</Motion>
-	</div>
+					</div>
+				</Reveal>
+			{/each}
+		</div>
+	</section>
 
-	<div class="mx-auto mt-40 max-w-3xl px-6 text-center">
-		<h3 class="mb-6 text-3xl font-bold text-slate-900">Not sure where to start?</h3>
-		<p class="mb-8 text-lg text-slate-600">
-			Our team can help assess your skills and place you in the right cohort.
-		</p>
-		<a
-			href="/contact"
-			class="inline-flex items-center text-lg font-bold text-blue-600 transition-all hover:gap-3"
-		>
-			Contact Admissions
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="20"
-				height="20"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="ml-2"
-				><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"
-				></polyline></svg
+	<section class="px-6 pb-24 md:px-12">
+		<Reveal>
+			<div
+				class="relative mx-auto max-w-7xl overflow-hidden rounded-[3rem] bg-slate-900 px-6 py-20 text-center"
 			>
-		</a>
-	</div>
+				<div class="relative z-10">
+					<h2 class="mb-6 text-3xl font-bold text-white md:text-5xl">Start Your Journey Today</h2>
+					<p class="mx-auto mb-8 max-w-xl text-slate-300">
+						Join hundreds of students transforming their lives through digital skills.
+					</p>
+					<a
+						href="/contact"
+						class="inline-flex items-center justify-center rounded-full bg-[#4ADE80] px-10 py-4 text-lg font-bold text-slate-900 transition-transform hover:scale-105"
+					>
+						Apply Now
+					</a>
+				</div>
+			</div>
+		</Reveal>
+	</section>
 </div>

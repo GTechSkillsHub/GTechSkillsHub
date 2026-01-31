@@ -54,6 +54,14 @@ export const siteData = {
             { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: '/team-vestine.jpg' }
         ]
     },
+    programsPage: {
+        hero: {
+            tag: "Our Programs",
+            title: "Programs That Make A Difference",
+            subtitle: "Curriculum designed to uplift communities through education, healthcare, and live support.",
+            image: "/programs-hero.jpg"
+        }
+    },
     home: {
         hero: {
             title: 'Unite. Act. Transform.',
@@ -119,7 +127,8 @@ export const siteData = {
             description: 'Foundational digital skills training for youth with little or no prior computer experience.',
             duration: '6 months',
             audience: 'High-school graduates (16-28)',
-            outcomes: ['Computer Basics', 'Google Workspace', 'Safe Tech Use']
+            outcomes: ['Computer Basics', 'Google Workspace', 'Safe Tech Use'],
+            image: '/program-digital.jpg'
         },
         {
             id: 'coding-beginners',
@@ -128,7 +137,8 @@ export const siteData = {
             description: 'Focuses on programming and applied technology, helping participants advance from basic literacy to practical code.',
             duration: '3 months',
             audience: 'Youth with basic computer literacy',
-            outcomes: ['Python Programming', 'AI Fundamentals', 'Emerging Tech']
+            outcomes: ['Python Programming', 'AI Fundamentals', 'Emerging Tech'],
+            image: '/program-coding.jpg'
         },
         {
             id: 'career-dev',
@@ -137,7 +147,8 @@ export const siteData = {
             description: 'Mentorship and training on professional skills to strengthen career readiness.',
             duration: 'Integrated',
             audience: 'All participants',
-            outcomes: ['Strong CV', 'LinkedIn Profile', 'Job Readiness']
+            outcomes: ['Strong CV', 'LinkedIn Profile', 'Job Readiness'],
+            image: '/program-career.jpg'
         },
         {
             id: 'emerging-tech',
@@ -146,7 +157,8 @@ export const siteData = {
             description: 'Introduces participants to basic programming, data literacy, and artificial intelligence trends.',
             duration: '3 months',
             audience: 'Youth with strong interest in AI',
-            outcomes: ['Data Literacy', 'AI Awareness', 'Global Opportunities']
+            outcomes: ['Data Literacy', 'AI Awareness', 'Global Opportunities'],
+            image: '/program-emerging.jpg'
         }
     ],
     team: {
