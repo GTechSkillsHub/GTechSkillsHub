@@ -2,7 +2,8 @@ import {
     BookOpen, Code, Lightbulb, Rocket, 
     Users, Heart, Hand, MessageCircle, Globe,
     Mail, Phone, MapPin, Laptop,
-    GraduationCap, Award
+    GraduationCap, Award,
+    CreditCard, CheckCircle, MousePointer2, UserCheck
 } from 'lucide-svelte';
 
 export const siteData = {
@@ -354,5 +355,45 @@ export const siteData = {
         { title: "Bringing hope through food, shelter, and support", date: "Apr 9, 2025", image: "/blog-1.jpg" },
         { title: "Building Food Security Through Community Farming", date: "Sep 19, 2025", image: "/blog-2.jpg" },
         { title: "Restoring Hope in Times of Urgency", date: "Apr 7, 2025", image: "/blog-3.jpg" }
-    ]
+    ],
+    donatePage: {
+        hero: {
+            tag: "Donate",
+            title: "Donate. Impact. Transform Lives.",
+            subtitle: "Your donation supports education, health, & crisis relief transforming & empowering lives."
+        },
+        steps: [
+            { 
+                num: "1", 
+                title: "Enter Details", 
+                desc: "Please complete your basic essential information.",
+                icon: UserCheck 
+            },
+            { 
+                num: "2", 
+                title: "Select The Cause", 
+                desc: "Choose cause or program you want to support.",
+                icon: MousePointer2
+            },
+            { 
+                num: "3", 
+                title: "Enter Donation Amount", 
+                desc: "Enter how much you wish to contribute & submit.",
+                icon: CreditCard 
+            },
+            { 
+                num: "4", 
+                title: "Receive Confirmation", 
+                desc: "Get instant receipts and updates on donation.",
+                icon: CheckCircle 
+            }
+        ],
+        faq: [
+            { question: "What is your NGO's mission?", answer: "Our mission is to bridge the digital divide for refugee and underserved youth through technology and education." },
+            { question: "How are donations used?", answer: "100% of public donations go directly to funding student laptops, internet access, and instructor stipends." },
+            { question: "Can I volunteer?", answer: "Yes! We offer remote mentorship opportunities for tech professionals." },
+            { question: "Besides donating, how else can I help?", answer: "You can partner with us to offer internships, sponsor a specific student, or donate equipment." },
+            { question: "Can I sponsor a child or family?", answer: "Yes, our 'Sponsor a Future' program allows you to directly fund a student's 6-month education journey." }
+        ]
+    }
 };
