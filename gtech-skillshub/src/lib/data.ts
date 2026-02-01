@@ -172,6 +172,25 @@ export const siteData = {
             applyLink: "#"
         }
     ],
+    applyPage: {
+        hero: {
+            tag: "Join the Hub",
+            title: "Start Your Digital Journey",
+            subtitle: "Apply now for our free training programs. Spaces are limited, so we encourage early applications."
+        },
+        requirements: [
+            "Must be between 16-30 years old",
+            "Resident of Mahama Camp or Kirehe District",
+            "Commitment to attend 80% of classes",
+            "Basic English literacy is a plus",
+            "Passion for technology and learning"
+        ],
+        steps: [
+            { num: "01", text: "Fill out the form below" },
+            { num: "02", text: "Attend a short interview" },
+            { num: "03", text: "Get selected & start learning" }
+        ]
+    },
     home: {
         hero: {
             title: 'Unite. Act. Transform.',

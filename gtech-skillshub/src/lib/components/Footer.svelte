@@ -1,20 +1,10 @@
 <script lang="ts">
 	import { siteData } from '$lib/data';
-	import { Instagram, Linkedin, MessageCircle } from 'lucide-svelte';
+	import { Instagram, Linkedin, MessageCircle, ArrowRight } from 'lucide-svelte';
 </script>
 
-<footer class="relative overflow-hidden bg-slate-900 pt-0 pb-0 text-white">
-	<div class="relative z-20 mb-20 flex w-full overflow-hidden bg-blue-600 py-4">
-		<div class="animate-marquee flex items-center gap-8 whitespace-nowrap">
-			{#each Array(10) as _}
-				<span class="text-xl font-bold tracking-[0.2em] text-white/90 uppercase md:text-2xl">
-					Hope • Unity • Care • Impact • Growth • Trust • Together •
-				</span>
-			{/each}
-		</div>
-	</div>
-
-	<div class="relative z-20 mx-auto mb-32 grid max-w-7xl gap-12 px-6 md:grid-cols-4 md:px-12">
+<footer class="relative overflow-hidden bg-slate-900 pt-20 pb-0 text-white">
+	<div class="relative z-20 mx-auto mb-20 grid max-w-7xl gap-12 px-6 md:grid-cols-4 md:px-12">
 		<div class="col-span-1 md:col-span-2">
 			<div class="mb-6 flex items-center gap-2 text-2xl font-bold tracking-tighter">
 				<img
@@ -30,13 +20,13 @@
 			<div class="flex gap-4">
 				<a
 					href={siteData.general.socials.instagram}
-					class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-blue-600"
+					class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-[#4ADE80] hover:text-slate-900"
 				>
 					<Instagram size={20} />
 				</a>
 				<a
 					href={siteData.general.socials.linkedin}
-					class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-blue-600"
+					class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-[#4ADE80] hover:text-slate-900"
 				>
 					<Linkedin size={20} />
 				</a>
@@ -44,38 +34,48 @@
 		</div>
 
 		<div>
-			<h4 class="mb-6 text-lg font-bold">Explore</h4>
+			<h4 class="mb-6 text-lg font-bold text-white">Explore</h4>
 			<ul class="space-y-4 text-slate-400">
-				<li><a href="/about" class="transition-colors hover:text-white">About Us</a></li>
-				<li><a href="/programs" class="transition-colors hover:text-white">Our Programs</a></li>
-				<li><a href="/impact" class="transition-colors hover:text-white">Impact Stories</a></li>
-				<li><a href="/contact" class="transition-colors hover:text-white">Contact</a></li>
+				<li><a href="/about" class="transition-colors hover:text-[#4ADE80]">About Us</a></li>
+				<li><a href="/programs" class="transition-colors hover:text-[#4ADE80]">Our Programs</a></li>
+				<li>
+					<a href="/opportunities" class="transition-colors hover:text-[#4ADE80]"
+						>Opportunities Hub</a
+					>
+				</li>
+				<li><a href="/contact" class="transition-colors hover:text-[#4ADE80]">Contact</a></li>
 			</ul>
 		</div>
 
 		<div>
-			<h4 class="mb-6 text-lg font-bold">Get Involved</h4>
-			<p class="mb-4 text-sm text-slate-400">Join our community for updates.</p>
-			<a
-				href={siteData.general.whatsapp}
-				target="_blank"
-				class="inline-flex items-center gap-2 font-bold text-blue-400 transition-colors hover:text-white"
-			>
-				<MessageCircle size={18} />
-				Join WhatsApp
-			</a>
+			<h4 class="mb-2 text-lg font-bold text-white">Newsletter</h4>
+			<p class="mb-6 text-sm text-slate-400">Sign in to newsletter and never miss update.</p>
+
+			<form class="relative w-full">
+				<input
+					type="email"
+					placeholder="name@email.com"
+					class="h-12 w-full rounded-full border border-white/10 bg-white/5 pr-14 pl-5 text-sm text-white transition-colors placeholder:text-slate-500 focus:border-[#4ADE80] focus:outline-none"
+				/>
+				<button
+					type="submit"
+					class="absolute top-1 right-1 bottom-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#4ADE80] text-slate-900 transition-transform hover:scale-105"
+				>
+					<ArrowRight size={18} />
+				</button>
+			</form>
 		</div>
 	</div>
 
 	<div
-		class="pointer-events-none absolute bottom-0 left-0 z-0 flex w-full justify-center overflow-hidden leading-none select-none"
+		class="pointer-events-none absolute bottom-0 left-0 z-0 flex w-full justify-center overflow-hidden leading-none opacity-[0.03] select-none"
 	>
-		<h1 class="text-[13vw] font-black tracking-tighter whitespace-nowrap text-white opacity-[0.05]">
+		<h1 class="text-[14vw] font-black tracking-tighter whitespace-nowrap text-white">
 			G TECH SKILLSHUB
 		</h1>
 	</div>
 
-	<div class="relative z-20 border-t border-white/10 backdrop-blur-sm">
+	<div class="relative z-20 border-t border-white/5 bg-slate-900/50 backdrop-blur-sm">
 		<div
 			class="mx-auto flex max-w-7xl flex-col items-center justify-between px-6 py-8 text-center text-sm text-slate-500 md:flex-row md:px-12 md:text-left"
 		>
@@ -87,17 +87,3 @@
 		</div>
 	</div>
 </footer>
-
-<style>
-	.animate-marquee {
-		animation: scroll 30s linear infinite;
-	}
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(-50%);
-		}
-	}
-</style>

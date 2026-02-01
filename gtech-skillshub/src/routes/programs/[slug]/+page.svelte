@@ -121,7 +121,7 @@
 								</p>
 
 								<a
-									href="/contact"
+									href="/apply"
 									class="mb-4 inline-flex w-full items-center justify-center rounded-xl bg-[#4ADE80] px-8 py-4 text-lg font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e]"
 								>
 									Register Now <ArrowRight size={20} class="ml-2" />
