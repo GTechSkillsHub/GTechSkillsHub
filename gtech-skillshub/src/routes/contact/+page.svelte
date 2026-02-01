@@ -146,7 +146,8 @@
 			class="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white p-2 shadow-xl"
 		>
 			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15945.85672206775!2d30.822819875953535!3d-2.348639206109951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c4c4784a0d8435%3A0x2a975003c003264c!2sMahama%20Refugee%20Camp!5e0!3m2!1sen!2srw!4v1714400000000!5m2!1sen!2srw"
+				title="Map location of GTech SkillsHub at Mahama Refugee Camp"
+				src="https://maps.google.com/maps?q=Mahama%20Refugee%20Camp,%20Rwanda&t=&z=14&ie=UTF8&iwloc=&output=embed"
 				width="100%"
 				height="450"
 				style="border:0; border-radius: 2rem;"
