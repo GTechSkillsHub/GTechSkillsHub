@@ -146,27 +146,27 @@
 				</Reveal>
 
 				<Reveal delay={0.2}>
-					<div class="grid h-[600px] grid-cols-1 grid-rows-2 gap-4 md:h-[500px] md:grid-cols-4">
+					<div class="grid h-auto grid-cols-1 gap-4 md:h-[500px] md:grid-cols-4 md:grid-rows-2">
 						<div
-							class="relative flex items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-2"
+							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-2 md:h-auto"
 						>
 							<span class="font-bold text-slate-400">[Image: {program.gallery[0]}]</span>
 						</div>
 
 						<div
-							class="relative flex items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1"
+							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1 md:h-auto"
 						>
 							<span class="text-sm font-bold text-slate-400">[Image: {program.gallery[1]}]</span>
 						</div>
 
 						<div
-							class="relative flex items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1"
+							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1 md:h-auto"
 						>
 							<span class="text-sm font-bold text-slate-400">[Image: {program.gallery[2]}]</span>
 						</div>
 
 						<div
-							class="relative flex items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-1"
+							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-1 md:h-auto"
 						>
 							<span class="font-bold text-slate-400">[Image: {program.gallery[3]}]</span>
 						</div>
