@@ -1,7 +1,7 @@
 import { 
     BookOpen, Code, Lightbulb, Rocket, 
     Users, Heart, Hand, MessageCircle, Globe,
-    Mail, Phone, MapPin 
+    Mail, Phone, MapPin, Laptop 
 } from 'lucide-svelte';
 
 export const siteData = {
@@ -151,42 +151,96 @@ export const siteData = {
         {
             id: 'digital-skills',
             title: 'Digital Skills Training',
-            icon: Lightbulb,
+            icon: Laptop,
+            subtitle: "Master the basics of the digital world.",
             description: 'Foundational digital skills training for youth with little or no prior computer experience.',
             duration: '6 months',
             audience: 'High-school graduates (16-28)',
             outcomes: ['Computer Basics', 'Google Workspace', 'Safe Tech Use'],
-            image: '/program-digital.jpg'
+            image: '/program-digital.jpg',
+            fullDescription: "Access to digital literacy is essential for thriving in the modern economy. Our Digital Skills program provides vital computer education to underserved regions, ensuring no one is left behind due to the digital divide.",
+            curriculum: [
+                "Introduction to Hardware & Software",
+                "Typing & Mouse Proficiency",
+                "Google Workspace (Docs, Sheets, Slides)",
+                "Internet Safety & Email Etiquette",
+                "Basic Maintenance & Troubleshooting"
+            ],
+            gallery: ["/digital-1.jpg", "/digital-2.jpg", "/digital-3.jpg", "/digital-4.jpg"],
+            testimonials: [
+                { name: "Grace K.", role: "Graduate", text: "I had never touched a computer before. Now I am typing my own CV." },
+                { name: "John B.", role: "Parent", text: "This program gave my daughter confidence she never had." }
+            ]
         },
         {
             id: 'coding-beginners',
             title: 'Coding for Beginners',
             icon: Code,
+            subtitle: "Build your first website and software.",
             description: 'Focuses on programming and applied technology, helping participants advance from basic literacy to practical code.',
             duration: '3 months',
             audience: 'Youth with basic computer literacy',
             outcomes: ['Python Programming', 'AI Fundamentals', 'Emerging Tech'],
-            image: '/program-coding.jpg'
+            image: '/program-coding.jpg',
+            fullDescription: "We are committed to demystifying technology. This course takes students from consumers of technology to creators, teaching the logic and languages that power the web.",
+            curriculum: [
+                "HTML5 & CSS3 Fundamentals",
+                "Introduction to JavaScript Logic",
+                "Building Responsive Websites",
+                "Version Control with Git",
+                "Final Project: Portfolio Site"
+            ],
+            gallery: ["/coding-1.jpg", "/coding-2.jpg", "/coding-3.jpg", "/coding-4.jpg"],
+            testimonials: [
+                { name: "Eric M.", role: "Student", text: "Seeing my code turn into a real website was magic." }
+            ]
+            
         },
         {
             id: 'career-dev',
             title: 'Career Development',
             icon: Rocket,
+            subtitle: "Launch your professional journey.",
             description: 'Mentorship and training on professional skills to strengthen career readiness.',
             duration: 'Integrated',
             audience: 'All participants',
             outcomes: ['Strong CV', 'LinkedIn Profile', 'Job Readiness'],
-            image: '/program-career.jpg'
+            image: '/program-career.jpg',
+            fullDescription: "Technical skills get you the interview; soft skills get you the job. We focus on the holistic professional development of our students.",
+            curriculum: [
+                "CV & Resume Building",
+                "LinkedIn Profile Optimization",
+                "Mock Interviews & Body Language",
+                "Workplace Communication",
+                "Freelancing Basics"
+            ],
+            gallery: ["/career-1.jpg", "/career-2.jpg", "/career-3.jpg", "/career-4.jpg"],
+            testimonials: [
+                { name: "Sarah L.", role: "Alumni", text: "The mock interviews prepared me for my real job interview perfectly." }
+            ]
         },
         {
             id: 'emerging-tech',
             title: 'Emerging Technologies',
-            icon: Users,
+            icon: Lightbulb,
+            subtitle: "Step into the future of AI and Data.",
             description: 'Introduces participants to basic programming, data literacy, and artificial intelligence trends.',
             duration: '3 months',
             audience: 'Youth with strong interest in AI',
             outcomes: ['Data Literacy', 'AI Awareness', 'Global Opportunities'],
-            image: '/program-emerging.jpg'
+            image: '/program-emerging.jpg',
+            fullDescription: "Preparing youth for the jobs of tomorrow. This advanced track explores how AI and Data are reshaping our world.",
+            curriculum: [
+                "Data Literacy Basics",
+                "Introduction to Python for Data",
+                "Understanding AI & Machine Learning",
+                "Ethical Use of AI Tools",
+                "Global Remote Work Opportunities"
+            ],
+            gallery: ["/ai-1.jpg", "/ai-2.jpg", "/ai-3.jpg", "/ai-4.jpg"],
+            testimonials: [
+                { name: "David R.", role: "Student", text: "I learned how AI can help solve problems in my community." }
+            ]
         }
     ],
     team: {
