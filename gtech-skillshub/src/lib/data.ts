@@ -395,5 +395,61 @@ export const siteData = {
             { question: "Besides donating, how else can I help?", answer: "You can partner with us to offer internships, sponsor a specific student, or donate equipment." },
             { question: "Can I sponsor a child or family?", answer: "Yes, our 'Sponsor a Future' program allows you to directly fund a student's 6-month education journey." }
         ]
+    },
+    legal: {
+        privacy: {
+            title: "Privacy Policy",
+            subtitle: "We respect your privacy and are committed to protecting your personal data.",
+            lastUpdated: "Last Updated: February 2026",
+            content: [
+                {
+                    heading: "1. Introduction",
+                    text: "GTech SkillsHub ('we', 'our', or 'us') is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or engage with our programs."
+                },
+                {
+                    heading: "2. Information We Collect",
+                    text: "We collect information that you provide directly to us, such as when you apply for a program, donate, or sign up for our newsletter. This includes: Name, Email address, Phone number, and Location data."
+                },
+                {
+                    heading: "3. How We Use Your Information",
+                    text: "We use the information we collect to: Provide, operate, and maintain our services; Process your donations and applications; Communicate with you about updates and opportunities; and comply with legal obligations."
+                },
+                {
+                    heading: "4. Data Security",
+                    text: "We implement appropriate technical and organizational security measures to protect your personal information. However, please note that no method of transmission over the Internet is 100% secure."
+                },
+                {
+                    heading: "5. Contact Us",
+                    text: "If you have any questions about this Privacy Policy, please contact us at gtechskillhub@gmail.com."
+                }
+            ]
+        },
+        terms: {
+            title: "Terms & Conditions",
+            subtitle: "Please read these terms carefully before using our services.",
+            lastUpdated: "Last Updated: February 2026",
+            content: [
+                {
+                    heading: "1. Acceptance of Terms",
+                    text: "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement."
+                },
+                {
+                    heading: "2. Educational Content",
+                    text: "All content provided on this platform is for educational purposes only. While we strive for accuracy, GTech SkillsHub makes no warranties regarding the completeness or accuracy of the information."
+                },
+                {
+                    heading: "3. Student Code of Conduct",
+                    text: "Students enrolled in our programs are expected to maintain professional behavior. Harassment, discrimination, or misuse of provided technology will result in immediate termination from the program."
+                },
+                {
+                    heading: "4. Intellectual Property",
+                    text: "The content, organization, graphics, design, and other matters related to the Site are protected under applicable copyrights and other proprietary laws."
+                },
+                {
+                    heading: "5. Limitation of Liability",
+                    text: "GTech SkillsHub shall not be liable for any damages that result from the use of, or inability to use, the materials on this site."
+                }
+            ]
+        }
     }
 };
