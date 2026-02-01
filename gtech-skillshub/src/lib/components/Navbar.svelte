@@ -33,8 +33,7 @@
 		<div class="hidden items-center gap-8 text-sm font-medium text-slate-300 md:flex">
 			<a href="/about" class="transition-colors hover:text-white">About</a>
 			<a href="/programs" class="transition-colors hover:text-white">Programs</a>
-			<a href="/impact" class="transition-colors hover:text-white">Causes</a>
-			<a href="/blog" class="transition-colors hover:text-white">Blog</a>
+			<a href="/opportunities" class="transition-colors hover:text-white">Opportunities</a>
 			<a href="/contact" class="transition-colors hover:text-white">Contact</a>
 		</div>
 
@@ -72,8 +71,10 @@
 			class="text-3xl font-bold text-white"
 			on:click={() => (isMobileOpen = false)}>Programs</a
 		>
-		<a href="/impact" class="text-3xl font-bold text-white" on:click={() => (isMobileOpen = false)}
-			>Causes</a
+		<a
+			href="/opportunities"
+			class="text-3xl font-bold text-white"
+			on:click={() => (isMobileOpen = false)}>Opportunities</a
 		>
 		<a href="/contact" class="text-3xl font-bold text-white" on:click={() => (isMobileOpen = false)}
 			>Contact</a

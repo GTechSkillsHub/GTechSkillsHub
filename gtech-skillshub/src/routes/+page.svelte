@@ -232,40 +232,50 @@
 				<div class="mb-12 flex items-end justify-between">
 					<div>
 						<span class="mb-4 block text-sm font-bold tracking-widest text-blue-600 uppercase"
-							>News & Stories</span
+							>Oppoortunities Hub</span
 						>
-						<h2 class="text-4xl font-bold text-slate-900">Latest Updates</h2>
+						<h2 class="text-4xl font-bold text-slate-900">Latest Opportunities</h2>
+						<p class="mt-2 text-slate-600">
+							Scholarships, Fellowships, and Grants curated for you.
+						</p>
 					</div>
-					<Button href="/blog" variant="outline">View All Posts</Button>
+					<Button href="/opportunities" variant="outline">View All</Button>
 				</div>
 			</Reveal>
 
 			<div class="grid gap-8 md:grid-cols-3">
-				{#each siteData.blogs as blog, i}
+				{#each siteData.opportunities.slice(0, 3) as opp, i}
 					<Reveal delay={i * 0.1}>
-						<a href="/blog" class="group block">
-							<div class="relative mb-6 aspect-[16/10] overflow-hidden rounded-[2rem]">
+						<a href="/opportunities/{opp.id}" class="group block flex h-full flex-col">
+							<div
+								class="relative mb-6 aspect-[16/10] overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-sm"
+							>
 								<div
-									class="absolute inset-0 flex items-center justify-center bg-slate-200 text-slate-400"
+									class="absolute inset-0 flex items-center justify-center text-sm font-bold text-slate-400"
 								>
-									[Image: {blog.image}]
+									[Image: {opp.image}]
 								</div>
 								<div
-									class="absolute top-4 left-4 rounded-full bg-white/90 px-4 py-2 text-xs font-bold tracking-widest text-slate-900 uppercase backdrop-blur"
+									class="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-widest text-blue-600 uppercase shadow-sm backdrop-blur"
 								>
-									{blog.date}
+									{opp.category}
 								</div>
 							</div>
 
 							<h3
-								class="mb-3 text-2xl leading-tight font-bold text-slate-900 transition-colors group-hover:text-blue-600"
+								class="mb-2 text-xl leading-tight font-bold text-slate-900 transition-colors group-hover:text-blue-600"
 							>
-								{blog.title}
+								{opp.title}
 							</h3>
+
+							<p class="mb-4 line-clamp-2 flex-grow text-sm text-slate-500">
+								{opp.description}
+							</p>
+
 							<p
-								class="flex items-center gap-2 text-sm font-bold tracking-wider text-blue-600 uppercase"
+								class="mt-auto flex items-center gap-2 text-sm font-bold tracking-wider text-blue-600 uppercase"
 							>
-								Read Story <ArrowRight
+								View Details <ArrowRight
 									size={16}
 									class="transition-transform group-hover:translate-x-1"
 								/>

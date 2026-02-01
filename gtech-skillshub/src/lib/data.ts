@@ -1,7 +1,8 @@
 import { 
     BookOpen, Code, Lightbulb, Rocket, 
     Users, Heart, Hand, MessageCircle, Globe,
-    Mail, Phone, MapPin, Laptop 
+    Mail, Phone, MapPin, Laptop,
+    GraduationCap, Award
 } from 'lucide-svelte';
 
 export const siteData = {
@@ -90,6 +91,87 @@ export const siteData = {
             }
         ]
     },
+    opportunitiesPage: {
+        hero: {
+            tag: "Opportunities Hub",
+            title: "Unlock Your Potential",
+            subtitle: "Curated scholarships, fellowships, and grants to accelerate your career and education.",
+            image: "/opportunities-hero.jpg"
+        },
+        howItWorks: [
+            { step: "01", title: "Browse", desc: "Explore our curated list of verified global opportunities." },
+            { step: "02", title: "Prepare", desc: "Use our guides to polish your CV and essays." },
+            { step: "03", title: "Apply", desc: "Submit your application directly to the provider." }
+        ]
+    },
+    opportunities: [
+        {
+            id: 'mastercard-scholarship',
+            category: 'Scholarship',
+            title: 'Mastercard Foundation Scholars Program',
+            provider: 'Mastercard Foundation',
+            deadline: 'Sep 15, 2025',
+            image: '/opp-scholarship.jpg',
+            description: 'Full-ride scholarships for young African leaders to study at top universities worldwide.',
+            // Detail Page Content
+            fullDescription: "The Mastercard Foundation Scholars Program is a global initiative designed to develop the next generation of transformative leaders. It provides financial, social, and academic support to scholars.",
+            eligibility: ["Citizen of an African country", "Strong academic record", "Commitment to giving back"],
+            value: "Full Tuition + Stipend",
+            applyLink: "https://mastercardfdn.org"
+        },
+        {
+            id: 'mwf-fellowship',
+            category: 'Fellowship',
+            title: 'Mandela Washington Fellowship',
+            provider: 'US State Dept',
+            deadline: 'Oct 10, 2025',
+            image: '/opp-fellowship.jpg',
+            description: 'A flagship program for young African leaders to gain experience in the United States.',
+            fullDescription: "The Mandela Washington Fellowship brings young leaders to the United States for academic coursework and leadership training.",
+            eligibility: ["Ages 25-35", "Proven track record of leadership", "Proficient in English"],
+            value: "Fully Funded Trip to USA",
+            applyLink: "#"
+        },
+        {
+            id: 'google-grant',
+            category: 'Grant',
+            title: 'Google for Startups Fund',
+            provider: 'Google',
+            deadline: 'Rolling Basis',
+            image: '/opp-grant.jpg',
+            description: 'Equity-free funding for tech startups solving major challenges in Africa.',
+            fullDescription: "Get access to funding, mentoring, and Google products to help grow your startup.",
+            eligibility: ["Tech-enabled startup", "Based in Africa", "Scalable business model"],
+            value: "$100,000 Equity Free",
+            applyLink: "#"
+        },
+        {
+            id: 'alx-leadership',
+            category: 'Leadership',
+            title: 'ALX Leadership Xcelerator',
+            provider: 'ALX Africa',
+            deadline: 'Aug 01, 2025',
+            image: '/opp-leadership.jpg',
+            description: 'A intensive 6-week program designed to fast-track your career management skills.',
+            fullDescription: "Develop the soft skills that employers crave: critical thinking, communication, and project management.",
+            eligibility: ["Ages 18-30", "Access to a laptop", "Commitment to 20hrs/week"],
+            value: "Free (Sponsored)",
+            applyLink: "#"
+        },
+        {
+            id: 'coursera-google',
+            category: 'Online Course',
+            title: 'Google Data Analytics Cert',
+            provider: 'Coursera',
+            deadline: 'Open Now',
+            image: '/opp-course.jpg',
+            description: 'Professional certificate to get you job-ready for a career in data analytics.',
+            fullDescription: "Gain in-demand skills in less than 6 months. No degree or experience required.",
+            eligibility: ["Open to everyone", "No prior experience needed"],
+            value: "Financial Aid Available",
+            applyLink: "#"
+        }
+    ],
     home: {
         hero: {
             title: 'Unite. Act. Transform.',
