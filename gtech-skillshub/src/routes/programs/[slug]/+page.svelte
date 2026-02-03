@@ -146,31 +146,46 @@
 				</Reveal>
 
 				<Reveal delay={0.2}>
-					<div class="grid h-auto grid-cols-1 gap-4 md:h-[500px] md:grid-cols-4 md:grid-rows-2">
-						<div
-							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-2 md:h-auto"
-						>
-							<span class="font-bold text-slate-400">[Image: {program.gallery[0]}]</span>
-						</div>
+					{#if program.gallery && program.gallery.length >= 4}
+						<div class="grid h-auto grid-cols-1 gap-4 md:h-[500px] md:grid-cols-4 md:grid-rows-2">
+							<div
+								class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-2 md:h-auto"
+							>
+								<span class="font-bold text-slate-400">[Image: {program.gallery[0]}]</span>
+							</div>
 
-						<div
-							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1 md:h-auto"
-						>
-							<span class="text-sm font-bold text-slate-400">[Image: {program.gallery[1]}]</span>
-						</div>
+							<div
+								class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1 md:h-auto"
+							>
+								<span class="text-sm font-bold text-slate-400">[Image: {program.gallery[1]}]</span>
+							</div>
 
-						<div
-							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1 md:h-auto"
-						>
-							<span class="text-sm font-bold text-slate-400">[Image: {program.gallery[2]}]</span>
-						</div>
+							<div
+								class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-1 md:row-span-1 md:h-auto"
+							>
+								<span class="text-sm font-bold text-slate-400">[Image: {program.gallery[2]}]</span>
+							</div>
 
-						<div
-							class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-1 md:h-auto"
-						>
-							<span class="font-bold text-slate-400">[Image: {program.gallery[3]}]</span>
+							<div
+								class="relative flex h-64 items-center justify-center overflow-hidden rounded-[2rem] border border-slate-300 bg-slate-200 md:col-span-2 md:row-span-1 md:h-auto"
+							>
+								<span class="font-bold text-slate-400">[Image: {program.gallery[3]}]</span>
+							</div>
 						</div>
-					</div>
+					{:else}
+						<div class="grid gap-4 sm:grid-cols-2">
+							{#each program.gallery ?? [] as img}
+								<div class="relative flex h-48 items-center justify-center overflow-hidden rounded-[1rem] border border-slate-300 bg-slate-200">
+									<span class="text-sm font-bold text-slate-400">[Image: {img}]</span>
+								</div>
+							{/each}
+							{#if !(program.gallery && program.gallery.length)}
+								<div class="relative flex h-48 items-center justify-center overflow-hidden rounded-[1rem] border border-slate-300 bg-slate-200">
+									<span class="text-sm font-bold text-slate-400">No images available</span>
+								</div>
+							{/if}
+						</div>
+					{/if}
 				</Reveal>
 			</div>
 		</section>
