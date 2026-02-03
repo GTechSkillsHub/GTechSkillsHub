@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Reveal from '$lib/components/Reveal.svelte';
-	import Button from '$lib/components/Button.svelte';
 	import { siteData } from '$lib/data';
 	import { ArrowRight, Calendar, Tag } from 'lucide-svelte';
 
 	const { hero, howItWorks } = siteData.opportunitiesPage;
 </script>
-
 <div class="min-h-screen overflow-x-hidden bg-slate-50 font-sans text-slate-900">
 	<section
 		class="relative overflow-hidden rounded-b-[3rem] bg-[#0F172A] px-6 pt-48 pb-24 text-white md:px-12"
