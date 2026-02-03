@@ -75,7 +75,7 @@
 						<Reveal delay={0.2}>
 							<h3 class="mb-6 text-2xl font-bold text-slate-900">Community Feedback</h3>
 							<div class="grid gap-6 md:grid-cols-2">
-								{#each program.testimonials as testimonial}
+								{#each program.testimonials ?? [] as testimonial (testimonial.name)}
 									<div
 										class="relative rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm"
 									>
@@ -90,8 +90,7 @@
 											</p>
 										</div>
 									</div>
-								{/each}
-							</div>
+								{/each}							</div>
 						</Reveal>
 					</div>
 				</div>
@@ -189,6 +188,16 @@
 				</Reveal>
 			</div>
 		</section>
+
+		<!-- Mobile CTA: visible only on small screens -->
+		<div class="fixed inset-x-4 bottom-4 z-50 lg:hidden">
+			<a
+				href="/apply"
+				class="flex items-center justify-center gap-2 rounded-xl border-t border-slate-200 bg-[#4ADE80] px-6 py-3 text-lg font-bold text-slate-900 shadow-lg"
+			>
+				Register Now <ArrowRight size={18} class="ml-1" />
+			</a>
+		</div>
 	</div>
 {:else}
 	<div class="flex h-screen items-center justify-center bg-white">

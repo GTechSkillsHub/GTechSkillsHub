@@ -61,23 +61,24 @@
 						</p>
 					</div>
 
-					<div class="mb-12 rounded-[2rem] border border-slate-100 bg-slate-50 p-8 md:p-10">
-						<h3 class="mb-6 text-xl font-bold text-slate-900">Eligibility Criteria</h3>
-						<ul class="space-y-4">
-							{#each opp.eligibility as criteria}
-								<li class="flex items-start gap-3">
-									<CheckCircle class="mt-1 shrink-0 text-[#4ADE80]" />
-									<span class="font-medium text-slate-700">{criteria}</span>
-								</li>
-							{/each}
-						</ul>
-					</div>
+				{#if opp.eligibility?.length}
+				<div class="mb-12 rounded-[2rem] border border-slate-100 bg-slate-50 p-8 md:p-10">
+					<h3 class="mb-6 text-xl font-bold text-slate-900">Eligibility Criteria</h3>
+					<ul class="space-y-4">
+						{#each opp.eligibility as criteria, i (i)}
+							<li class="flex items-start gap-3">
+								<CheckCircle class="mt-1 shrink-0 text-[#4ADE80]" />
+								<span class="font-medium text-slate-700">{criteria}</span>
+							</li>
+						{/each}
+					</ul>
+				</div>
+				{/if}
 
-					<div class="mb-16">
-						<h3 class="mb-4 text-2xl font-bold text-slate-900">Value / Award</h3>
-						<p class="text-lg font-bold text-blue-600">{opp.value}</p>
-					</div>
-
+				<div class="mb-16">
+					<h3 class="mb-4 text-2xl font-bold text-slate-900">Value / Award</h3>
+					<p class="text-lg font-bold text-blue-600">{opp.value}</p>
+				</div>
 					<div
 						class="flex flex-col items-center justify-between gap-6 border-t border-slate-100 pt-12 md:flex-row"
 					>
