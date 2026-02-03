@@ -3,8 +3,93 @@
 	import AccordionItem from '$lib/components/AccordionItem.svelte';
 	import { siteData } from '$lib/data';
 	import { ArrowRight } from 'lucide-svelte';
+	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
 
 	const { hero, steps, faq } = siteData.donatePage;
+
+	// Donation form state
+	let donorName = '';
+	let donorPhone = '';
+	let donorEmail = '';
+	let amount: number | '' = '';
+	let cause = 'General Support';
+	let msg = '';
+	let isSubmitting = false;
+
+	async function handleDonateSubmit() {
+		// Validate required fields
+		if (!donorName || !donorEmail || amount === '' || amount === null || amount <= 0) {
+			alert('Please fill in all required fields.');
+			return;
+		}
+		isSubmitting = true;
+
+		// Prepare the data for Web3Forms - Donation Pledge Form
+		const formData = new FormData();
+		formData.append('access_key', PUBLIC_WEB3FORMS_ACCESS_KEY);
+		formData.append('subject', `New Donation Pledge: $${amount} - ${cause}`);
+		formData.append('donor_name', donorName);
+		formData.append('email', donorEmail);
+		formData.append('phone', donorPhone || 'Not provided');
+		formData.append('amount', `$${amount}`);
+		formData.append('cause', cause);
+		formData.append('message', msg || 'No additional message');
+		formData.append('from_name', 'GTech SkillsHub Donation Form');
+
+		try {
+			// Send to Web3Forms API
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				body: formData
+			});
+
+			// Check HTTP status before parsing JSON
+			if (!response.ok) {
+				let errorMessage = `HTTP Error: ${response.status} ${response.statusText}`;
+				try {
+					const errorText = await response.text();
+					if (errorText) {
+						try {
+							const errorData = JSON.parse(errorText);
+							if (errorData.message) {
+								errorMessage = errorData.message;
+							}
+						} catch {
+							// Not JSON, use text directly
+							errorMessage = errorText;
+						}
+					}
+				} catch {
+					// Fall back to HTTP status message
+				}
+				alert(`Submission failed: ${errorMessage}`);
+				return;
+			}
+			const result = await response.json();
+
+			if (result.success) {
+				alert(
+					'Thank you for your pledge! We will contact you shortly to arrange the bank transfer or Mobile Money payment.'
+				);
+				// Reset form
+				donorName = '';
+				donorPhone = '';
+				donorEmail = '';
+				msg = '';
+				amount = '';
+				cause = 'General Support';
+			} else {
+				alert('Something went wrong. Please try again.');
+			}
+		} catch (err) {
+			if (import.meta.env.DEV) {
+				console.error('Donation pledge form error:', err);
+			}
+			alert('Error connecting to the server. Please try again later.');
+		} finally {
+			isSubmitting = false;
+		}
+	}
 </script>
 
 <div class="flex min-h-screen flex-col bg-slate-50 font-sans text-slate-900">
@@ -74,7 +159,7 @@
 							Donation Information
 						</h3>
 
-						<form class="space-y-6">
+						<form class="space-y-6" on:submit|preventDefault={handleDonateSubmit}>
 							<div class="grid gap-6 md:grid-cols-2">
 								<div class="space-y-2">
 									<label for="name" class="ml-1 text-sm font-bold text-slate-700">First Name*</label
@@ -82,6 +167,9 @@
 									<input
 										type="text"
 										id="name"
+										name="name"
+										bind:value={donorName}
+										required
 										placeholder="Jane"
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 									/>
@@ -91,6 +179,8 @@
 									<input
 										type="tel"
 										id="phone"
+										name="phone"
+										bind:value={donorPhone}
 										placeholder="+250..."
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 									/>
@@ -103,6 +193,9 @@
 									<input
 										type="email"
 										id="email"
+										name="email"
+										bind:value={donorEmail}
+										required
 										placeholder="you@email.com"
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 									/>
@@ -111,12 +204,19 @@
 									<label for="amount" class="ml-1 text-sm font-bold text-slate-700"
 										>Donation Amount*</label
 									>
-									<input
-										type="number"
-										id="amount"
-										placeholder="$ Amount"
-										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
-									/>
+									<div class="relative">
+										<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">$</span>
+										<input
+											type="number"
+											id="amount"
+											name="amount"
+											bind:value={amount}
+											required
+											min="0"
+											step="0.01"
+											placeholder="0.00"
+											class="w-full rounded-xl border border-slate-200 bg-slate-50 pl-10 pr-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"										/>
+									</div>
 								</div>
 							</div>
 
@@ -126,6 +226,9 @@
 								>
 								<select
 									id="cause"
+									name="cause"
+									bind:value={cause}
+									required
 									class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 								>
 									<option>General Support</option>
@@ -139,6 +242,8 @@
 								<label for="msg" class="ml-1 text-sm font-bold text-slate-700">Your Message</label>
 								<textarea
 									id="msg"
+									name="msg"
+									bind:value={msg}
 									rows="3"
 									placeholder="Message..."
 									class="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
@@ -147,9 +252,10 @@
 
 							<button
 								type="submit"
-								class="w-full rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e]"
+								disabled={isSubmitting}
+								class="w-full rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e] disabled:opacity-60"
 							>
-								Submit Donation
+								{isSubmitting ? 'Processing...' : 'Submit Donation'}
 							</button>
 						</form>
 					</div>
