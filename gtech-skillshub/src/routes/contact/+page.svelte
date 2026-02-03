@@ -3,6 +3,7 @@
 	import AccordionItem from '$lib/components/AccordionItem.svelte';
 	import { siteData } from '$lib/data';
 	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
+	import Alert from '$lib/components/Alert.svelte'; 
 
 	const { hero, infoCards } = siteData.contactPage;
 
@@ -13,11 +14,22 @@
 	let phone = '';
 	let message = '';
 	let isSubmitting = false;
+	// Alert State
+    let alertVisible = false;
+    let alertType: 'success' | 'error' = 'success';
+    let alertMessage = '';
+
+    function triggerAlert(type: 'success' | 'error', msg: string) {
+        alertType = type;
+        alertMessage = msg;
+        alertVisible = true;
+        setTimeout(() => alertVisible = false, 5000);
+    }
 
 	async function handleContactSubmit() {
 		// Validate required fields
 		if (!firstName || !lastName || !email || !message) {
-			alert('Please fill in all required fields.');
+			triggerAlert('error', 'Please fill in all required fields.');
 			return;
 		}
 
@@ -39,10 +51,14 @@
 				body: formData
 			});
 
+			if (!response.ok) {
+				throw new Error(`HTTP error: ${response.status}`);
+			}
+
 			const result = await response.json();
 
 			if (result.success) {
-				alert('Message sent successfully! We will get back to you soon.');
+				triggerAlert('error','Message sent successfully! We will get back to you soon.');
 				// Reset form
 				firstName = '';
 				lastName = '';
@@ -50,18 +66,20 @@
 				phone = '';
 				message = '';
 			} else {
-				alert('Something went wrong. Please try again.');
-			}
-		} catch (err) {
+				triggerAlert('error', 'Something went wrong. Please try again.');
+			}		} catch (err) {
 			if (import.meta.env.DEV) {
 				console.error('Contact form error:', err);
 			}
-			alert('Error connecting to the server. Please try again later.');
+			triggerAlert('error', 'connecting to the server. Please try again later.');
 		} finally {
 			isSubmitting = false;
 		}
 	}
 </script>
+
+<Alert visible={alertVisible} type={alertType} message={alertMessage} onClose={() => alertVisible = false} />
+
 
 <div class="min-h-screen overflow-x-hidden bg-slate-50 font-sans text-slate-900">
 	<section

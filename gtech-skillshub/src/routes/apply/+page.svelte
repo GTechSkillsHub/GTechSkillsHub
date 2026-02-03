@@ -3,6 +3,7 @@
 	import { siteData } from '$lib/data';
 	import { CheckCircle2, ArrowRight } from 'lucide-svelte';
 	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
+	import Alert from '$lib/components/Alert.svelte';
 
 	const { hero, requirements, steps } = siteData.applyPage;
 	let selectedProgram = '';
@@ -14,11 +15,22 @@
 	let location = '';
 	let motivation = '';
 	let isSubmitting = false;
+	// Alert State
+	let alertVisible = false;
+	let alertType: 'success' | 'error' = 'success';
+	let alertMessage = '';
+
+	function triggerAlert(type: 'success' | 'error', msg: string) {
+		alertType = type;
+		alertMessage = msg;
+		alertVisible = true;
+		setTimeout(() => (alertVisible = false), 5000);
+	}
 
 	async function handleSubmit() {
 		// Validate required fields
 		if (!name || !age || !phone || !location || !selectedProgram || !motivation) {
-			alert('Please complete all required fields.');
+			triggerAlert('error', 'Please complete all required fields.');
 			return;
 		}
 
@@ -50,7 +62,8 @@
 			const result = await response.json();
 
 			if (result.success) {
-				alert(
+				triggerAlert(
+					'success',
 					'Application submitted successfully! We will review your application and contact you soon.'
 				);
 				// Reset form
@@ -61,18 +74,27 @@
 				selectedProgram = '';
 				motivation = '';
 			} else {
-				alert('Something went wrong. Please try again.');
+				triggerAlert('error', 'Something went wrong. Please try again.');
 			}
 		} catch (err) {
 			if (import.meta.env.DEV) {
 				console.error('Application form error:', err);
 			}
-			alert('Submission failed. Please try again later.');
+			triggerAlert('error', 'Submission failed. Please try again later.');
 		} finally {
 			isSubmitting = false;
 		}
 	}
 </script>
+
+<Alert
+	visible={alertVisible}
+	type={alertType}
+	message={alertMessage}
+	onClose={() => (alertVisible = false)}
+/>
+
+
 
 <div class="flex min-h-screen flex-col bg-slate-50 font-sans text-slate-900">
 	<section
@@ -168,7 +190,8 @@
 										max="100"
 										placeholder="e.g. 21"
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
-									/>								</div>
+									/>
+								</div>
 							</div>
 
 							<div class="grid gap-6 md:grid-cols-2">
@@ -187,6 +210,9 @@
 									/>
 								</div>
 								<div class="space-y-2">
+									<label for="location" class="ml-1 text-sm font-bold text-slate-700"
+										>Location</label
+									>
 									<select
 										id="location"
 										bind:value={location}
@@ -240,7 +266,8 @@
 								disabled={isSubmitting}
 								class="flex w-full items-center justify-center gap-2 rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e] disabled:opacity-60"
 							>
-								{isSubmitting ? 'Submitting...' : 'Submit Application'} <ArrowRight size={20} />
+								{isSubmitting ? 'Submitting...' : 'Submit Application'}
+								<ArrowRight size={20} />
 							</button>
 						</form>
 					</div>

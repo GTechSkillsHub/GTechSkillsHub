@@ -3,7 +3,7 @@
 	import AccordionItem from '$lib/components/AccordionItem.svelte';
 	import { siteData } from '$lib/data';
 	import { ArrowRight } from 'lucide-svelte';
-	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
+	import Alert from '$lib/components/Alert.svelte'; 
 
 	const { hero, steps, faq } = siteData.donatePage;
 
@@ -15,82 +15,48 @@
 	let cause = 'General Support';
 	let msg = '';
 	let isSubmitting = false;
+	// Alert State
+    let alertVisible = false;
+    let alertType: 'success' | 'error' = 'success';
+    let alertMessage = '';
+
+    function triggerAlert(type: 'success' | 'error', msg: string) {
+        alertType = type;
+        alertMessage = msg;
+        alertVisible = true;
+        setTimeout(() => alertVisible = false, 5000);
+    }
 
 	async function handleDonateSubmit() {
-		// Validate required fields
-		if (!donorName || !donorEmail || amount === '' || amount === null || amount <= 0) {
-			alert('Please fill in all required fields.');
+		if (!donorName || !donorEmail || amount === '' || amount === null) {
+			alert('Please fill required fields.');
 			return;
 		}
 		isSubmitting = true;
-
-		// Prepare the data for Web3Forms - Donation Pledge Form
-		const formData = new FormData();
-		formData.append('access_key', PUBLIC_WEB3FORMS_ACCESS_KEY);
-		formData.append('subject', `New Donation Pledge: $${amount} - ${cause}`);
-		formData.append('donor_name', donorName);
-		formData.append('email', donorEmail);
-		formData.append('phone', donorPhone || 'Not provided');
-		formData.append('amount', `$${amount}`);
-		formData.append('cause', cause);
-		formData.append('message', msg || 'No additional message');
-		formData.append('from_name', 'GTech SkillsHub Donation Form');
-
 		try {
-			// Send to Web3Forms API
-			const response = await fetch('https://api.web3forms.com/submit', {
+			const res = await fetch('/api/donate', {
 				method: 'POST',
-				body: formData
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ donorName, donorPhone, donorEmail, amount, cause, msg })
 			});
-
-			// Check HTTP status before parsing JSON
-			if (!response.ok) {
-				let errorMessage = `HTTP Error: ${response.status} ${response.statusText}`;
-				try {
-					const errorText = await response.text();
-					if (errorText) {
-						try {
-							const errorData = JSON.parse(errorText);
-							if (errorData.message) {
-								errorMessage = errorData.message;
-							}
-						} catch {
-							// Not JSON, use text directly
-							errorMessage = errorText;
-						}
-					}
-				} catch {
-					// Fall back to HTTP status message
-				}
-				alert(`Submission failed: ${errorMessage}`);
-				return;
+			if (!res.ok) {
+				triggerAlert('error', 'Donation submission failed.');
 			}
-			const result = await response.json();
-
-			if (result.success) {
-				alert(
-					'Thank you for your pledge! We will contact you shortly to arrange the bank transfer or Mobile Money payment.'
-				);
-				// Reset form
-				donorName = '';
-				donorPhone = '';
-				donorEmail = '';
-				msg = '';
-				amount = '';
-				cause = 'General Support';
-			} else {
-				alert('Something went wrong. Please try again.');
-			}
+			triggerAlert('success', 'Thank you for your donation intent.');
+			donorName = donorPhone = donorEmail = msg = '';
+			amount = '';
+			cause = 'General Support';
+			
 		} catch (err) {
-			if (import.meta.env.DEV) {
-				console.error('Donation pledge form error:', err);
-			}
-			alert('Error connecting to the server. Please try again later.');
+			triggerAlert('error', 'Donation submission failed.');
 		} finally {
 			isSubmitting = false;
 		}
 	}
 </script>
+
+<Alert visible={alertVisible} type={alertType} message={alertMessage} onClose={() => alertVisible = false} />
+
 
 <div class="flex min-h-screen flex-col bg-slate-50 font-sans text-slate-900">
 	<section
