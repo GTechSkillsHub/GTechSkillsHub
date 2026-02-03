@@ -82,7 +82,7 @@
 										Key Outcomes
 									</p>
 									<div class="flex flex-wrap gap-2">
-										{#each program.outcomes.slice(0, 2) as outcome}
+										{#each (program.outcomes ?? []).slice(0, 2) as outcome}
 											<span
 												class="inline-flex items-center gap-1 text-sm font-medium text-slate-700"
 											>
