@@ -232,7 +232,7 @@
 				<div class="mb-12 flex items-end justify-between">
 					<div>
 						<span class="mb-4 block text-sm font-bold tracking-widest text-blue-600 uppercase"
-							>Oppoortunities Hub</span
+							>Opportunities Hub</span
 						>
 						<h2 class="text-4xl font-bold text-slate-900">Latest Opportunities</h2>
 						<p class="mt-2 text-slate-600">
