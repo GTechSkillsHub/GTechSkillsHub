@@ -38,14 +38,14 @@
 		<div class="flex items-center gap-3 pl-4">
 			<a
 				href="/apply"
-				class="hidden items-center justify-center rounded-full bg-blue-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition-all hover:scale-105 hover:bg-blue-500 md:inline-flex"
+				class="hidden items-center justify-center rounded-full bg-blue-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition-all hover:scale-105 hover:bg-blue-500 lg:inline-flex"
 			>
 				Apply Now
 			</a>
 
 			<a
 				href="/donate"
-				class="hidden items-center justify-center rounded-full bg-[#4ADE80] px-6 py-2.5 text-sm font-bold text-slate-900 shadow-lg shadow-green-900/20 transition-all hover:scale-105 hover:bg-[#22c55e] md:inline-flex"
+				class="hidden items-center justify-center rounded-full bg-[#4ADE80] px-6 py-2.5 text-sm font-bold text-slate-900 shadow-lg shadow-green-900/20 transition-all hover:scale-105 hover:bg-[#22c55e] lg:inline-flex"
 			>
 				Donate Now
 			</a>
