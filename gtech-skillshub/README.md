@@ -741,65 +741,303 @@ a:hover {
 
 ## 🚀 Deployment
 
-### Deploy to Vercel (Recommended)
+### 🌐 Deploy to Vercel (Recommended - FREE)
 
-1. Push code to GitHub
-2. Import project on [Vercel](https://vercel.com)
-3. Deploy automatically
+**Why Vercel?**
+- ✅ Free hosting for personal/non-profit projects
+- ✅ Automatic deployments when you push to GitHub
+- ✅ Fast global CDN
+- ✅ Easy setup (5 minutes)
 
-### Deploy to Netlify
+**Steps:**
 
-1. Push code to GitHub
-2. Import project on [Netlify](https://netlify.com)
-3. Build command: `npm run build`
-4. Publish directory: `build`
+1. **Push your code to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/yourusername/gtech-skillshub.git
+   git push -u origin main
+   ```
 
-### Other Platforms
+2. **Sign up for Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Sign Up" and use your GitHub account
 
-You may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+3. **Import your project**
+   - Click "New Project"
+   - Select your GitHub repository
+   - Click "Import"
 
-## 📚 Available Scripts
+4. **Configure (usually auto-detected)**
+   - Framework Preset: **SvelteKit**
+   - Build Command: `npm run build`
+   - Output Directory: `.svelte-kit`
+   - Install Command: `npm install`
 
-```sh
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run check        # Type-check the project
-npm run lint         # Check code formatting
-npm run format       # Auto-format code
-```
+5. **Deploy!**
+   - Click "Deploy"
+   - Wait 2-3 minutes
+   - Your site is live! 🎉
 
-## 🐛 Troubleshooting
+**Your site URL**: `https://your-project-name.vercel.app`
 
-### Port Already in Use
-```sh
-# Use a different port
-npm run dev -- --port 3000
-```
-
-### Dependencies Issues
-```sh
-# Clear cache and reinstall
-rm -rf node_modules package-lock.json
-npm install
-```
-
-### Build Errors
-```sh
-# Check for TypeScript errors
-npm run check
-```
-
-## 📞 Support
-
-For questions or issues:
-- Email: gtechskillhub@gmail.com
-- WhatsApp: [Join Community](https://chat.whatsapp.com/IdNGD9CgqCWKNa1ODqqPC7)
-
-## 📄 License
-
-This project is private and proprietary to GTech SkillsHub.
+**Future updates**: Just push to GitHub, Vercel auto-deploys!
 
 ---
 
-**Built with ❤️ by GTech SkillsHub Team**
+### 🌐 Deploy to Netlify (Alternative - FREE)
+
+**Steps:**
+
+1. **Push code to GitHub** (same as above)
+
+2. **Sign up for Netlify**
+   - Go to [netlify.com](https://netlify.com)
+   - Sign up with GitHub
+
+3. **Import project**
+   - Click "Add new site" → "Import an existing project"
+   - Choose GitHub and select your repository
+
+4. **Configure**
+   - Build command: `npm run build`
+   - Publish directory: `build`
+   - Click "Deploy site"
+
+5. **Done!**
+   - Your site is live at `https://your-site-name.netlify.app`
+
+---
+
+### 🌐 Other Deployment Options
+
+| Platform | Free Tier | Best For |
+|----------|-----------|----------|
+| **Vercel** | ✅ Yes | SvelteKit (recommended) |
+| **Netlify** | ✅ Yes | Static sites |
+| **Cloudflare Pages** | ✅ Yes | Global performance |
+| **GitHub Pages** | ✅ Yes | Simple static sites |
+| **Railway** | ⚠️ Limited | Full-stack apps |
+
+**Note**: For platforms other than Vercel/Netlify, you may need to install a [SvelteKit adapter](https://kit.svelte.dev/docs/adapters).
+
+---
+
+## 📚 Available Commands
+
+| Command | What It Does | When to Use |
+|---------|--------------|-------------|
+| `npm run dev` | Start development server | While building/editing |
+| `npm run dev -- --open` | Start dev server + open browser | Quick preview |
+| `npm run dev -- --port 3000` | Use different port | Port 5173 is busy |
+| `npm run build` | Build for production | Before deploying |
+| `npm run preview` | Preview production build | Test before deploy |
+| `npm run check` | Type-check TypeScript | Find type errors |
+| `npm run lint` | Check code formatting | Before committing |
+| `npm run format` | Auto-format code | Clean up code style |
+
+**Most used commands:**
+```bash
+npm run dev      # Daily development
+npm run build    # Before deploying
+npm run format   # Before committing code
+```
+
+---
+
+## 🐛 Troubleshooting
+
+### ❌ "Port 5173 is already in use"
+
+**Problem**: Another app is using port 5173
+
+**Solution**:
+```bash
+# Option 1: Use a different port
+npm run dev -- --port 3000
+
+# Option 2: Kill the process using port 5173 (Windows)
+netstat -ano | findstr :5173
+taskkill /PID <process_id> /F
+
+# Option 2: Kill the process (Mac/Linux)
+lsof -ti:5173 | xargs kill -9
+```
+
+---
+
+### ❌ "Module not found" or dependency errors
+
+**Problem**: Dependencies not installed or corrupted
+
+**Solution**:
+```bash
+# Clear everything and reinstall
+rm -rf node_modules package-lock.json
+npm install
+
+# Or on Windows PowerShell:
+Remove-Item -Recurse -Force node_modules, package-lock.json
+npm install
+```
+
+---
+
+### ❌ TypeScript errors
+
+**Problem**: Type checking errors
+
+**Solution**:
+```bash
+# Check for errors
+npm run check
+
+# Common fixes:
+# 1. Make sure all imports are correct
+# 2. Check data.ts for missing fields
+# 3. Restart VS Code
+```
+
+---
+
+### ❌ Changes not showing in browser
+
+**Problem**: Browser cache or dev server issue
+
+**Solution**:
+1. **Hard refresh**: `Ctrl + Shift + R` (Windows) or `Cmd + Shift + R` (Mac)
+2. **Clear browser cache**: Settings → Clear browsing data
+3. **Restart dev server**: Stop (`Ctrl + C`) and run `npm run dev` again
+
+---
+
+### ❌ Images not showing
+
+**Problem**: Image path incorrect or file missing
+
+**Solution**:
+1. Check image is in `/static` folder
+2. Check path starts with `/` (e.g., `/image.jpg` not `image.jpg`)
+3. Check file extension matches (`.jpg` vs `.jpeg`)
+4. Check file name spelling (case-sensitive on some systems)
+
+**Example**:
+```typescript
+// ❌ Wrong
+image: 'program-digital.jpg'        // Missing /
+image: '/Program-Digital.jpg'       // Wrong case
+image: '/static/program-digital.jpg' // Don't include /static
+
+// ✅ Correct
+image: '/program-digital.jpg'
+```
+
+---
+
+### ❌ "Cannot find module 'lucide-svelte'"
+
+**Problem**: Icon import not found
+
+**Solution**:
+```bash
+# Reinstall dependencies
+npm install lucide-svelte
+
+# Or reinstall everything
+npm install
+```
+
+---
+
+### 🆘 Still Having Issues?
+
+1. **Check the browser console**: Right-click → Inspect → Console tab
+2. **Check the terminal**: Look for error messages
+3. **Search the error**: Copy error message and search on Google/Stack Overflow
+4. **Ask for help**: Contact the team (see Support section below)
+
+---
+
+## 📞 Support & Contact
+
+### 🤝 Get Help
+
+**For technical issues:**
+- 📧 Email: gtechskillhub@gmail.com
+- 💬 WhatsApp: [Join Community](https://chat.whatsapp.com/IdNGD9CgqCWKNa1ODqqPC7)
+
+**For content updates:**
+- See the [Content Management Guide](#-content-management-guide) above
+- Check the [data.ts file](src/lib/data.ts)
+
+**For code contributions:**
+- Fork the repository
+- Create a feature branch
+- Submit a pull request
+
+### 📚 Helpful Resources
+
+- **SvelteKit Docs**: [kit.svelte.dev](https://kit.svelte.dev/)
+- **Tailwind CSS Docs**: [tailwindcss.com/docs](https://tailwindcss.com/docs)
+- **Lucide Icons**: [lucide.dev/icons](https://lucide.dev/icons)
+- **Svelte Motion**: [svelte-motion.gradientdescent.de](https://svelte-motion.gradientdescent.de/)
+
+---
+
+## 🎯 Quick Reference Card
+
+**Most Common Tasks:**
+
+| Task | File to Edit | What to Change |
+|------|--------------|----------------|
+| Update email/phone | `src/lib/data.ts` | `general.email`, `general.whatsapp` |
+| Change hero text | `src/lib/data.ts` | `hero.headline`, `hero.subheadline` |
+| Update statistics | `src/lib/data.ts` | `impact.youthTrained`, etc. |
+| Add new program | `src/lib/data.ts` | Add to `programs` array |
+| Add team member | `src/lib/data.ts` | Add to `aboutPage.team` array |
+| Add new image | `static/` folder | Copy image, reference as `/image.jpg` |
+| Change colors | `tailwind.config.js` | Modify theme colors |
+| Add new page | `src/routes/` | Create new folder with `+page.svelte` |
+
+**Most Used Commands:**
+```bash
+npm run dev      # Start development
+npm run build    # Build for production
+npm run format   # Format code
+```
+
+---
+
+## 📄 License
+
+This project is private and proprietary to **GTech SkillsHub**.
+
+© 2025 GTech SkillsHub. All rights reserved.
+
+---
+
+## 🙏 Acknowledgments
+
+**Built with:**
+- ❤️ Love and dedication by the GTech SkillsHub Team
+- ⚡ SvelteKit - The fastest web framework
+- 🎨 Tailwind CSS - Beautiful, responsive design
+- ✨ Svelte Motion - Smooth animations
+
+**Special thanks to:**
+- All contributors and volunteers
+- Our students and community members
+- Open source community
+
+---
+
+<div align="center">
+
+### 🌟 Star this project if you find it helpful!
+
+**GTech SkillsHub** - *Bridging the digital divide, one student at a time.*
+
+[Website](https://gtechskillshub.org) • [Instagram](https://www.instagram.com/gtechskillhub/) • [LinkedIn](https://www.linkedin.com/company/gtech-skills-hub)
+
+</div>
