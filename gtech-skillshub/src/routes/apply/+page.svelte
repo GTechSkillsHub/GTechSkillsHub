@@ -2,9 +2,76 @@
 	import Reveal from '$lib/components/Reveal.svelte';
 	import { siteData } from '$lib/data';
 	import { CheckCircle2, ArrowRight } from 'lucide-svelte';
+	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
 
 	const { hero, requirements, steps } = siteData.applyPage;
 	let selectedProgram = '';
+
+	// form state
+	let name = '';
+	let age: number | '' = '';
+	let phone = '';
+	let location = '';
+	let motivation = '';
+	let isSubmitting = false;
+
+	async function handleSubmit() {
+		// Validate required fields
+		if (!name || !age || !phone || !location || !selectedProgram || !motivation) {
+			alert('Please complete all required fields.');
+			return;
+		}
+
+		isSubmitting = true;
+
+		// Prepare the data for Web3Forms
+		const formData = new FormData();
+		formData.append('access_key', PUBLIC_WEB3FORMS_ACCESS_KEY);
+		formData.append('name', name);
+		formData.append('age', age.toString());
+		formData.append('phone', phone);
+		formData.append('location', location);
+		formData.append('program', selectedProgram);
+		formData.append('message', motivation);
+		formData.append('subject', 'New Program Application from GTech SkillsHub Website');
+
+		try {
+			// Send to Web3Forms API
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				body: formData
+			});
+
+			// Check HTTP status before parsing JSON
+			if (!response.ok) {
+				throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
+			}
+
+			const result = await response.json();
+
+			if (result.success) {
+				alert(
+					'Application submitted successfully! We will review your application and contact you soon.'
+				);
+				// Reset form
+				name = '';
+				age = '';
+				phone = '';
+				location = '';
+				selectedProgram = '';
+				motivation = '';
+			} else {
+				alert('Something went wrong. Please try again.');
+			}
+		} catch (err) {
+			if (import.meta.env.DEV) {
+				console.error('Application form error:', err);
+			}
+			alert('Submission failed. Please try again later.');
+		} finally {
+			isSubmitting = false;
+		}
+	}
 </script>
 
 <div class="flex min-h-screen flex-col bg-slate-50 font-sans text-slate-900">
@@ -75,13 +142,16 @@
 							<p class="text-slate-500">Fill in your details correctly. All fields are required.</p>
 						</div>
 
-						<form class="space-y-6">
+						<form class="space-y-6" on:submit|preventDefault={handleSubmit}>
 							<div class="grid gap-6 md:grid-cols-2">
 								<div class="space-y-2">
 									<label for="name" class="ml-1 text-sm font-bold text-slate-700">Full Name</label>
 									<input
 										type="text"
 										id="name"
+										bind:value={name}
+										name="name"
+										required
 										placeholder="Enter your full name"
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 									/>
@@ -91,10 +161,14 @@
 									<input
 										type="number"
 										id="age"
+										bind:value={age}
+										name="age"
+										required
+										min="16"
+										max="100"
 										placeholder="e.g. 21"
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
-									/>
-								</div>
+									/>								</div>
 							</div>
 
 							<div class="grid gap-6 md:grid-cols-2">
@@ -105,19 +179,22 @@
 									<input
 										type="tel"
 										id="phone"
+										bind:value={phone}
+										name="phone"
+										required
 										placeholder="+250..."
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 									/>
 								</div>
 								<div class="space-y-2">
-									<label for="location" class="ml-1 text-sm font-bold text-slate-700"
-										>Residence</label
-									>
 									<select
 										id="location"
+										bind:value={location}
+										name="location"
+										required
 										class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 									>
-										<option value="" disabled selected>Select location</option>
+										<option value="" disabled>Select location</option>
 										<option>Mahama Refugee Camp</option>
 										<option>Kirehe District (Host Community)</option>
 										<option>Other</option>
@@ -132,6 +209,8 @@
 								<select
 									id="program"
 									bind:value={selectedProgram}
+									name="program"
+									required
 									class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 								>
 									<option value="" disabled selected>Select a program</option>
@@ -147,6 +226,9 @@
 								>
 								<textarea
 									id="motivation"
+									bind:value={motivation}
+									name="motivation"
+									required
 									rows="4"
 									placeholder="Tell us about your goals..."
 									class="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
@@ -155,9 +237,10 @@
 
 							<button
 								type="submit"
-								class="flex w-full items-center justify-center gap-2 rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e]"
+								disabled={isSubmitting}
+								class="flex w-full items-center justify-center gap-2 rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e] disabled:opacity-60"
 							>
-								Submit Application <ArrowRight size={20} />
+								{isSubmitting ? 'Submitting...' : 'Submit Application'} <ArrowRight size={20} />
 							</button>
 						</form>
 					</div>
