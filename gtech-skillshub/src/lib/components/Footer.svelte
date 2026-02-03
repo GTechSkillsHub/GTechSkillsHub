@@ -1,6 +1,31 @@
 <script lang="ts">
 	import { siteData } from '$lib/data';
 	import { Instagram, Linkedin, MessageCircle, ArrowRight } from 'lucide-svelte';
+
+	// Newsletter form state and refs
+	let newsletterEmail = '';
+	let isSubmitting = false;
+	let newsletterForm: HTMLFormElement | null = null;
+	let emailInput: HTMLInputElement | null = null;
+
+	async function handleSubscribe() {
+		if (!newsletterEmail) return;
+		isSubmitting = true;
+		try {
+			// Example submission - replace endpoint as needed
+			await fetch('/api/subscribe', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email: newsletterEmail })
+			});
+			// simple success handling
+			newsletterEmail = '';
+		} catch (err) {
+			console.error('Subscribe failed', err);
+		} finally {
+			isSubmitting = false;
+		}
+	}
 </script>
 
 <footer class="relative overflow-hidden bg-slate-900 pt-20 pb-0 text-white">
@@ -20,12 +45,18 @@
 			<div class="flex gap-4">
 				<a
 					href={siteData.general.socials.instagram}
+					aria-label="Instagram"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-[#4ADE80] hover:text-slate-900"
 				>
 					<Instagram size={20} />
 				</a>
 				<a
 					href={siteData.general.socials.linkedin}
+					aria-label="LinkedIn"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-[#4ADE80] hover:text-slate-900"
 				>
 					<Linkedin size={20} />
@@ -49,17 +80,22 @@
 
 		<div>
 			<h4 class="mb-2 text-lg font-bold text-white">Newsletter</h4>
-			<p class="mb-6 text-sm text-slate-400">Sign in to newsletter and never miss update.</p>
+			<p class="mb-6 text-sm text-slate-400">Sign up for our newsletter and never miss an update.</p>
 
-			<form class="relative w-full">
+			<form class="relative w-full" on:submit|preventDefault={handleSubscribe} bind:this={newsletterForm}>
 				<input
 					type="email"
+					name="email"
+					bind:this={emailInput}
+					bind:value={newsletterEmail}
+					required
 					placeholder="name@email.com"
 					class="h-12 w-full rounded-full border border-white/10 bg-white/5 pr-14 pl-5 text-sm text-white transition-colors placeholder:text-slate-500 focus:border-[#4ADE80] focus:outline-none"
 				/>
 				<button
 					type="submit"
-					class="absolute top-1 right-1 bottom-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#4ADE80] text-slate-900 transition-transform hover:scale-105"
+					disabled={isSubmitting}
+					class="absolute top-1 right-1 bottom-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#4ADE80] text-slate-900 transition-transform hover:scale-105 disabled:opacity-60"
 				>
 					<ArrowRight size={18} />
 				</button>
