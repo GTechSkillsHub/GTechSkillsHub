@@ -88,6 +88,7 @@
 						<a
 							href={opp.applyLink}
 							target="_blank"
+							rel="noopener noreferrer"
 							class="inline-flex items-center justify-center rounded-full bg-[#4ADE80] px-8 py-4 text-lg font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-105 hover:bg-[#22c55e]"
 						>
 							Apply on Official Site <ExternalLink size={20} class="ml-2" />
