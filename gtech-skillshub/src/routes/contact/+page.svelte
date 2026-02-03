@@ -2,8 +2,65 @@
 	import Reveal from '$lib/components/Reveal.svelte';
 	import AccordionItem from '$lib/components/AccordionItem.svelte';
 	import { siteData } from '$lib/data';
+	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
 
 	const { hero, infoCards } = siteData.contactPage;
+
+	// Contact form state
+	let firstName = '';
+	let lastName = '';
+	let email = '';
+	let phone = '';
+	let message = '';
+	let isSubmitting = false;
+
+	async function handleContactSubmit() {
+		// Validate required fields
+		if (!firstName || !lastName || !email || !message) {
+			alert('Please fill in all required fields.');
+			return;
+		}
+
+		isSubmitting = true;
+
+		// Prepare the data for Web3Forms
+		const formData = new FormData();
+		formData.append('access_key', PUBLIC_WEB3FORMS_ACCESS_KEY);
+		formData.append('name', `${firstName} ${lastName}`);
+		formData.append('email', email);
+		formData.append('phone', phone || 'Not provided');
+		formData.append('message', message);
+		formData.append('subject', 'New Contact from GTech SkillsHub Website');
+
+		try {
+			// Send to Web3Forms API
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				body: formData
+			});
+
+			const result = await response.json();
+
+			if (result.success) {
+				alert('Message sent successfully! We will get back to you soon.');
+				// Reset form
+				firstName = '';
+				lastName = '';
+				email = '';
+				phone = '';
+				message = '';
+			} else {
+				alert('Something went wrong. Please try again.');
+			}
+		} catch (err) {
+			if (import.meta.env.DEV) {
+				console.error('Contact form error:', err);
+			}
+			alert('Error connecting to the server. Please try again later.');
+		} finally {
+			isSubmitting = false;
+		}
+	}
 </script>
 
 <div class="min-h-screen overflow-x-hidden bg-slate-50 font-sans text-slate-900">
@@ -71,7 +128,7 @@
 				<div class="h-full rounded-[2rem] border border-slate-100 bg-white p-8 shadow-xl md:p-12">
 					<h2 class="mb-8 text-xl font-bold text-[#4ADE80]">Contact Information</h2>
 
-					<form class="space-y-6">
+					<form class="space-y-6" on:submit|preventDefault={handleContactSubmit}>
 						<div class="grid gap-6 md:grid-cols-2">
 							<div class="space-y-2">
 								<label for="first-name" class="ml-1 text-sm font-bold text-slate-700"
@@ -80,6 +137,9 @@
 								<input
 									type="text"
 									id="first-name"
+									name="first-name"
+									bind:value={firstName}
+									required
 									placeholder="Jane"
 									class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 								/>
@@ -91,6 +151,9 @@
 								<input
 									type="text"
 									id="last-name"
+									name="last-name"
+									bind:value={lastName}
+									required
 									placeholder="Smith"
 									class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 								/>
@@ -103,6 +166,9 @@
 								<input
 									type="email"
 									id="email"
+									name="email"
+									bind:value={email}
+									required
 									placeholder="you@example.com"
 									class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 								/>
@@ -113,6 +179,8 @@
 								<input
 									type="tel"
 									id="phone"
+									name="phone"
+									bind:value={phone}
 									placeholder="+250..."
 									class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
 								/>
@@ -123,6 +191,9 @@
 							<label for="message" class="ml-1 text-sm font-bold text-slate-700">Message</label>
 							<textarea
 								id="message"
+								name="message"
+								bind:value={message}
+								required
 								rows="4"
 								placeholder="Let's work together!"
 								class="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-[#4ADE80] focus:outline-none"
@@ -131,9 +202,10 @@
 
 						<button
 							type="submit"
-							class="w-full rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e]"
+							disabled={isSubmitting}
+							class="w-full rounded-xl bg-[#4ADE80] py-4 font-bold text-slate-900 shadow-lg shadow-green-900/10 transition-all hover:scale-[1.02] hover:bg-[#22c55e] disabled:opacity-60"
 						>
-							Submit Message
+							{isSubmitting ? 'Sending...' : 'Submit Message'}
 						</button>
 					</form>
 				</div>
