@@ -1,10 +1,11 @@
-import { 
-    BookOpen, Code, Lightbulb, Rocket, 
+import {
+    BookOpen, Code, Lightbulb, Rocket,
     Users, Heart, Hand, MessageCircle, Globe,
     Mail, Phone, MapPin, Laptop,
     GraduationCap, Award,
     CreditCard, CheckCircle, MousePointer2, UserCheck
 } from 'lucide-svelte';
+import { teamImages } from './teamImages';
 
 export const siteData = {
     general: {
@@ -42,19 +43,20 @@ export const siteData = {
             image: "/vision-image.jpg"
         },
         team: [
-             // Founders (Optional - kept from before just in case, remove if unwanted)
-            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: '/team-gervais.jpg' },
-            { name: 'Ishiwe Alistide', role: 'Co-Founder & Operations Lead', image: '/team-ishiwe.jpg' },
-            // Your New List
-            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: '/team-monia.jpg' },
-            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: '/team-latia.jpg' },
-            { name: 'Theonest Bizuru', role: 'Career Growth Support', image: '/team-theonest.jpg' },
-            { name: 'Don Divin Niyukuri', role: 'Program & Activity Coordination', image: '/team-don.jpg' },
-            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling Support', image: '/team-joseph.jpg' },
-            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: '/team-eleciella.jpg' },
-            { name: 'Dominique Kwizera', role: 'Community Outreach', image: '/team-dominique.jpg' },
-            { name: 'Frank Murwaneza', role: 'Digital Systems & Website', image: '/team-frank.jpg' },
-            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: '/team-vestine.jpg' }
+            // Founders
+            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: teamImages.gervais, bio: 'Computer Engineering student passionate about bridging the digital divide through technology education.' },
+            { name: 'Ishimwe Alistide', role: 'Co-Founder & Professional Skills Program Lead', image: teamImages.ishimwe, bio: 'Business Administration student dedicated to empowering youth through professional development.' },
+
+            // Team Members
+            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: teamImages.monia, bio: 'Providing hands-on technical guidance to help students master digital skills.' },
+            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: teamImages.latia, bio: 'Ensuring every student has the support they need to succeed in their learning journey.' },
+            { name: 'Theonest Bizuru', role: 'Career Development Support', image: teamImages.theonest, bio: 'Helping students prepare for successful careers in the digital economy.' },
+            { name: 'Don Divin Niyukuri', role: 'Project Coordination', image: teamImages.divin, bio: 'Coordinating programs and ensuring smooth operations across all initiatives.' },
+            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling Support', image: teamImages.joseph, bio: 'Capturing and sharing the inspiring stories of our students and community.' },
+            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: teamImages.vestine, bio: 'Providing mentorship and guidance to help students reach their full potential.' },
+            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: teamImages.ele, bio: 'Building partnerships and securing resources to expand our impact.' },
+            { name: 'Dominique Kwizera', role: 'Community Outreach', image: teamImages.dominique, bio: 'Connecting with communities to identify needs and expand our reach.' },
+            { name: 'Kwizera Mugwaneza Frank', role: 'Digital Developer', image: teamImages.frank, bio: 'Building digital solutions to enhance learning experiences and program delivery.' }
         ]
     },
     programsPage: {
@@ -81,8 +83,8 @@ export const siteData = {
             { 
                 icon: Phone, 
                 title: "Our Contact", 
-                value: "+250 788 000 000",
-                link: "tel:+250788000000"
+                value: "+250 788 123 456",
+                link: "tel:+250788123456"
             },
             { 
                 icon: MapPin, 
@@ -153,7 +155,7 @@ export const siteData = {
             provider: 'ALX Africa',
             deadline: 'Aug 01, 2025',
             image: '/opp-leadership.jpg',
-            description: 'A intensive 6-week program designed to fast-track your career management skills.',
+            description: 'An intensive 6-week program designed to fast-track your career management skills.',
             fullDescription: "Develop the soft skills that employers crave: critical thinking, communication, and project management.",
             eligibility: ["Ages 18-30", "Access to a laptop", "Commitment to 20hrs/week"],
             value: "Free (Sponsored)",
@@ -180,7 +182,7 @@ export const siteData = {
             subtitle: "Apply now for our free training programs. Spaces are limited, so we encourage early applications."
         },
         requirements: [
-            "Must be between 16-30 years old",
+            "Must be between 16–28 years old",
             "Resident of Mahama Camp or Kirehe District",
             "Commitment to attend 80% of classes",
             "Basic English literacy is a plus",
@@ -282,9 +284,9 @@ export const siteData = {
             description: 'Focuses on programming and applied technology, helping participants advance from basic literacy to practical code.',
             duration: '3 months',
             audience: 'Youth with basic computer literacy',
-            outcomes: ['Python Programming', 'AI Fundamentals', 'Emerging Tech'],
+            outcomes: ['HTML & CSS', 'JavaScript Fundamentals', 'Responsive Design', 'Version Control'],
             image: '/program-coding.jpg',
-            fullDescription: "We are committed to demystifying technology. This course takes students from consumers of technology to creators, teaching the logic and languages that power the web.",
+            fullDescription: "This hands-on web development course teaches HTML, CSS, and JavaScript so students can build responsive websites and a portfolio project.",
             curriculum: [
                 "HTML5 & CSS3 Fundamentals",
                 "Introduction to JavaScript Logic",

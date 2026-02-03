@@ -117,11 +117,21 @@
 						<div
 							class="group relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl"
 						>
-							<div
-								class="absolute inset-0 flex items-center justify-center bg-slate-300 font-medium text-slate-500"
-							>
-								[Photo: {member.name}]
-							</div>
+							{#if member.image}
+								<!-- Display actual team member image -->
+								<img
+									src={member.image}
+									alt={member.name}
+									class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+								/>
+							{:else}
+								<!-- Fallback placeholder if no image -->
+								<div
+									class="absolute inset-0 flex items-center justify-center bg-slate-300 font-medium text-slate-500"
+								>
+									[Photo: {member.name}]
+								</div>
+							{/if}
 
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-60 transition-opacity group-hover:opacity-80"
