@@ -10,30 +10,27 @@ import { teamImages } from './teamImages';
 export const siteData = {
     general: {
         name: 'GTech SkillsHub',
-        tagline: 'Bridging the digital gap for refugee and underserved youth through learning and opportunity.',
+        tagline: 'Empowering refugee and Underserved Rwandan youth with digital skills, mentorship, and global opportunities.',
         email: 'gtechskillhub@gmail.com',
         whatsapp: 'https://chat.whatsapp.com/IdNGD9CgqCWKNa1ODqqPC7',
         socials: {
             instagram: 'https://www.instagram.com/gtechskillhub/',
             linkedin: 'https://www.linkedin.com/company/gtech-skills-hub',
-            facebook: '#'
+            facebook: 'https://www.facebook.com/gtechskillshub'
         },
-        location: 'Based near Mahama Refugee Camp, Rwanda'
+        location: 'In and around Mahama Refugee Camp, Rwanda'
     },
+
     aboutPage: {
         hero: {
-            title: "Driven By Purpose And Impact",
-            subtitle: "A purpose driven non-profit organization working to create lasting change in communities.",
-            image: "/about-hero.jpg",
-            stats: [
-                { value: "11,000+", label: "People Impacted" },
-                { value: "240+", label: "Active Volunteers" },
-                { value: "1,200+", label: "Missions Completed" },
-                { value: "62+", label: "Global Partners" }
-            ]
+            title: 'Bridging the Digital Divide',
+            subtitle: 'GTech SkillsHub equips refugee and underserved youth with digital literacy, programming, ethical AI, and professional skills — transforming isolation into opportunity.',
+            buttons: { primary: "Apply Now", secondary: "Learn More" },
+            bgImage: '/hero-placeholder.jpg',
         },
+
         mission: {
-            title: "Together for Lasting Hope and Humanity",
+            title: "Inclusivity • Sustainability • Empowerment",
             description: "We are united by a single goal: to bridge the digital divide. Through technology, education, and mentorship, we are building a future where every young person has the opportunity to thrive.",
             image: "/mission-image.jpg"
         },
@@ -44,34 +41,36 @@ export const siteData = {
         },
         team: [
             // Founders
-            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: teamImages.gervais, bio: 'Computer Engineering student passionate about bridging the digital divide through technology education.' },
-            { name: 'Ishimwe Alistide', role: 'Co-Founder & Professional Skills Program Lead', image: teamImages.ishimwe, bio: 'Business Administration student dedicated to empowering youth through professional development.' },
+            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: teamImages.gervais, bio: 'Computer Engineering student at Ashesi University, passionate about bridging the digital divide through civic engagement and technology education.' },
+            { name: 'Ishimwe Alistide', role: 'Co-Founder & Professional Skills Program Lead', image: teamImages.ishimwe, bio: 'Business Administration student, focused on empowering refugee youth through professional development and mentorship.' },
 
             // Team Members
-            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: teamImages.monia, bio: 'Providing hands-on technical guidance to help students master digital skills.' },
-            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: teamImages.latia, bio: 'Ensuring every student has the support they need to succeed in their learning journey.' },
-            { name: 'Theonest Bizuru', role: 'Career Development Support', image: teamImages.theonest, bio: 'Helping students prepare for successful careers in the digital economy.' },
-            { name: 'Don Divin Niyukuri', role: 'Project Coordination', image: teamImages.divin, bio: 'Coordinating programs and ensuring smooth operations across all initiatives.' },
-            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling Support', image: teamImages.joseph, bio: 'Capturing and sharing the inspiring stories of our students and community.' },
-            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: teamImages.vestine, bio: 'Providing mentorship and guidance to help students reach their full potential.' },
-            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: teamImages.ele, bio: 'Building partnerships and securing resources to expand our impact.' },
-            { name: 'Dominique Kwizera', role: 'Community Outreach', image: teamImages.dominique, bio: 'Connecting with communities to identify needs and expand our reach.' },
-            { name: 'Kwizera Mugwaneza Frank', role: 'Digital Developer', image: teamImages.frank, bio: 'Building digital solutions to enhance learning experiences and program delivery.' }
+            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: teamImages.monia, bio: 'Guides students in Python, AI, and computer basics.' },
+            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: teamImages.latia, bio: 'Supports learner selection and admissions, ensuring fair access for refugee and underserved youth.' },
+            { name: 'Theonest Bizuru', role: 'Career Development Support', image: teamImages.theonest, bio: 'Helps students with CVs, LinkedIn, and public speaking.' },
+            { name: 'Don Divin Niyukuri', role: 'Program Coordination', image: teamImages.divin, bio: 'Coordinates activities and ensures smooth operations.' },
+            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling', image: teamImages.joseph, bio: 'Captures and shares inspiring stories of refugee students, highlighting their journey from digital isolation to empowerment.' },
+            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: teamImages.vestine, bio: 'Provides mentorship and academic guidance.' },
+            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: teamImages.ele, bio: 'Builds partnerships and mobilizes resources.' },
+            { name: 'Dominique Kwizera', role: 'Community Outreach', image: teamImages.dominique, bio: 'Leads outreach sessions and connects with schools.' },
+            { name: 'Kwizera Mugwaneza Frank', role: 'Digital Developer', image: teamImages.frank, bio: 'Supports digital systems and website development.' }
         ]
     },
+
     programsPage: {
         hero: {
             tag: "Our Programs",
             title: "Programs That Make A Difference",
-            subtitle: "Curriculum designed to uplift communities through education, healthcare, and live support.",
+            subtitle: "Curriculum designed to empower refugee and underserved Rwandan youth with digital and professional skills.",
             image: "/programs-hero.jpg"
         }
     },
+
     contactPage: {
         hero: {
             tag: "Contact",
             title: "Reach Out. We're Here Always",
-            subtitle: "Have questions, ideas, or need support? Connect with us we're ready to listen & help."
+            subtitle: "Have questions, ideas, or need support? Connect with us — we're ready to listen and help."
         },
         infoCards: [
             { 
@@ -94,6 +93,7 @@ export const siteData = {
             }
         ]
     },
+
     opportunitiesPage: {
         hero: {
             tag: "Opportunities Hub",
@@ -107,6 +107,8 @@ export const siteData = {
             { step: "03", title: "Apply", desc: "Submit your application directly to the provider." }
         ]
     },
+
+
     opportunities: [
         {
             id: 'mastercard-scholarship',
@@ -116,6 +118,9 @@ export const siteData = {
             deadline: 'Sep 15, 2025',
             image: '/opp-scholarship.jpg',
             description: 'Full-ride scholarships for young African leaders to study at top universities worldwide.',
+
+
+            
             // Detail Page Content
             fullDescription: "The Mastercard Foundation Scholars Program is a global initiative designed to develop the next generation of transformative leaders. It provides financial, social, and academic support to scholars.",
             eligibility: ["Citizen of an African country", "Strong academic record", "Commitment to giving back"],
@@ -196,15 +201,15 @@ export const siteData = {
     },
     home: {
         hero: {
-            title: 'Unite. Act. Transform.',
-            subtitle: 'Your support powers life-changing missions, feeding families & rebuilding hope.',
-            buttons: { primary: "Donate Now", secondary: "Learn About Us" },
+            title: 'Bridging the Digital Divide',
+            subtitle: 'Empowering refugee and underserved youth with digital literacy, programming, ethical AI, and professional skills.',
+            buttons: { primary: "Apply Now", secondary: "Learn More" },
             bgImage: '/hero-placeholder.jpg',
         },
         about: {
             tag: "About Us",
-            title: "United Together to Create Enduring Hope",
-            description: "We are a purpose-driven organization empowering health & education. Our mission is to bridge the gap for underserved youth through technology.",
+            title: "Empowering Youth Through Technology",
+            description: "Founded in 2025, GTech SkillsHub is a student-led initiative providing digital literacy, coding, ethical AI, and professional readiness for refugee and underserved youth in Mahama Camp.",
             image: "/about-placeholder.jpg"
         },
         supporters: {
@@ -215,27 +220,27 @@ export const siteData = {
             title: "Our Impact",
             subtitle: "Together for change. See what our impact shows.",
             stats: [
-                { value: "1,200+", label: "Meals Distributed", sub: "For families in need" },
-                { value: "15k+", label: "Youth Educated", sub: "Digital skills training" },
-                { value: "100%", label: "Impact Rate", sub: "Direct to community" }
+                { value: "200+", label: "Students Reached", sub: "Through outreach & training" },
+                { value: "4", label: "Core Programs", sub: "Digital, Python, Career, AI" },
+                { value: "2", label: "Communities Engaged", sub: "GS Paysannat L.D & L.C" }
             ]
         },
         help: {
             title: "How you can help",
-            subtitle: "United, We Transform. Feeding families, educating children, impacting lives.",
+            subtitle: "United, We Transform. Empowering youth, bridging gaps, and building futures through technology.",
             cards: [
-                { title: "Act During Crisis", desc: "Join urgent missions with rapid aid, relief, and community recovery.", icon: Users },
-                { title: "Strengthen Social Good", desc: "Sponsorships grow awareness and strengthen your brand's purpose.", icon: Heart },
-                { title: "Power Meaningful Change", desc: "Financial gifts help drive lasting progress in key cause areas.", icon: Globe },
-                { title: "Fuel Greater Impact", desc: "Your donation scales our work and reaches more communities in need.", icon: Rocket }
+                { title: "Mentorship & Outreach", desc: "Motivating students through school outreach and guidance.", icon: Users },
+                { title: "Digital Skills Training", desc: "Providing access to computer literacy and safe internet use.", icon: Laptop },
+                { title: "Career Development", desc: "Helping youth prepare CVs, LinkedIn, and job readiness.", icon: Rocket },
+                { title: "Emerging Tech", desc: "Introducing ethical AI and data literacy for future opportunities.", icon: Lightbulb }
             ]
         },
         testimonials: {
-            title: "Stories Bringing Hope",
+            title: "Student Voices",
             subtitle: "Real stories from those we've helped and those who help sharing the hope & heart.",
             items: [
-                { quote: "Innovating Youth Engagement...", author: "Liam Carter", role: "Program Director", image: "/avatar-1.jpg" },
-                { quote: "The skills I learned here changed my life...", author: "Sarah M.", role: "Student Alumni", image: "/avatar-2.jpg" }
+                { quote: "The training motivated me to study harder and believe in my future.", author: "Senior Six Student", role: "GS Paysannat L.D", image: "/avatar-1.jpg" },
+                { quote: "I had never touched a laptop before. Now I can type my own CV.", author: "Graduate", role: "Digital Skills Program", image: "/avatar-2.jpg" }
             ]
         },
         faq: [
@@ -245,10 +250,9 @@ export const siteData = {
             { question: 'Where are classes held?', answer: 'In-person training sessions in selected refugee camps (Mahama) and nearby schools.' }
         ],
         cta: {
-            title: "Be the Reason Someone Smiles.",
-            subtitle: "Join us in the journey to empower communities and change lives.",
-            stat: "500+ Peoples joined already"
-        }
+            cta: { title: "Empowering Refugee Youth Through Technology", 
+                subtitle: "Join us in bridging the digital divide with digital literacy, Python programming, ethical AI, and career development.", 
+                stat: "200+ Students Empowered" }
     },
     
     programs: [
@@ -278,21 +282,21 @@ export const siteData = {
         },
         {
             id: 'coding-beginners',
-            title: 'Coding for Beginners',
+            title: 'Python Programming',
             icon: Code,
-            subtitle: "Build your first website and software.",
+            subtitle: "Learn Python fundamentals, problem-solving, and real-world applications.",
             description: 'Focuses on programming and applied technology, helping participants advance from basic literacy to practical code.',
             duration: '3 months',
             audience: 'Youth with basic computer literacy',
-            outcomes: ['HTML & CSS', 'JavaScript Fundamentals', 'Responsive Design', 'Version Control'],
+            outcomes: ["Python Basics", "Problem-Solving", "Simple Projects"],
             image: '/program-coding.jpg',
             fullDescription: "This hands-on web development course teaches HTML, CSS, and JavaScript so students can build responsive websites and a portfolio project.",
             curriculum: [
-                "HTML5 & CSS3 Fundamentals",
-                "Introduction to JavaScript Logic",
-                "Building Responsive Websites",
-                "Version Control with Git",
-                "Final Project: Portfolio Site"
+                "Introduction to Python",
+                "Variables, Data Types, and Logic",
+                "Loops and Functions",
+                "Building Simple Applications",
+                "Final Project: Python Portfolio"
             ],
             gallery: ["/coding-1.jpg", "/coding-2.jpg", "/coding-3.jpg", "/coding-4.jpg"],
             testimonials: [
@@ -325,9 +329,9 @@ export const siteData = {
         },
         {
             id: 'emerging-tech',
-            title: 'Emerging Technologies',
+            title: 'Ethical AI & Emerging Technologies',
             icon: Lightbulb,
-            subtitle: "Step into the future of AI and Data.",
+            subtitle: "Introducing youth to Python, data literacy, and responsible use of AI in education and the workplace.",
             description: 'Introduces participants to basic programming, data literacy, and artificial intelligence trends.',
             duration: '3 months',
             audience: 'Youth with strong interest in AI',
@@ -349,20 +353,20 @@ export const siteData = {
     ],
     team: {
         founders: [
-            { name: 'Gervais Mboninkunda', title: 'Co-Founder & Program Lead', bio: 'Computer Engineering student...' },
-            { name: 'Ishiwe Alistide', title: 'Co-Founder & Operations Lead', bio: 'Business Administration student...' }
+            { name: 'Gervais Mboninkunda', title: 'Co-Founder & Program Lead', bio: 'Computer Engineering student at Ashesi University, passionate about bridging the digital divide through civic engagement and technology education.' },
+            { name: 'Ishimwe Alistide', title: 'Co-Founder & Operations Lead', bio: 'Business Administration student, focused on empowering refugee youth through professional development and mentorship.' }
         ]
     },
     blogs: [
-        { title: "Bringing hope through food, shelter, and support", date: "Apr 9, 2025", image: "/blog-1.jpg" },
-        { title: "Building Food Security Through Community Farming", date: "Sep 19, 2025", image: "/blog-2.jpg" },
-        { title: "Restoring Hope in Times of Urgency", date: "Apr 7, 2025", image: "/blog-3.jpg" }
+        { title: "School Outreach at GS Paysannat L.C", date: "Feb 2026", image: "/blog-1.jpg", description: "We introduced students to digital literacy and inspired them to pursue technology careers." },
+        { title: "Mentorship and Career Development for Refugee Youth", date: "Jan 2026", image: "/blog-2.jpg", description: "Our mentors guided students in CV writing, LinkedIn, and interview preparation." },
+        { title: "Launching ElevateGTech Platform", date: "Dec 2025", image: "/blog-3.jpg", description: "A new digital platform connecting students with learning resources and global opportunities." }
     ],
     donatePage: {
         hero: {
             tag: "Donate",
             title: "Donate. Impact. Transform Lives.",
-            subtitle: "Your donation supports education, health, & crisis relief transforming & empowering lives."
+            subtitle: "Your donation directly funds laptops, internet access, and mentorship for refugee youth."
         },
         steps: [
             { 
@@ -395,7 +399,7 @@ export const siteData = {
             { question: "How are donations used?", answer: "100% of public donations go directly to funding student laptops, internet access, and instructor stipends." },
             { question: "Can I volunteer?", answer: "Yes! We offer remote mentorship opportunities for tech professionals." },
             { question: "Besides donating, how else can I help?", answer: "You can partner with us to offer internships, sponsor a specific student, or donate equipment." },
-            { question: "Can I sponsor a child or family?", answer: "Yes, our 'Sponsor a Future' program allows you to directly fund a student's 6-month education journey." }
+            { question: "Can I sponsor a student?", answer: "Yes, our 'Sponsor a Future' program allows you to directly support a refugee youth through their 6-month digital training journey." }
         ]
     },
     legal: {
@@ -410,11 +414,11 @@ export const siteData = {
                 },
                 {
                     heading: "2. Information We Collect",
-                    text: "We collect information that you provide directly to us, such as when you apply for a program, donate, or sign up for our newsletter. This includes: Name, Email address, Phone number, and Location data."
+                    text: "We collect information only for program applications, mentorship, and outreach."
                 },
                 {
                     heading: "3. How We Use Your Information",
-                    text: "We use the information we collect to: Provide, operate, and maintain our services; Process your donations and applications; Communicate with you about updates and opportunities; and comply with legal obligations."
+                    text: "We do not sell or share student data; it is used only to connect youth with opportunities."
                 },
                 {
                     heading: "4. Data Security",
@@ -437,7 +441,7 @@ export const siteData = {
                 },
                 {
                     heading: "2. Educational Content",
-                    text: "All content provided on this platform is for educational purposes only. While we strive for accuracy, GTech SkillsHub makes no warranties regarding the completeness or accuracy of the information."
+                    text: "All content provided on this platform is for educational purposes related to digital literacy, programming, and career development. While we strive for accuracy, GTech SkillsHub makes no warranties regarding completeness or accuracy of external opportunities listed."
                 },
                 {
                     heading: "3. Student Code of Conduct",
@@ -454,4 +458,8 @@ export const siteData = {
             ]
         }
     }
-};
+}
+}
+
+
+
