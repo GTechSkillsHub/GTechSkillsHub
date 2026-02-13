@@ -573,33 +573,328 @@ testimonials: {
 
 ---
 
-### 🖼️ How to Add Images
+### 🖼️ How to Add Images (Complete Step-by-Step Guide)
 
-**Step 1: Prepare Your Image**
-- Recommended size: 1200x800px for hero images, 600x400px for cards
-- Formats: `.jpg`, `.png`, `.svg`, `.webp`
-- Optimize images (use [TinyPNG](https://tinypng.com/) to compress)
+> **📌 Important**: All images should be placed in the `static/` folder for easy management and best performance!
 
-**Step 2: Add to Static Folder**
-1. Open the `static/` folder in your project
-2. Copy your image file into this folder
-3. Rename it to something descriptive (e.g., `program-web-dev.jpg`)
+---
 
-**Step 3: Reference in data.ts**
+#### 🎯 Adding Images to Your Website
+
+**Use this for**: ALL images - team photos, program images, opportunity images, hero backgrounds, blog images, etc.
+
+##### **Step 1: Prepare Your Image**
+
+1. **Choose the right size**:
+   - Hero/Banner images: `1920x1080px` (landscape)
+   - Program/Opportunity cards: `800x600px` (landscape)
+   - Blog thumbnails: `600x400px` (landscape)
+   - Team photos: `400x500px` (portrait)
+   - Icons/Logos: `200x200px` (square)
+
+2. **Optimize your image** (IMPORTANT for fast loading):
+   - Go to [TinyPNG.com](https://tinypng.com/) or [Squoosh.app](https://squoosh.app/)
+   - Upload your image
+   - Download the compressed version
+   - This reduces file size by 50-70% without losing quality!
+
+3. **Rename your file**:
+   - Use descriptive, lowercase names
+   - Use hyphens instead of spaces
+   - ✅ Good: `program-digital-skills.jpg`, `hero-background.jpg`
+   - ❌ Bad: `IMG_1234.jpg`, `My Photo.png`, `PROGRAM.JPG`
+
+##### **Step 2: Add Image to Static Folder**
+
+**Option A: Using File Explorer (Easiest)**
+
+1. Open your project folder in File Explorer (Windows) or Finder (Mac)
+2. Navigate to: `gtech-skillshub/static/`
+3. Copy your image file into this folder
+4. Done! Your image is now accessible
+
+**Option B: Using VS Code**
+
+1. In VS Code, look at the left sidebar (Explorer)
+2. Find the `static` folder
+3. Right-click on `static` → "Reveal in File Explorer" (Windows) or "Reveal in Finder" (Mac)
+4. Copy your image into this folder
+
+**Option C: Create Subfolders (Recommended for Organization)**
+
+```
+static/
+├── team/              ← Team member photos go here
+│   ├── gervais.jpg
+│   ├── ishimwe.jpg
+│   ├── monia.jpg
+│   ├── latia.jpg
+│   ├── theonest.jpg
+│   ├── divin.jpg
+│   ├── joseph.jpg
+│   ├── vestine.jpg
+│   ├── ele.jpg
+│   ├── dominique.jpg
+│   └── frank.jpg
+├── programs/          ← Program images go here
+│   ├── digital-skills.jpg
+│   ├── python-coding.jpg
+│   └── career-dev.jpg
+├── opportunities/     ← Opportunity images go here
+│   ├── mastercard.jpg
+│   └── mandela.jpg
+├── hero/              ← Hero/banner images go here
+│   ├── home-hero.jpg
+│   └── about-hero.jpg
+└── gallery/           ← Activity/event photos go here
+    ├── outreach-1.jpg
+    └── training-1.jpg
+```
+
+##### **Step 3: Reference the Image in data.ts**
+
+**Rule**: Always start with `/` and use the path relative to the `static/` folder.
+
+**Examples:**
+
 ```typescript
-image: '/program-web-dev.jpg'  // ← Note the forward slash at the start!
+// If image is directly in static/
+image: '/program-digital.jpg'
+
+// If image is in static/programs/
+image: '/programs/digital-skills.jpg'
+
+// If image is in static/team/
+image: '/team/gervais.jpg'
+
+// If image is in static/hero/
+bgImage: '/hero/home-background.jpg'
 ```
 
-**File location example:**
-```
-Your file:     static/program-web-dev.jpg
-Reference as:  '/program-web-dev.jpg'
+**❌ Common Mistakes:**
+
+```typescript
+// DON'T include "static" in the path
+image: '/static/program-digital.jpg'  // ❌ Wrong
+
+// DON'T forget the leading slash
+image: 'program-digital.jpg'  // ❌ Wrong
+
+// DON'T use backslashes
+image: '\programs\digital.jpg'  // ❌ Wrong
+
+// DON'T use relative paths
+image: '../static/program.jpg'  // ❌ Wrong
 ```
 
-**Common image fields:**
-- `image` - Main image for cards/pages
-- `gallery` - Array of images: `["/img1.jpg", "/img2.jpg"]`
-- `bgImage` - Background images
+**✅ Correct Examples:**
+
+```typescript
+// ✅ Correct - image in static/
+image: '/program-digital.jpg'
+
+// ✅ Correct - image in static/programs/
+image: '/programs/digital-skills.jpg'
+
+// ✅ Correct - image in static/team/
+image: '/team/gervais.jpg'
+```
+
+##### **Step 4: Test Your Image**
+
+1. Save `data.ts` (Ctrl+S or Cmd+S)
+2. Go to your browser (should auto-refresh)
+3. Check if the image appears
+4. If not, see troubleshooting below
+
+---
+
+#### 📋 Complete Example: Adding a New Program Image
+
+**Scenario**: You want to add an image for a new "Web Development" program.
+
+**Step-by-Step:**
+
+1. **Prepare the image**:
+   - Find/create an image (800x600px recommended)
+   - Optimize it at [TinyPNG.com](https://tinypng.com/)
+   - Rename it to: `program-web-development.jpg`
+
+2. **Add to static folder**:
+   - Copy `program-web-development.jpg` to `gtech-skillshub/static/`
+   - Or create `static/programs/` and put it there
+
+3. **Update data.ts**:
+   ```typescript
+   programs: [
+       // ... existing programs
+       {
+           id: 'web-development',
+           title: 'Web Development Bootcamp',
+           icon: Code,
+           subtitle: "Build modern websites",
+           description: 'Learn HTML, CSS, JavaScript...',
+           duration: '4 months',
+           audience: 'Youth with basic computer skills',
+           outcomes: ['HTML/CSS', 'JavaScript', 'Projects'],
+           image: '/program-web-development.jpg',  // ← Your image here!
+           // ... rest of program data
+       }
+   ]
+   ```
+
+4. **Save and test**:
+   - Save the file (Ctrl+S)
+   - Check browser - image should appear on the programs page!
+
+---
+
+#### 📋 Complete Example: Adding a Team Member Photo
+
+**Scenario**: You want to add a photo for a new team member "Sarah Johnson".
+
+**Step-by-Step:**
+
+1. **Prepare the photo**:
+   - Get a professional headshot (400x500px recommended)
+   - Optimize at [TinyPNG.com](https://tinypng.com/)
+   - Rename to: `sarah.jpg`
+
+2. **Add to static/team/ folder**:
+   - Copy `sarah.jpg` to `gtech-skillshub/static/team/`
+
+3. **Add to data.ts**:
+   ```typescript
+   aboutPage: {
+       team: [
+           // ... existing team members
+           {
+               name: 'Sarah Johnson',
+               role: 'Program Coordinator',
+               image: '/team/sarah.jpg',  // ← Reference the image
+               bio: 'Sarah coordinates our training programs and student support.'
+           }
+       ]
+   }
+   ```
+
+4. **Save and test**:
+   - Save the file (Ctrl+S)
+   - Check `/about` page - Sarah's photo should appear!
+
+---
+
+#### 🐛 Troubleshooting Images
+
+##### **Problem: Image not showing (broken image icon)**
+
+**Solution 1: Check file location**
+```bash
+# Your image should be here:
+gtech-skillshub/static/your-image.jpg
+
+# NOT here:
+gtech-skillshub/your-image.jpg
+gtech-skillshub/src/your-image.jpg
+```
+
+**Solution 2: Check the path in data.ts**
+```typescript
+// ✅ Correct
+image: '/your-image.jpg'
+
+// ❌ Wrong - missing slash
+image: 'your-image.jpg'
+
+// ❌ Wrong - includes static
+image: '/static/your-image.jpg'
+```
+
+**Solution 3: Check file name spelling**
+- File names are case-sensitive on some systems
+- `Image.jpg` ≠ `image.jpg`
+- Check for typos!
+
+**Solution 4: Check file extension**
+```typescript
+// If your file is program.jpeg
+image: '/program.jpeg'  // ✅ Correct
+
+// NOT
+image: '/program.jpg'   // ❌ Wrong extension
+```
+
+##### **Problem: Image is too large / slow to load**
+
+**Solution**: Optimize your images!
+1. Go to [TinyPNG.com](https://tinypng.com/)
+2. Upload your image
+3. Download the compressed version
+4. Replace the old image with the compressed one
+
+**Target file sizes:**
+- Hero images: < 300KB
+- Card images: < 150KB
+- Team photos: < 100KB
+- Icons: < 50KB
+
+##### **Problem: Image looks blurry or pixelated**
+
+**Solution**: Use higher resolution images
+- Minimum: 800x600px for cards
+- Recommended: 1200x800px for hero images
+- For retina displays: 2x the display size
+
+##### **Problem: Team member image not showing**
+
+**Solution**: Check the following:
+1. Image must be in `static/team/` folder
+2. Path in `data.ts` must be `/team/yourname.jpg` (with leading slash)
+3. File name must match exactly (case-sensitive)
+
+---
+
+#### 📊 Image Best Practices
+
+**✅ DO:**
+- Optimize all images before adding them
+- Use descriptive file names
+- Use consistent naming (lowercase, hyphens)
+- Keep images under 300KB
+- Use appropriate dimensions
+- Test images on mobile and desktop
+
+**❌ DON'T:**
+- Upload huge unoptimized images (slow loading!)
+- Use spaces in file names
+- Use special characters in file names
+- Forget the leading `/` in paths
+- Include `static/` in the path
+
+---
+
+#### 🎨 Recommended Image Dimensions
+
+| Use Case | Dimensions | Aspect Ratio | Max Size |
+|----------|------------|--------------|----------|
+| Hero/Banner | 1920x1080px | 16:9 | 300KB |
+| Program Card | 800x600px | 4:3 | 150KB |
+| Opportunity Card | 800x600px | 4:3 | 150KB |
+| Team Photo | 400x500px | 4:5 | 100KB |
+| Blog Thumbnail | 600x400px | 3:2 | 100KB |
+| Logo | 200x200px | 1:1 | 50KB |
+| Icon | 100x100px | 1:1 | 20KB |
+
+---
+
+#### 🔗 Helpful Image Tools
+
+- **[TinyPNG](https://tinypng.com/)** - Compress images (reduce file size)
+- **[Squoosh](https://squoosh.app/)** - Advanced image optimization
+- **[Unsplash](https://unsplash.com/)** - Free high-quality stock photos
+- **[Pexels](https://pexels.com/)** - Free stock photos and videos
+- **[Remove.bg](https://remove.bg/)** - Remove image backgrounds
+- **[Canva](https://canva.com/)** - Create/edit images online
 
 ---
 

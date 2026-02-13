@@ -5,7 +5,6 @@ import {
     GraduationCap, Award,
     CreditCard, CheckCircle, MousePointer2, UserCheck
 } from 'lucide-svelte';
-import { teamImages } from './teamImages';
 
 export const siteData = {
     general: {
@@ -41,19 +40,19 @@ export const siteData = {
         },
         team: [
             // Founders
-            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: teamImages.gervais, bio: 'Computer Engineering student at Ashesi University, passionate about bridging the digital divide through civic engagement and technology education.' },
-            { name: 'Ishimwe Alistide', role: 'Co-Founder & Professional Skills Program Lead', image: teamImages.ishimwe, bio: 'Business Administration student, focused on empowering refugee youth through professional development and mentorship.' },
+            { name: 'Gervais Mboninkunda', role: 'Co-Founder & Program Lead', image: '/team/gervais.jpg', bio: 'Computer Engineering student at Ashesi University, passionate about bridging the digital divide through civic engagement and technology education.' },
+            { name: 'Ishimwe Alistide', role: 'Co-Founder & Professional Skills Program Lead', image: '/team/Ishimwe.jpg', bio: 'Business Administration student, focused on empowering refugee youth through professional development and mentorship.' },
 
             // Team Members
-            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: teamImages.monia, bio: 'Guides students in Python, AI, and computer basics.' },
-            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: teamImages.latia, bio: 'Supports learner selection and admissions, ensuring fair access for refugee and underserved youth.' },
-            { name: 'Theonest Bizuru', role: 'Career Development Support', image: teamImages.theonest, bio: 'Helps students with CVs, LinkedIn, and public speaking.' },
-            { name: 'Don Divin Niyukuri', role: 'Program Coordination', image: teamImages.divin, bio: 'Coordinates activities and ensures smooth operations.' },
-            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling', image: teamImages.joseph, bio: 'Captures and shares inspiring stories of refugee students, highlighting their journey from digital isolation to empowerment.' },
-            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: teamImages.vestine, bio: 'Provides mentorship and academic guidance.' },
-            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: teamImages.ele, bio: 'Builds partnerships and mobilizes resources.' },
-            { name: 'Dominique Kwizera', role: 'Community Outreach', image: teamImages.dominique, bio: 'Leads outreach sessions and connects with schools.' },
-            { name: 'Kwizera Mugwaneza Frank', role: 'Digital Developer', image: teamImages.frank, bio: 'Supports digital systems and website development.' }
+            { name: 'Monia Nijimbere', role: 'Technical Learning Support', image: '/team/Monia.jpeg', bio: 'Guides students in Python, AI, and computer basics.' },
+            { name: 'Latia Iradukunda', role: 'Admission & Learner Support', image: '/team/Latia.jpg', bio: 'Supports learner selection and admissions, ensuring fair access for refugee and underserved youth.' },
+            { name: 'Theonest Bizuru', role: 'Career Development Support', image: '/team/Theoneste.jpg', bio: 'Helps students with CVs, LinkedIn, and public speaking.' },
+            { name: 'Don Divin Niyukuri', role: 'Program Coordination', image: '/team/Divin.jpeg', bio: 'Coordinates activities and ensures smooth operations.' },
+            { name: 'Joseph Nduwamahoro', role: 'Media & Storytelling', image: '/team/Joseph.jpg', bio: 'Captures and shares inspiring stories of refugee students, highlighting their journey from digital isolation to empowerment.' },
+            { name: 'Vestine Uwineza', role: 'Mentorship & Guidance', image: '/team/vestine.jpg', bio: 'Provides mentorship and academic guidance.' },
+            { name: 'Eleciella Habanayo', role: 'Fundraising & Partnerships', image: '/team/Ele.jpg', bio: 'Builds partnerships and mobilizes resources.' },
+            { name: 'Dominique Kwizera', role: 'Community Outreach', image: '/team/dominique.jpeg', bio: 'Leads outreach sessions and connects with schools.' },
+            { name: 'Kwizera Mugwaneza Frank', role: 'Digital Developer', image: '/team/Me.jpg', bio: 'Supports digital systems and website development.' }
         ]
     },
 
