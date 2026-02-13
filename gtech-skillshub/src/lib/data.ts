@@ -250,11 +250,12 @@ export const siteData = {
             { question: 'Where are classes held?', answer: 'In-person training sessions in selected refugee camps (Mahama) and nearby schools.' }
         ],
         cta: {
-            cta: { title: "Empowering Refugee Youth Through Technology", 
-                subtitle: "Join us in bridging the digital divide with digital literacy, Python programming, ethical AI, and career development.", 
-                stat: "200+ Students Empowered" }
+            title: "Empowering Refugee Youth Through Technology",
+            subtitle: "Join us in bridging the digital divide with digital literacy, Python programming, ethical AI, and career development.",
+            stat: "200+ Students Empowered"
+        }
     },
-    
+
     programs: [
         {
             id: 'digital-skills',
@@ -458,7 +459,6 @@ export const siteData = {
             ]
         }
     }
-}
 }
 
 
