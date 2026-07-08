@@ -1,0 +1,76 @@
+---
+title: "Module 8: Research & Insight Development"
+phase: 2
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-2-module-8.mp4" />
+
+## Introduction
+
+Historically, research in African contexts has often been conducted 'on' rather than 'with' communities, resulting in limited direct benefits for the actual participants. However, recent studies involving adolescents in several African countries have utilized a powerful alternative: "Photovoice". Instead of relying on outside observers, researchers provided youth with cameras and asked them to document their own lived realities. By capturing their own environments, the youth bypassed researcher assumptions and revealed profound insights into their daily resilience, environmental barriers, and the realities of social stigma.
+
+Welcome to Phase 2, Module 8. In Module 7, we learned that Human-Centered Design relies heavily on empathy. Today, we will explore the mechanics of how you actively gather that empathy through **Research and Insight Development**. You will learn how to structure your field observations, empower your users through participatory research, and synthesize massive amounts of data into actionable design opportunities.
+
+## Core Concept
+
+### Structured Observation: The POEMS Framework
+
+When you step into a community to conduct research, it is incredibly easy to be overwhelmed by the environment and focus only on the most obvious actions. To ensure comprehensiveness, professional researchers use structured observation tools like the **POEMS framework**.
+
+POEMS forces you to systematically document five distinct aspects of any context:
+*   **People:** Who is present? (e.g., demographics, roles, behaviors).
+*   **Objects:** What physical items are they interacting with? (e.g., tools, devices, furniture).
+*   **Environments:** What is the physical space like? (e.g., lighting, architecture, temperature).
+*   **Messages:** What information is being transmitted? (e.g., signs, tone of voice, digital notifications).
+*   **Services:** What systems are supporting the activity? (e.g., internet access, transportation, business operations).
+
+By breaking a scene down into these five categories, you prevent yourself from making rushed interpretations and instead gather rich, objective evidence.
+
+### Participatory Research: Self-Documentation and Photovoice
+
+Sometimes, the mere presence of a researcher changes how people act. To overcome this, or when exploring sensitive topics, you can use **Self-Documentation**. This involves giving participants a camera, voice recorder, or journal and asking them to record their own experiences over a period of days or weeks.
+
+A highly effective version of this is **Photovoice**, a participatory action research strategy that integrates photography with qualitative interviewing. Photovoice engages community members by allowing them to visually express their lived experiences, highlight community strengths and concerns, and foster critical dialogue. When users return with their photos, researchers conduct interviews asking them to explain the narrative behind the images, transforming the participants from passive subjects into active co-designers.
+
+### Synthesis: Affinity Diagramming and Insight Statements
+
+After conducting field visits and interviews, you will have a massive, disorganized pile of data. You must synthesize this qualitative data using a collaborative sorting process known as **Affinity Diagramming** (or Insights Sorting).
+
+1.  **Download Your Learnings:** Immediately after research, gather your team and write individual observations, direct quotes, and facts on separate sticky notes.
+2.  **Organize into Clusters:** Post the sticky notes on a wall and collaboratively organize them into clusters based on relationships, themes, or similarities.
+3.  **Create Insight Statements:** An insight is a revelation that points toward a design opportunity. Review your clusters and write one short, prescriptive sentence for each theme that captures a core truth or a new perspective about the user's needs.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Research Planner
+
+Before going into the field, you must plan your approach. Type a challenge you want to research in your community (e.g., "Why local vendors lose produce to spoilage" or "How youth navigate public transportation") into the sandbox below. The AI coach will help you decide whether to use a POEMS observational approach or a Photovoice/Self-Documentation approach, and help you draft the initial prompts for your research.
+
+<AiSandbox systemPrompt="You are a Design Research coach for a Rwandan youth at GTech SkillsHub. Help the user design a research plan for a community challenge they provide. Ask them if they want to use the 'POEMS Framework' (for direct observation) or 'Photovoice/Self-Documentation' (for participatory research). Guide them in creating 3 specific elements to look for or 3 specific photo prompts to give their participants. Keep responses practical, brief, empathetic, and encouraging." />
+
+## Reflection
+
+### The POEMS Observation Challenge
+
+To master research, you must practice structured observation. Connect this to your daily routine:
+
+1. **Observe:** Spend 10 minutes observing a shared space at the hub or in your community.
+2. **Document:** Write down one objective observation for each of the five POEMS categories (People, Objects, Environments, Messages, Services).
+3. **Synthesize:** Look at your 5 observations. Write down one overarching **Insight Statement** about that space based on the data.
+4. **Share:** Discuss your POEMS breakdown with your Habit Buddy. Did using the framework help you notice something you would normally ignore?
+
+<Takeaways items={[
+  "Historically, research in Africa was conducted 'on' communities; participatory methods like Photovoice conduct research 'with' them.",
+  "Use the POEMS framework (People, Objects, Environments, Messages, Services) to structure comprehensive field observations.",
+  "Self-Documentation empowers users to record their own realities, bypassing researcher bias and revealing hidden truths.",
+  "Affinity Diagramming is a collaborative process of clustering sticky notes to transform raw data into actionable themes and Insight Statements."
+]} />
+
+---
+**References:**
+*   Krause, R., & Pernice, K. (2024). *Affinity Diagramming for Collaboratively Sorting UX Findings and Design Ideas*. Nielsen Norman Group.
+*   IDEO.org. (2015). *The Field Guide to Human-Centered Design*.
+*   Kumar, V. (2012). *101 Design Methods: A Structured Approach for Driving Innovation in Your Organization*.
+*   Mayman, Y. R., & Van Wyk, B. (2025). The use of photovoice in research with adolescents living with HIV in Africa: A scoping review. *Journal of Public Health in Africa*.
