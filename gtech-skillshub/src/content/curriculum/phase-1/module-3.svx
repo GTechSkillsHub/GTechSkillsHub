@@ -1,0 +1,82 @@
+---
+title: "Module 3: Communication Fundamentals"
+phase: 1
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-1-module-3.mp4" />
+
+## Introduction
+
+### Your Growth Journey
+
+In the rapidly growing African tech ecosystem, brilliant ideas alone are not enough to succeed; innovators must be able to connect and collaborate effectively across diverse environments. As organizations expand and teams become more multicultural, the ability to communicate across cultures has transitioned from a desirable soft skill to a fundamental component of professional effectiveness. Welcome to Phase 1, Module 3. Today, we focus on communication fundamentals, learning how to articulate your ideas confidently, listen actively, and build "cultural agility" to foster a supportive environment with your peers.
+
+## Core Concept
+
+### Receptive and Expressive Communication
+
+Effective collaboration relies heavily on two types of communication: **receptive** and **expressive**.
+*   **Receptive Communication:** This is your ability to listen and understand. In fact, research shows that among all essential soft skills, *active listening* is the most foundational skill for successful cross-cultural communication. It allows you to process others' perspectives and build genuine trust.
+*   **Expressive Communication:** This involves using words, sentences, and narrative to convey your meaning. When you clearly explain your ideas, your own self-awareness and understanding of the topic actually increase.
+
+### Psychological Safety and Peer Accountability
+
+Communication thrives in an environment of **psychological safety**—the belief that it is safe to share concerns or out-of-the-box ideas without fear of retaliation or embarrassment. This safety enables **peer accountability**, which is the practice of giving and receiving timely, in-the-moment feedback with your colleagues.
+
+Peer accountability comes in two forms:
+1.  **Safe Accountability:** Recognizing and thanking peers for doing good work.
+2.  **Risky Accountability:** Speaking up to respectfully correct a peer's mistake in the moment.
+
+Both are essential for a highly reliable team.
+
+### Structuring Your Pitch
+
+Whether you are at a networking event or a job interview, you need to be able to express your ideas concisely. An **Elevator Pitch** is a quick overview of your goals and skills that lasts no longer than 30 seconds. A strong pitch follows a 4-part framework:
+1.  **Introduce / Explain:** Who are you and what do you do?
+2.  **Unique Value:** What makes you or your idea unique?
+3.  **Evidence:** Provide brief proof of your success.
+4.  **Engagement:** End with a question or a call to action to encourage further conversation.
+
+If you are pitching a specific product or project, you can also use the **Pixar-Style Pitch**, which relies on a classic 6-sentence storytelling structure to hook the listener emotionally:
+*   *Once upon a time...*
+*   *Every day...*
+*   *One day...*
+*   *Because of that...*
+*   *Because of that...*
+*   *Until finally...*
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Pitch and Feedback Coach
+
+Practice introducing yourself and your ideas using either the 4-part Elevator Pitch or the 6-sentence Pixar structure. Type your pitch into the sandbox below. The AI coach will help you refine your clarity, ensure you highlight your unique value, and keep it under 30 seconds.
+
+<AiSandbox systemPrompt="You are a communication and public speaking coach for a Rwandan youth at GTech SkillsHub. Help the user refine their 30-second elevator pitch or Pixar-style pitch. Guide them on clarity, unique value proposition, and ending with a call to action. Keep responses brief, empathetic, encouraging, and easy to understand." />
+
+## Reflection
+
+### The "Two Stars and One Wish" Peer Feedback Exercise
+
+To practice active listening and peer accountability, pair up with your Habit Buddy from Module 2 and use the **"Two Stars and One Wish"** technique.
+
+1. **Share:** Take 30 seconds each to deliver your newly refined Elevator Pitch to your buddy.
+2. **Listen:** While your buddy speaks, practice *receptive communication* (active listening). Do not interrupt.
+3. **Two Stars (Safe Accountability):** Provide your buddy with two specific things they did exceptionally well (e.g., "Star 1: You highlighted your unique value clearly.").
+4. **One Wish (Risky Accountability):** Provide one respectful, constructive suggestion for improvement next time, phrasing it as a "wish" rather than a criticism. By calling contributions "wishes", you create a safe environment for collaborative growth.
+
+<Takeaways items={[
+  "Active listening is the most foundational skill for effective cross-cultural communication.",
+  "Peer accountability requires both 'safe' recognition and 'risky' constructive correction.",
+  "A successful elevator pitch should be under 30 seconds and end with a clear call to action.",
+  "Use storytelling frameworks like the Pixar Pitch to make your ideas memorable."
+]} />
+
+---
+**References:**
+*   DeMichele, A. (2019). *An Investigation of Peer Accountability in Healthcare*. Scholarship @ Claremont.
+*   Franco, T. (2019). *How to Pitch Your Idea, Pixar-style*. Franco London.
+*   Mkumbira, A. S., et al. (2025). *The Role of Cross-Cultural Communication in Workplace Leadership Effectiveness*. International Journal of Recent Research in Commerce Economics and Management.
+*   Paniagua, G. (2023). *8 Elevator Pitch Examples for Students*. Slidebean.
+*   Scoular, C., et al. (2020). *Collaboration in East Africa: A contextualised approach to defining the construct*. ACER Research Repository.
