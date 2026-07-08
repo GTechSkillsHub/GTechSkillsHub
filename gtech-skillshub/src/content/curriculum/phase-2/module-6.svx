@@ -1,0 +1,73 @@
+---
+title: "Module 6: Problem Analysis Techniques"
+phase: 2
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-2-module-6.mp4" />
+
+## Introduction
+
+In Module 5, we learned that rushing to brainstorm solutions without fully clarifying the problem often leads to solving the wrong issue entirely. But once you have framed a problem, how do you ensure you are tackling its root cause rather than just treating a surface-level symptom?
+
+In a 2025 study of Uganda's development pathway, researchers found that out of students, professionals, and entrepreneurs, the entrepreneurs exhibited significantly higher questioning frequency. This "questioning culture" functions as the primary driver of innovation outcomes, especially when supported by an environment of psychological safety. Welcome to Phase 2, Module 6. Today, we will build your analytical skills by learning how to break down complex problems, conduct root-cause analysis, and ask effective, penetrating questions.
+
+## Core Concept
+
+### Root Cause Analysis and the "5 Whys" Method
+
+When a problem occurs, it is tempting to address the immediate, visible symptom. However, symptoms will continue to reappear if the underlying issue is not resolved. To innovate effectively, you must utilize **Root Cause Analysis**.
+
+One of the most powerful tools for root cause analysis is the **"5 Whys" method**. This technique involves stating the problem and then asking "Why?" repeatedly (typically five times) until you drill down to the core issue. By asking "Why?" sequentially, you discover the fundamental failure (like a flawed system or process) rather than just a surface-level glitch.
+
+### Root-Cause and Barrier Analysis
+
+To deepen this analysis, you can apply the **"Why? What's Stopping You?"** method. Utilizing this framework allows you to apply two distinct lenses to uncover the core of a challenge.
+*   **The "Why?" Lens:** This facilitates root-cause analysis to ensure you are addressing the correct underlying purpose of the challenge.
+*   **The "What's Stopping You?" Lens:** This helps identify the exact barriers preventing a solution, distinguishing between tangible constraints (like a lack of funding) and self-imposed psychological limits (like fear of failure or perfectionism).
+
+### Socratic Questioning and Peaceful Inquiry
+
+A questioning culture thrives on effective, disciplined inquiry. **Socratic pedagogy** is a systematized method that encourages learners to question themselves and each other without being judgmental. It aims at boosting empathy and developing the ability to reach objective, informed conclusions.
+
+To analyze a problem deeply, you can practice Socratic questioning by categorizing your inquiries into six distinct types:
+1.  **Clarification:** "What makes you say that?"
+2.  **Examining Assumptions:** "Can we verify this assumption?"
+3.  **Reasons and Evidence:** "What are some of the reasons for this?"
+4.  **Viewpoints and Perspectives:** "Is there an alternative to what you have said?"
+5.  **Implications and Consequences:** "What are the consequences of these assumptions?"
+6.  **Questions about the Question:** "Why is this question important?"
+
+Applying these questions in collaborative settings—often called Socratic Seminars—promotes peaceful discussions aimed at finding common ground rather than argumentative debate.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Socratic Problem Coach
+
+Practice getting to the root of an issue. Type a surface-level problem or frustration you recently encountered (e.g., "I missed my project deadline" or "My team is not communicating well") into the sandbox below. The AI coach will act as your Socratic guide, leading you through the "5 Whys" and applying the six types of Socratic questions to help you uncover the root cause without judgment.
+
+<AiSandbox systemPrompt="You are a Problem Analysis coach for a Rwandan youth at GTech SkillsHub. Help the user apply the '5 Whys' method and Socratic questioning to a surface-level problem they provide. Ask questions step-by-step, waiting for their response each time, to help them drill down to the root cause. Incorporate the 'Why? What is stopping you?' framework to identify psychological versus physical barriers. Keep responses brief, analytical, non-judgmental, empathetic, and highly interactive." />
+
+## Reflection
+
+### The Root Cause Breakdown
+
+Take a few minutes to apply today's analytical frameworks to a real challenge:
+
+1. **Identify a Symptom:** Write down one surface-level problem you are currently facing in your studies, community, or personal projects.
+2. **Apply Socratic Inquiry:** Write out three specific Socratic questions (e.g., one Clarification, one Examining Assumptions, and one Implications) related to your problem.
+3. **Analyze Barriers:** Ask yourself, "What's stopping me from solving this?" Identify at least one physical constraint and one psychological barrier (like fear or perfectionism). Share your findings with your Habit Buddy to practice building common ground.
+
+<Takeaways items={[
+  "A questioning culture, supported by psychological safety, is a primary driver of innovation.",
+  "The '5 Whys' method prevents you from merely treating symptoms by drilling down to the fundamental root cause.",
+  "The 'Why? What's Stopping You?' framework distinguishes real constraints from self-imposed mental barriers.",
+  "Socratic questioning uses distinct types of inquiry to build empathy and objective understanding without judgment."
+]} />
+
+---
+**References:**
+*   Balbay, S., & Dogan, C. (2023). The Socratic method in developing spoken English discussion discourse markers: A case study. *African Educational Research Journal*.
+*   Musiimenta, N., & Asiimwe, I. K. (2025). Cultivating the "Why" and "What If": A Case for Questioning as the Engine of Innovation in Uganda's Development Pathway. *Metropolitan Journal of Academic and Applied Research*.
+*   Yeung, R. (2026). Future Ready Young Adults: Building Creative and Adaptive Thinkers. *Digital Commons at Buffalo State*.
