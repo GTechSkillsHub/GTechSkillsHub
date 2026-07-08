@@ -1,0 +1,63 @@
+---
+title: "Module 2: Goal Setting & Time Management"
+phase: 1
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-1-module-2.mp4" />
+
+## Introduction
+
+In Kenya's dynamic startup ecosystem, successful companies like Twiga Foods and M-Kopa have achieved immense growth not merely through grand visions, but by utilizing structured, adaptable business models and optimizing their resources. Their success highlights the importance of taking continuous, strategic steps. Welcome to Phase 1, Module 2. In the last module, we built the foundation of your growth mindset. Now, we will translate that mindset into actionable momentum through identity-based goal setting, micro-productivity, and peer accountability.
+
+## Core Concept
+
+### Identity-Based Habits and Micro-Productivity
+
+Behavioral change doesn't come from massive, life-changing pep talks; it comes from tiny, consistent actions done again and again. Setting a vague goal like "I want to get a high grade" focuses purely on an outcome. Instead, focus on **identity-based habits**. When you view yourself as "the kind of person who finishes what they start," you stop needing constant external motivation because every action you take is a vote for the kind of person you want to become.
+
+To make these identity-based habits sustainable, you must practice **micro-productivity**. A large task can be daunting and quickly lead to burnout. By breaking a significant goal into smaller, manageable chunks—like writing 1,000 words a day instead of trying to write 10,000 at once—you guarantee consistent progress without overwhelming your willpower.
+
+### Habit Piling and Designing Your Environment
+
+Your environment is the invisible hand that shapes your behavior. To successfully implement new goals, you must design a growth environment by removing distractions and making visual cues unmissable. Furthermore, you can use **habit piling** (or habit stacking), which involves taking a new, desired habit and piling it directly on top of an existing routine. The established routine acts as the trigger for the new behavior, helping your brain automate the process.
+
+### The Power of Peer Accountability
+
+In high-stress or resource-constrained academic environments, managing time alone can feel overwhelming. This is where **peer accountability** comes in. Peer accountability is the act of reciprocally giving and receiving feedback in an honest and respectful manner with someone who has no formal authority over you.
+
+Recent studies on school routines, such as the "Daily 3 Initiative," have demonstrated that peer accountability structures—like pairing up with a "Habit Buddy"—are strongly associated with improved habit maintenance in adolescents and young adults. An accountability partner tracks your progress, offers a fresh outside perspective, and provides the necessary social support to keep you from relapsing into bad habits.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Goal Refiner
+
+Type a vague or overwhelming goal you have (e.g., "I want to be good at programming" or "I want to get a job") into the sandbox below. The AI coach will help you break it down into a SMART goal, align it with an identity-based statement, and suggest ways to practice micro-productivity and habit piling.
+
+<AiSandbox systemPrompt="You are a supportive goal-setting coach for a Rwandan youth at GTech SkillsHub. Help the user transform their vague goal into a SMART goal using the principles of micro-productivity. Guide them to connect this goal to an identity-based statement. Suggest a specific micro-habit they can pile onto their existing daily routine. Keep responses concise, practical, and empathetic." />
+
+## Reflection
+
+### Your Mission & Your Habit Buddy
+
+Take a few minutes to write down the following steps to track your continuous personal growth:
+
+1. **Draft an Identity Statement:** Write one sentence describing the kind of professional you want to become (e.g., "I am the kind of person who manages time efficiently and finishes projects").
+2. **Apply Micro-Productivity:** Take one large goal you have for this week and break it down into a 10% chunk that you can tackle today.
+3. **Establish a Habit Buddy:** Pair up with a classmate. Share your identity statement and micro-goal, and agree to do a brief check-in with each other at the end of every hub session to hold each other accountable.
+
+<Takeaways items={[
+  "Focus on building identity-based habits rather than just chasing outcome-based goals.",
+  "Use micro-productivity to break large, overwhelming tasks into small, manageable daily chunks.",
+  "Design a growth environment by making positive cues unmissable and utilizing habit piling.",
+  "Leverage peer accountability and a Habit Buddy to maintain long-term focus and consistency."
+]} />
+
+---
+**References:**
+*   Chichi, G. S., Kyongo, J., & Omagwa, J. (2025). *Business Model Innovation And Successful Startup: A Comparative Analysis Of Modern Trends In Kenya*. IOSR Journal of Business and Management.
+*   Collins, E. (2020). *Little Habit Mastery: 7 Secrets to Create Successful Habits, Overcome Procrastination, and Make Lasting Changes*.
+*   DeMichele, A. (2019). *An Investigation of Peer Accountability in Healthcare*. Claremont Graduate University.
+*   Hassan, K. (2026). *Embedding micro-habits in school routines: how communities can help young people build sustainable healthy lifestyles*. NSRI Student Research Journal.
+*   Mascio, J. (2025). *5 Lessons from 'Atomic Habits' Teachers Should Utilize in the Classroom*. Teach Better.
