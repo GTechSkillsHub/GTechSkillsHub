@@ -1,0 +1,71 @@
+---
+title: "Module 4: Digital Literacy and Technology Fundamentals"
+phase: 1
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-1-module-4.mp4" />
+
+## Introduction
+
+The internet has fundamentally transformed the way modern businesses operate. Small and medium-sized enterprises (SMEs) are critical drivers of economic growth, innovation, and employment across Africa. However, as businesses increasingly rely on digital platforms, they also expose themselves to heightened cybersecurity threats and digital responsibilities.
+
+In our previous modules, you established a growth mindset, built personal productivity systems, and practiced effective communication. Welcome to Phase 1, Module 4. Today, we will apply those exact same principles to your digital environment. Digital literacy is the bedrock of your technical journey. By mastering basic computer operations, file management, and online safety, you empower yourself to participate fully and securely in the global digital landscape.
+
+## Core Concept
+
+### The Digital Workspace: Hardware, Software, and File Management
+
+Before you can build complex programs, you must understand your tools.
+*   **Hardware** represents the physical components of your technology (the computer, keyboard, and screen).
+*   **Software** represents the invisible instructions and programs that tell the hardware what to do.
+
+Just as a physical desk requires organization, your digital workspace requires structured **file and folder management**. Using the micro-productivity techniques from Module 2, you should build a daily routine of properly naming and storing your files. Additionally, maintaining your software is crucial. Outdated operating systems and poor software patch management leave businesses highly exposed to known vulnerabilities. A well-organized, regularly updated digital environment prevents data loss, reduces stress, and increases your efficiency.
+
+### Online Safety and Cyber Threats
+
+While the internet offers boundless opportunities, protecting your digital identity is a critical professional skill. In Africa, SMEs face growing cyber threats like ransomware and phishing, with phishing attacks up 76% in recent years. Shockingly, human error is one of the leading causes of security breaches, and up to 78% of phishing attempts succeed against untrained staff.
+
+Effective security does not have to be expensive. You can dramatically reduce your risks by implementing basic, budget-friendly security measures:
+*   **Strong Passwords:** Require 12-character passwords with symbols, and avoid informal password sharing.
+*   **Affordable Tools:** Utilize free or low-cost solutions like Bitwarden for secure password management and VeraCrypt or BitLocker for file encryption.
+*   **Verification:** Always look for a small padlock icon (SSL/HTTPS) next to a website's URL to ensure your data is encrypted, and learn to spot suspicious email attachments.
+
+### Digital Responsibility and Data Governance
+
+Digital responsibility means acting ethically and legally in online environments. African nations are rapidly developing legal frameworks, such as the AU Data Policy Framework and the Malabo Convention, to establish regulatory foundations for data protection and cybersecurity.
+
+For example, under Kenya's Data Protection Act, businesses must obtain explicit, informed consent before contacting individuals for direct marketing, and individuals have an absolute right to object to their data being processed. Your digital footprint and how you handle customer data is a permanent extension of your professional identity. Responsible digital citizens respect data privacy, comply with local regulations, and use technology to build consumer trust.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Digital Safety Coach
+
+Practice identifying digital risks. Type a scenario into the sandbox below about an email you received, a website you are unsure about, or a plan to market a new product using customer phone numbers. The AI coach will help you identify potential cyber threats (like phishing), ensure you are respecting data protection laws, and guide you on how to manage your digital workspace securely.
+
+<AiSandbox systemPrompt="You are a Digital Security and Literacy coach for a Rwandan youth at GTech SkillsHub. Help the user identify potential cyber threats (like phishing emails or unsecured websites) or assist them with data privacy compliance (like gaining consent for marketing). Connect your advice to the concept of digital responsibility and budget-friendly security tools. Keep responses brief, practical, empathetic, and easy to understand." />
+
+## Reflection
+
+### Your Digital Habit
+
+Take a few minutes to connect today's lesson with the systems you built in Module 2.
+
+1. **Digital Habit Piling:** Identify one existing daily routine (e.g., "closing my laptop at the end of the session").
+2. **Add a 2-Minute Digital Rule:** Attach a new digital organization or security habit to it. For example, "Before I close my laptop, I will spend 2 minutes backing up my project files to secure cloud storage to protect against data loss and ransomware".
+3. **Share with your Habit Buddy:** Briefly explain to your accountability partner how you plan to protect your passwords and respect data privacy this week.
+
+<Takeaways items={[
+  "A knowledge economy relies on digital skills, but increasing digitalization brings heightened cyber risks.",
+  "Human error is a leading cause of breaches; combat this with 12-character passwords and phishing awareness.",
+  "Utilize budget-friendly tools like password managers and file encryption to secure your digital workspace.",
+  "Digital responsibility requires respecting data privacy laws, such as obtaining explicit consent for marketing."
+]} />
+
+---
+**References:**
+*   African Union Development Agency (AUDA-NEPAD). (n.d.). *About the AU and AUDA-NEPAD*.
+*   Eke, L., et al. (2023). *Challenges Small and Medium-Sized Enterprises (SMEs) Face in Implementing Effective Cybersecurity Measures*. Interdisciplinary Journal of African & Asian Studies.
+*   Mwangi, K. (2023). *Best Practices for SME Cybersecurity in Africa*. Tech In Africa.
+*   Njogu Associates. (2024). *What SMEs Need to Know About Data Protection in Kenya*.
