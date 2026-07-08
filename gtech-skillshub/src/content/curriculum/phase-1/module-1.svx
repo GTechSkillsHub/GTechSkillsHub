@@ -1,0 +1,70 @@
+---
+title: "Module 1: Growth Mindset & Self-Awareness"
+phase: 1
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-1-module-1.mp4" />
+
+## Introduction
+
+### Your Growth Journey
+
+In 2016, autonomous drones carrying life-saving medical supplies were crashing into the trees and fields of Rwanda. When Zipline first launched its delivery operations, they faced devastating flight failures with their first generation of aircraft. It was a scrappy start that could have easily ended the company. But instead of giving up, they used those early crashes as vital feedback to continuously improve their hardware and technology. By 2023, they were conducting over 100,000 successful flights across the nation.
+
+Their secret wasn't just good engineering; it was a growth mindset. Welcome to Phase 1, Module 1 of the GTech SkillsHub curriculum. Today, we are going to focus on translating your natural resilience into structured self-awareness so you can overcome your own early "crashes."
+
+## Core Concept
+
+### Minding the Gap: From Fixed to Growth
+
+**The Painful Reality: The Fixed Mindset**
+Right now, you might feel held back by thoughts like "I am just not good at computers," or "I don't have the talent for programming." This is the painful reality of a **Fixed Mindset**—the psychological belief that your basic abilities, intelligence, and talents are static and unchangeable. When you are stuck here, every mistake feels like a permanent measurement of your worth. It makes you avoid challenges, fear criticism, and give up easily when things get hard.
+
+**The Ideal Future: The Growth Mindset**
+Now, imagine a future where you view challenges as exciting opportunities. A future where you aren't afraid of making mistakes because you know they are actively making you smarter. This is the **Growth Mindset**—the belief that your intelligence and skills can be developed through dedication, effort, and good strategies. In this ideal future, you don't run from difficulty; you lean into it.
+
+**The Bridge: The Power of "Yet"**
+How do you bridge the gap between where you are now and where you want to be? The answer lies in a simple psychological concept coined by Dr. Carol Dweck: **The Power of "Yet"**.
+
+Whenever you face a roadblock, simply add the word "yet" to the end of your sentence. "I don't understand programming... *yet*." "I cannot solve this problem... *yet*." This tiny psychological shift acts as a bridge. It reframes your brain to understand that striving and struggling do not mean you are failing; they are the exact mechanisms that make you smart.
+
+### Building Positive Habits
+
+A growth mindset requires continuous action. However, as author James Clear notes in *Atomic Habits*, you do not rise to the level of your goals; you fall to the level of your systems. Motivation is fleeting, but systems are forever.
+
+To build the systems of a successful learner, you must anchor your behaviors in identity and rely on the **2-Minute Rule**. Behavior changes come from tiny, consistent actions done repeatedly.
+1. **Focus on Identity:** Every action you take is a vote for the kind of person you want to become. Tell yourself, "I am the kind of person who finishes what they start."
+2. **The 2-Minute Rule:** When starting a new habit, scale it down to an action that takes less than two minutes. Build in 2-minute "start it now" moments before you leave class or the hub. If your goal is to study programming every day, scale it down to: "I will open my code editor for two minutes." Confidence grows when you learn to trust yourself to simply show up, even when it's hard.
+3. **Celebrate 1% Improvements:** Success is the product of daily habits. Notice your small daily wins—like asking one good question or fixing one line of code.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: Mindset Reflection Coach
+
+Practice reframing your thoughts. Type a negative or "fixed" thought you've had recently (e.g., "I will never understand this topic") into the sandbox below. The AI will safely assist you in transforming it into a growth mindset statement using the "Power of Yet" and help you design a 2-minute habit.
+
+<AiSandbox systemPrompt="You are a supportive reflection coach for a Rwandan youth at GTech SkillsHub. Your goal is to help the user reframe their fixed mindset statements into growth mindset statements using the 'Power of Yet'. Guide them to identify their personal strengths and suggest tiny, identity-based 2-minute micro-habits. Keep your responses brief, empathetic, encouraging, and easy to understand." />
+
+## Reflection
+
+### Experiential Project: The 3-2-1 Reflection
+
+Reflective thinking helps turn everyday challenges into valuable lessons. Use the 3-2-1 self-assessment technique to track your progress and plan your growth:
+1. List **3 things** you learned today about your own mindset.
+2. List **2 two-minute micro-habits** you will start doing tomorrow.
+3. List **1 difficulty** you HAVE NOT overcome *yet* and write down your strategy to tackle it.
+
+<Takeaways items={[
+  "A fixed mindset traps you; a growth mindset frees you to learn through effort.",
+  "Use the 'Power of Yet' to bridge the gap between failure and future success.",
+  "Rely on systems and 2-minute micro-habits rather than fleeting motivation.",
+  "Reflective thinking turns everyday challenges into valuable lessons."
+]} />
+
+---
+**References:**
+*   Dweck, C. (2016). *Mindset: The new psychology of success*. Ballantine Books.
+*   FutureList, The. (n.d.). *Q&A with Zipline: Revolutionising Logistics in Rwanda*.
+*   Mascio, J. (2025). *5 Lessons from 'Atomic Habits' Teachers Should Utilize in the Classroom*. Teach Better.
