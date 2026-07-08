@@ -1,0 +1,69 @@
+---
+title: "Module 7: Human-Centered Thinking"
+phase: 2
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-2-module-7.mp4" />
+
+## Introduction
+
+In the Democratic Republic of the Congo (DRC), one out of every five children does not live to see their fifth birthday. When the American Refugee Committee (ARC) wanted to address this tragedy, they didn't just build a standard medical facility from afar. Instead, they partnered with design firm IDEO.org, traveled to the DRC, and immersed themselves in the community. By designing a holistic approach *with* the people themselves, they created Asili—a sustainable social enterprise that provides agricultural services, clean water, and a health clinic all in one ecosystem.
+
+Welcome to Phase 2, Module 7. In our previous modules, we explored how to frame problems and conduct root-cause analysis. Today, we focus on **Human-Centered Design (HCD)**. You will learn how to apply empathy, active listening, and observation to design solutions that are embraced by the community because they respond to real human needs.
+
+## Core Concept
+
+### The Three Lenses of Human-Centered Design
+
+Human-Centered Design is a process used to create new solutions—whether they are products, services, environments, or organizations—by starting with the people you are designing for. Successful innovations sit at the intersection of three specific lenses:
+1. **Desirability:** What do people actually desire and need? (This is always the starting point).
+2. **Feasibility:** What is technically and organizationally possible to implement?
+3. **Viability:** What business model makes this solution financially sustainable?
+
+To reach this intersection, innovators move through three main phases: **Hear** (gathering inspiration and building empathy), **Create** (translating insights into tangible prototypes), and **Deliver** (launching the solution into the world).
+
+### Empathy Mapping and The Rule of One
+
+At the heart of the "Hear" phase is empathy—the capacity to step into other people's shoes and understand their lives from their perspective. To structure this empathy, innovators use an **Empathy Map**.
+
+According to the Ideos Institute, a comprehensive empathy map moves through a specific ladder of inquiries to understand the user's perceptual world:
+*   **Perception:** What are they *Seeing* and *Hearing* in their environment?
+*   **Action:** What are they *Saying* and *Doing*?
+*   **Internal:** What are they *Thinking* and *Feeling*?
+*   **Goal:** What are they ultimately *Needing*?
+
+A critical rule when creating these maps is **"one-to-one mapping."** You must stick to one specific group or persona per map. Mixing different groups (e.g., trying to map "teachers" and "students" on the same document) will muddy your insights and ruin the value of the exercise.
+
+### Community-Driven Discovery and Observation
+
+The real experts on any given topic are the people in the community. However, through storytelling and observation, you will quickly learn that what people *say* they do and what they *actually* do are not always the same thing.
+
+To bridge this gap, you must rely on **In-Context Immersion**—spending time with people in their real settings. Furthermore, you can use **Community-Driven Discovery** by actively recruiting members of the community to serve as primary researchers, translators, or co-designers on your project. By empowering the community with the tools to document their own lives, you bypass your own assumptions and design solutions they will eagerly adopt.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Empathy Mapper
+
+Let's practice building an empathy profile. Type a specific demographic or persona from your community (e.g., "A rural Rwandan farmer struggling with crop spoilage" or "A youth seeking freelance digital work") into the sandbox below. The AI will help you walk through the Empathy Mapping Ladder (See, Hear, Say, Do, Think, Feel, Need) to deeply understand their perspective.
+
+<AiSandbox systemPrompt="You are an expert Human-Centered Design coach at GTech SkillsHub. Your goal is to guide the user through creating an Empathy Map for a specific persona. Ask them to define one specific persona (enforcing the 'one-to-one mapping' rule). Then, guide them through the Ideos Institute Empathy Ladder: What does the persona See/Hear? What do they Say/Do? What do they Think/Feel? What do they Need? Keep your responses empathetic, structured, and highly interactive." />
+
+## Reflection
+
+### The Observation Challenge
+
+To move from analysis to action, you must practice stepping into someone else's shoes in the real world.
+1. **Identify** one specific person in your community whose daily routine is different from yours.
+2. **Observe** them for 15 minutes (or conduct a brief interview), taking note of what they *Say* versus what they actually *Do*.
+3. **Map** their experience using the Empathy Ladder (See, Hear, Say, Do, Think, Feel, Need).
+4. **Reflect:** Based on your map, write down one *Desirable* solution that could address their core *Need*.
+
+<Takeaways items={[
+  "Human-Centered Design hits the overlap of Desirability, Feasibility, and Viability.",
+  "The innovation process moves through three phases: Hear, Create, and Deliver.",
+  "Empathy Mapping explores what a user Sees, Hears, Says, Does, Thinks, Feels, and Needs.",
+  "Always use 'one-to-one mapping'—focusing on only one persona per empathy map to avoid muddying insights.",
+  "The community members are the true experts; engage them through Community-Driven Discovery."
+]} />
