@@ -1,0 +1,98 @@
+---
+title: "Module 11: Applied Python for Problem Solving"
+phase: 3
+time: "45 Minutes"
+requiresPython: true
+---
+
+<VideoPlayer src="/videos/phase-3-module-11.mp4" />
+
+## Introduction
+
+In Phase 2, you learned that computers are incredibly fast but require explicit instructions to function. You wrote your first lines of Python, learning how to use variables, conditions, and loops. Now, we are going to level up. Welcome to Phase 3, Module 11. Today, we focus on **Applied Python for Problem Solving**.
+
+In the real world, developers rarely work with just one piece of data at a time. Consider the education sector in The Gambia: the Planning Policy Analysis, Research and Budgeting Directorate (PPARBD) is responsible for producing customized School Report Cards (SRCs) for each school by collating data from MS Access databases and Excel spreadsheets. This manual process involves linking different school codes and validating formulas by hand, which researchers have noted is heavily time-consuming, complex, and error-prone.
+
+By learning how to group data together and write reusable scripts, you can build simple automations that process thousands of records in seconds, bypassing manual data entry altogether. Today, you will learn how to structure data, write functions, interact with web APIs, and embrace the art of debugging.
+
+## Core Concept
+
+### Data Structures: Lists, Dictionaries, and JSON
+
+To solve real-world problems, you need to organize related information efficiently. Python provides powerful "data structures" to handle this:
+* **Lists:** An ordered collection of items, much like a single column in a spreadsheet.
+* **Dictionaries:** A Dictionary allows you to store data in "key-value" pairs. You write it using curly braces: `student = {"name": "Aisha", "score": 95}`.
+
+Python Dictionaries are especially powerful because they directly map to **JSON** (JavaScript Object Notation). JSON is the standard lightweight data-interchange format used across the internet because it facilitates seamless integration between entirely different computer systems and platforms.
+
+### Functions, APIs, and Automation
+
+If you find yourself writing the exact same code multiple times, you are doing it wrong. A **Function** is a reusable block of code that only runs when you call it. You provide the raw materials (inputs), the function processes them, and hands you the finished product.
+
+By combining functions with data structures, you can automate massive tasks. For example, instead of manually typing Excel data into a DHIS2 Data Entry Web Form using a browser, a developer can write a Python function that uses HTTP requests to send the data directly to the server's API. This eliminates human error and saves hundreds of hours.
+
+### Early Defect Detection and CI/CD Pipelines
+
+When you write code to solve complex problems, you *will* make mistakes. Your program will crash, or it will produce the wrong answer. This is completely normal.
+
+In technology development, **debugging** is the process of finding and resolving these defects. A growth-minded programmer does not panic when they see an error; they read it carefully to locate the defect. In modern professional software engineering, teams automate this process by integrating automated defect-tracking tools directly into **CI/CD (Continuous Integration/Continuous Deployment) pipelines**. This ensures that every time a developer writes a new Python function, the system automatically tests it for defects before it is deployed to users.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Python Automator
+
+It is time to automate a business process. The sandbox below simulates a small enterprise managing its inventory using a List of Dictionaries (which looks exactly like JSON data). Read the code to see how a **Function** automates the process of checking for low stock.
+
+Run the code. Then, try adding a new product to the `inventory` list, or change the `limit` inside the function to see how the automation adapts.
+
+<PyodideRunner initialCode="
+print('--- GTech SkillsHub SME Inventory Manager ---')
+
+# 1. Data Structures: A List containing Dictionaries (JSON format)
+inventory = [
+    {'item': 'Solar Lamps', 'quantity': 12, 'price': 15000},
+    {'item': 'Water Filters', 'quantity': 3, 'price': 8500},
+    {'item': 'Phone Chargers', 'quantity': 25, 'price': 3000}
+]
+
+# 2. Function: Reusable logic to automate a check
+def check_low_stock(product_list, limit):
+    print('Checking for items with less than ' + str(limit) + ' in stock...')
+    for product in product_list:
+        if product['quantity'] < limit:
+            print('WARNING: Low stock on ' + product['item'])
+        else:
+            print('Stock OK: ' + product['item'])
+
+# 3. Execution: Calling the function
+check_low_stock(inventory, 5)
+" />
+
+If you run into an error while experimenting with the code, use the AI Sandbox below. Paste your broken code or the error message, and the coach will help you practice early defect detection.
+
+<AiSandbox systemPrompt="You are a Python Debugging and Automation coach for a Rwandan youth at GTech SkillsHub. Help the user debug their Python code or conceptualize how to use Lists, Dictionaries, and Functions for a specific problem they want to automate. Do not just give them the answer; guide them to find the defect or structure the logic themselves. Keep responses practical, brief, empathetic, and encouraging." />
+
+## Reflection
+
+### Automating Your Workflow
+
+Take a few minutes to connect Python automation to the productivity tools you learned about in Module 10.
+
+1. **Identify Data:** Think of the spreadsheet you designed in the previous module. How would you represent one row of that spreadsheet as a Python Dictionary (or JSON object)? Write it down on paper.
+2. **Design a Function:** If you could write one Python function to automate a task on that data (like sending an HTTP request, calculating a total, or flagging a missing value), what would you name the function? What would the inputs be?
+3. **Share:** Discuss your automated function idea with your Habit Buddy. Practice "peer accountability" by asking them to spot any potential "defects" or logical flaws in your idea before you actually code it.
+
+<Takeaways items={[
+  "Lists and Dictionaries are data structures used to organize large amounts of information in Python.",
+  "JSON is a standard data format that perfectly maps to Python Dictionaries, facilitating easy integration between different systems.",
+  "Using Python to make HTTP requests to an API eliminates the time-consuming and error-prone nature of manual data entry.",
+  "Functions are reusable blocks of code that allow you to automate repetitive tasks.",
+  "Professional teams use CI/CD pipelines and defect tools to automate the debugging and testing process."
+]} />
+
+---
+**References:**
+* Nusratova, S. B. (2017). *529 Methodology for Learning JSON Files Using the Python Programming Language*.
+* Pickering, J. (2017). *Populating data from Excel to DHIS2 Data Entry Web Form with Internet Explorer*.
+* *Integrating DEFECT TOOLS with CI/CD Pipelines*. (n.d.). India Free Notes.
+* *School Report Cards in The Gambia*. (n.d.). GPE KIX.
