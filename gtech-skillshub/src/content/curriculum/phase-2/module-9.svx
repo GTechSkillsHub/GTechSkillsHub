@@ -1,0 +1,91 @@
+---
+title: "Module 9: Introduction to Programming with Python"
+phase: 2
+time: "45 Minutes"
+requiresPython: true
+---
+
+<VideoPlayer src="/videos/phase-2-module-9.mp4" />
+
+## Introduction
+
+Let’s get one thing straight: computers are incredibly fast, but they are exceptionally stupid. They cannot solve problems for you. They will only do exactly what you tell them to do, step by excruciating step. In the previous modules, you learned how to be a human-centered problem solver. Now, you will learn how to translate your solutions into instructions a machine can execute.
+
+Across the continent, software engineering is driving massive change. In Uganda, the MTN ACE Tech program—implemented by Cente-Tech and Refactory in partnership with the National ICT Innovation Hub—is actively skilling youth in software engineering to solve real-life problems and build tech-driven startups. Meanwhile, billion-dollar African FinTechs rely heavily on Python to scale. Wave, a mobile money provider operating in Senegal, Côte d'Ivoire, and Uganda, successfully processes billions of requests by running its core systems on a surprisingly simple Python monolith. Similarly, Flutterwave provides a dedicated Python library to allow developers to seamlessly integrate complex payment APIs into their apps. Code is the lever used to scale impact. Welcome to Phase 2, Module 9. Today, we demystify programming using Python.
+
+## Core Concept
+
+### Variables and Data Types
+
+If you are going to process information, you need a place to put it. Think of a **variable** as a labeled bucket in the computer's memory. You give the bucket a name, and you put data inside it.
+
+Computers are pedantic; they need to know what *type* of data is in the bucket. The two most basic **data types** are:
+*   **Strings:** Text characters wrapped in quotes (e.g., `"Kigali"`, `"Hello World"`).
+*   **Integers:** Whole numbers used for math (e.g., `25`, `100`).
+
+### Input and Output
+
+A program that doesn't interact with anyone is useless.
+*   **Output:** To make the computer talk to the user, we use the `print()` function.
+*   **Input:** To get information from the user, we use the `input()` function.
+
+### Conditions and Control Flow
+
+This is where your program gets a brain. By using **Conditions** (`if`, `elif`, `else`), you tell the computer to make decisions based on the data it receives. If a specific condition is true, it executes one block of code. If it is false, it does something else. For example, youth empowerment programs like MTN ACE explicitly require applicants to be between the ages of 18 and 29. You can use conditional logic to automatically verify if an applicant meets this criteria.
+
+### Loops
+
+Humans get bored doing the exact same thing a thousand times; computers do not. **Loops** (`for`, `while`) allow you to repeat a block of code continuously until a condition is met. This is the ultimate tool for micro-productivity and automation.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Python Sandbox
+
+Enough theory. It is time to write actual code. The sandbox below runs a real Python environment directly in your browser. Read the code carefully to see how variables, inputs, and an `if/elif/else` condition work together to verify age requirements for youth programs.
+
+Run the code, interact with it, and then try changing the variable names or the text inside the `print()` statements to see what happens. If you break it, don't panic—just reset it.
+
+<PyodideRunner initialCode="
+print('Welcome to the GTech SkillsHub & MTN ACE Eligibility Calculator!')
+
+# 1. Input and Variables
+user_name = input('What is your name? ')
+user_age_text = input('How old are you? ')
+
+# 2. Data Types (Converting the text input into an integer number)
+user_age = int(user_age_text)
+
+# 3. Conditions
+if 18 <= user_age <= 29:
+    print('Hello ' + user_name + '! You are eligible for programs like MTN ACE Tech. Time to build some startups.')
+elif user_age < 18:
+    years_left = 18 - user_age
+    print('Hello ' + user_name + '! You have ' + str(years_left) + ' years left until adulthood.')
+else:
+    print('Hello ' + user_name + '! You are outside the 18-29 youth bracket, but it is never too late to code.')
+" />
+
+## Reflection
+
+### Automating the Mundane
+
+Programming is fundamentally about recognizing patterns and automating them. As the engineering team at Wave notes, starting with a simple architecture and solving problems in simple ways allows developers to focus entirely on delivering value to users.
+
+1. **Identify a Repetitive Task:** Think about your daily routine at the hub, in your studies, or in your community. What is one highly repetitive, boring task that involves organizing information or making simple decisions?
+2. **Draft the Logic:** Write out the steps to solve that task using plain English (this is called "pseudocode"). Use "If this happens, then do that" logic.
+3. **Share:** Explain your pseudocode to your Habit Buddy. Could a computer follow your instructions, or are they too vague?
+
+<Takeaways items={[
+  "Computers are fast but dumb; they require precise, logical instructions.",
+  "Variables act as labeled buckets to store different data types like Strings and Integers.",
+  "Input and Output functions allow your program to interact with the real world.",
+  "Conditions (if/else) give your program the ability to make logical decisions.",
+  "African unicorns like Wave rely on simple Python architectures to scale to billions of requests."
+]} />
+
+---
+**References:**
+*   Cente Tech. (n.d.). *Projects - MTN Ace Tech Training*.
+*   Flutterwave. (n.d.). *GitHub - Flutterwave/Python-v2: Python library for Flutterwave for Business (F4B) v2 APIs*.
+*   Luu, D. (2022). *Some benefits of simple software architectures*. Wave Blog.
+*   Opportunities For Africans. (2024). *The MTN ACE Skills Programme 2024 for young Ugandan graduates*.
