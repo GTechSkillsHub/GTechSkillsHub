@@ -1,0 +1,75 @@
+---
+title: "Module 5: Introduction to Problem Solving"
+phase: 2
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-2-module-5.mp4" />
+
+## Introduction
+
+In a recent 2025 study of Uganda's development pathway, researchers identified a critical paradox: despite possessing immense human capital and increasing access to technology, indigenous innovation often remains low because educational and professional cultures prioritize conformity and memorization over curiosity. The researchers found that the true "engine of innovation" is a questioning culture—environments that deliberately encourage individuals to ask "Why?" and "What if?" to challenge the status quo.
+
+Similarly, in Rwanda, the Wavumbuzi Entrepreneurship Challenge has demonstrated that innovative problem solving fundamentally relies on curiosity, which arises when individuals are no longer satisfied with the status quo and desire to find new and better solutions to existing problems.
+
+Welcome to Phase 2: Thinking. In Phase 1, we built the foundations of a growth mindset, time management, and digital literacy. Now, we transition from managing yourself to managing challenges. Before you can write a line of code or launch a startup, you must master the cognitive ability to interrogate the world around you and frame problems accurately.
+
+## Core Concept
+
+### The Osborn-Parnes Creative Problem Solving (CPS) Model
+
+To tackle complex challenges, innovators use structured frameworks like the Osborn-Parnes Creative Problem Solving (CPS) model. The CPS model is a systematic process for approaching a problem in an imaginative way. While sometimes simplified into four stages (Clarify, Ideate, Develop, Implement), the foundational model involves distinct, iterative steps:
+1. **Mess Finding:** Identifying a situation that presents a challenge or opportunity.
+2. **Data Finding:** Gathering all known facts and identifying what information is lacking.
+3. **Problem Finding:** Isolating the most important, underlying problem.
+4. **Idea Finding:** Generating as many solutions as possible.
+5. **Solution Finding:** Using criteria to evaluate and choose the best solution.
+6. **Acceptance Finding:** Developing a plan of action to successfully implement the solution.
+
+If you rush to brainstorm solutions without fully clarifying the problem (Steps 1-3), you risk solving the wrong issue entirely.
+
+### Balancing Divergent and Convergent Thinking
+
+Effective problem solving requires a deliberate "dynamic balance" between two distinct modes of thought.
+*   **Divergent Thinking:** This is used to expand your possibilities. During this phase, you must defer judgment, strive for a massive quantity of ideas, seek wild or "far-out" concepts, and combine existing ideas to create new spin-offs.
+*   **Convergent Thinking:** This is used to focus your energy and evaluate your ideas. During this phase, you must be deliberate, explicit, avoid premature closure, and maintain affirmative judgment without losing sight of your ultimate goals.
+
+### Defining Clear Problem Statements
+
+A key strategy in the Problem Finding stage is shifting a negative complaint into an open-ended question. This is done by beginning your problem statements with phrases like **"In What Ways Might We...?" (IWWMW)** or **"How Might I...?" (HMI)**.
+
+Once you have a statement, you can utilize the **"Why? What’s Stopping You?"** method to dig deeper. Asking "Why?" facilitates a root-cause analysis to ensure you are addressing the true purpose of the challenge. Asking "What's stopping you?" helps identify both tangible constraints and self-imposed psychological barriers (like fear or perfectionism), allowing you to distinguish between actual limitations and mental ruts.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Problem Framer
+
+Practice shifting from a complaint to a structured problem statement. Type an everyday frustration or challenge you are facing (e.g., "The internet is too slow," or "I don't have money to start a project") into the sandbox below. The AI coach will help you interrogate the problem using the "Why? What's Stopping You?" method and reframe it into an empowering "In What Ways Might We...?" statement.
+
+<AiSandbox systemPrompt="You are a Problem Framing coach for a Rwandan youth at GTech SkillsHub. Your goal is to help the user transform a complaint or vague problem into a clear 'In What Ways Might We...?' (IWWMW) statement using the Osborn-Parnes Creative Problem Solving (CPS) principles. Guide them to ask 'What is stopping you?' to identify actual barriers versus psychological ones. Keep responses brief, practical, empathetic, and encouraging." />
+
+## Reflection
+
+### The "What If?" Questioning Habit
+
+To build the "engine of innovation" within your own mind, you must practice critical inquiry daily. Connect this to the habit-piling systems you built in Phase 1:
+
+1. **Observe and Question:** Tomorrow, identify one inefficient process or frustrating problem in your community or at the hub.
+2. **Apply the "What If":** Write down three "What If...?" questions that challenge the current way that problem is handled (e.g., "What if this process was reversed?", "What if this was automated?").
+3. **Draft an IWWMW:** Discuss your findings with your Habit Buddy and draft one "In What Ways Might We...?" statement together to reframe the frustration into an opportunity.
+
+<Takeaways items={[
+  "A questioning culture that asks 'Why?' and 'What if?' is the foundational engine of innovation.",
+  "The Osborn-Parnes CPS model requires balancing divergent idea generation with convergent evaluation.",
+  "Rushing to solutions without properly completing the 'Problem Finding' stage often leads to solving the wrong issue.",
+  "Reframing complaints into 'In What Ways Might We...?' statements shifts your brain into a solution-oriented growth mindset.",
+  "Asking 'What is stopping you?' helps distinguish between physical constraints and psychological barriers."
+]} />
+
+---
+**References:**
+*   Mitchell, W. E., & Kowalik, T. F. (1999). *Creative Problem Solving*.
+*   Musiimenta, N., & Asiimwe, I. K. (2025). *Cultivating the "Why" and "What If": A Case for Questioning as the Engine of Innovation in Uganda's Development Pathway*. Metropolitan Journal of Academic and Applied Research.
+*   Wavumbuzi. (2025). *REPORT 2025 - Wavumbuzi Entrepreneurship Challenge*.
+*   Yeung, R. (2026). *Future Ready Young Adults: Building Creative and Adaptive Thinkers*. State University of New York College at Buffalo.
