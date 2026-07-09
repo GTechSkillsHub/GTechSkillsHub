@@ -1,0 +1,110 @@
+---
+title: "Module 20: Real-World Application Project"
+phase: 4
+time: "Capstone"
+requiresPython: true
+---
+
+<VideoPlayer src="/videos/phase-4-module-20.mp4" />
+
+## Introduction
+
+You have reached the culmination of the GTech SkillsHub curriculum. Over the past 19 modules, you have evolved from mastering foundational digital literacy to writing Python scripts, leading collaborative teams, and ethically engaging with Artificial Intelligence. Now, it is time to prove your capabilities.
+
+Welcome to Module 20: **The Real-World Application Project**. This capstone is not a theoretical exercise; it is a practical mandate to identify and solve a real-world problem relevant to your community, education, or environment. By integrating everything you have learned—from human-centered design to Python programming—you will transition from a student of technology into an active creator of digital solutions.
+
+## Core Concept
+
+### Participatory Problem Framing
+
+Before writing a single line of code, you must fall in love with the problem, not your proposed solution. The concept of "human-centered" design relies on crafting things that people actually need. This requires immersing yourself in the "Know People" mode, which focuses on empathy, observation, and personal engagement.
+
+In African contexts, successful innovators increasingly rely on **participatory design techniques**, meaning the end-users are actively involved in the creation process. For instance, when developers redesigned the DHIS2 School Report Cards in The Gambia to track gender equity, they used participatory methods to ensure the local community could understand the data—ultimately replacing complex charts with intuitive "smiling face" icons based on direct user feedback. Another powerful participatory tool is **Photovoice**, where community members use photography to document their own challenges, allowing you to see the problem through their eyes and avoid relying on your own assumptions.
+
+### Applied Technology and Python Integration
+
+The core technical requirement of this Capstone is to demonstrate your ability to apply digital tools and programming to solve a specific aspect of your identified problem.
+
+You do not need to build a massive software platform from scratch; modern development relies on integrating existing tools. You might write a Python script that processes a CSV file of survey results. Alternatively, you could build a backend service (similar to the open-source Agro-API designed for African dairy and poultry farming), use open-source Python wrappers like `dhis2.py` to pull data from public health servers, or integrate payment gateways like the Flutterwave Python API for a local e-commerce solution. The goal is to prove your technical competence by translating a real-world process into logical computer instructions.
+
+### Evaluation (Theory of Change) and The Final Pitch
+
+A successful project must be sustainable and ethically sound. You must apply the principles of Ubuntu, recognizing your relational responsibility to your community and ensuring any AI tools used in your project are transparent and verified.
+
+Furthermore, you must design a way to measure your success. In professional tech and NGO sectors, this is done using structured Monitoring and Evaluation (M&E) frameworks. You should establish a **Theory of Change**—a comprehensive description of exactly *how* and *why* your desired change is expected to happen in your specific context, linking your digital inputs to long-term community impact.
+
+Finally, you will present your findings in a final pitch. You will utilize the PREP framework and culturally referenced storytelling to clearly articulate the problem, demonstrate your technical solution, and outline your Theory of Change to monitor its future impact.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: Capstone Data Analyzer
+
+To fulfill your technical requirement, you can use Python to analyze data you have collected from your community. The sandbox below contains a template script that takes raw survey data and automates the process of finding the most critical community need.
+
+Modify the `survey_data` to reflect the actual problem you are trying to solve for your capstone project. *Note: There is a deliberate bug in the variable naming in the function. Practice your debugging skills, fix the defect, and run your analysis!*
+
+<PyodideRunner initialCode="
+print('--- Capstone Project: Community Data Analyzer ---')
+
+# 1. Your collected community data
+survey_data = [
+    {'respondent': 'Shop Owner', 'issue': 'Supply Chain Delay', 'severity': 4},
+    {'respondent': 'Teacher', 'issue': 'Internet Access', 'severity': 5},
+    {'respondent': 'Farmer', 'issue': 'Supply Chain', 'severity': 4},
+    {'respondent': 'Student', 'issue': 'Internet Access', 'severity': 5}
+]
+
+# 2. Automation Function to find the most critical issue
+def analyze_community_needs(data):
+    issue_counts = {}
+    for entry in data:
+        # Standardize text
+        issue = str(entry.get('issue', 'Unknown')).lower()
+        if 'supply' in issue or 'chain' in issue:
+            issue = 'supply chain'
+
+        if issue in issue_counts:
+            issue_counts[issue] += 1
+        else:
+            issue_counts[issue] = 1
+
+    print('Analysis Complete. High Priority Needs Identified:')
+    for issue, count in issue_counts.items():
+        print(f'- {issue.title()}: Mentioned {count} times')
+
+# 3. Execution
+analyze_community_needs(survey_data)
+" />
+
+If you are stuck on your project idea, or if your Python code is broken, use the AI Capstone Coach below.
+
+<AiSandbox systemPrompt="You are a Capstone Project Coach for a Rwandan youth at GTech SkillsHub. Help the user brainstorm a community problem, debug their Python code, or structure their final presentation using the PREP framework. Remind them to apply Human-Centered Design and maintain ethical AI integrity. Keep responses brief, practical, empathetic, and encouraging." />
+
+## Reflection
+
+### The Capstone Checklist
+
+Take time to review the final requirements for your Capstone presentation.
+
+1. **Problem Framing:** Have you clearly defined the community problem using participatory design methods (like Photovoice) or human-centered observations?
+2. **Technical Execution:** Have you written a functional Python script or built a structured digital tool that directly addresses a component of this problem?
+3. **The Pitch:** Have you prepared a structured presentation to share your solution with your peers and hub managers, including a Theory of Change to monitor its impact?
+
+<Takeaways items={[
+  "The Capstone Project requires integrating your mindset, problem-solving, and technical skills to address a real community issue.",
+  "Participatory design methods involve the community directly in the creation process to uncover deep, nonobvious insights.",
+  "You must demonstrate practical programming skills by using Python to automate or analyze a component of your project.",
+  "Effective projects include a Theory of Change to assess real-world impact and unintended consequences.",
+  "All solutions must be developed ethically, demonstrating teamwork, transparent use of AI, and cultural relevance."
+]} />
+
+---
+**References:**
+*   *Agro-API*. (n.d.). GitHub - Daniel-Andarge/Agro-API.
+*   *dhis2.py: Generic and lightweight Python wrapper for the DHIS2 API using requests*. (n.d.). GitHub - davidhuser/dhis2.py.
+*   Dodaj, G. (2022). *Representing gender equity through dynamic indicators: the participatory re-design of School Report Card in the Gambia*. GPE KIX.
+*   *Flutterwave/Python-v2*. (n.d.). GitHub.
+*   Halilaj, A., & Johnson, L. U. (2021). *Developing and testing for usability within a low resource context: An action case study of the School report card in the Gambia*. GPE KIX.
+*   IDEO.org. (2015). *The Field Guide to Human-Centered Design*.
+*   Mayman, et al. (2025). *The use of photovoice in research with adolescents living with HIV in Africa: A scoping review*. Journal of Public Health in Africa.
+*   Twaweza. (2011). *Twaweza Strategy 2011-2014*.
