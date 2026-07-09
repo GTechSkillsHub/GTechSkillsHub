@@ -1,0 +1,76 @@
+---
+title: "Module 17: Conflict Management"
+phase: 4
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-4-module-17.mp4" />
+
+## Introduction
+
+In Module 16, we explored how teams develop and the importance of collaboration. However, whenever diverse individuals collaborate on complex problems, disagreements are inevitable. Many people view conflict as something to be feared or avoided. But to be an effective leader and a strong team player, you must understand that conflict is actually a necessary ingredient for innovation.
+
+Welcome to Phase 4, Module 17: **Conflict Management**. Today, we will explore how to transition our mindset regarding conflict—moving away from a traditional "beat and defeat" mentality toward a constructive "together we can" approach. You will learn how to identify different types of conflict, utilize the Thomas-Kilmann conflict modes, avoid the trap of "suboptimal compromise," and apply Socratic facilitation to turn disagreements into opportunities for growth.
+
+## Core Concept
+
+### Types of Conflict and The Storming Stage
+
+As we learned in the Tuckman model of team development, groups inevitably enter a "Storming" stage where clashes and conflicts happen due to different work styles, unclear tasks, and diverse personal backgrounds. The ability to navigate these dynamics is crucial; research shows a direct link between the *type* of conflict, the management strategy employed, and ultimate team outcomes.
+
+Conflicts generally fall into three categories:
+1.  **Goal Conflict:** Disagreements arising from differing objectives or desired outcomes.
+2.  **Cognitive Conflict:** Disagreements over ideas, information, or how to solve a specific technical problem. (This type of conflict is highly beneficial for innovation if managed well).
+3.  **Behavioral/Relational Conflict:** Discrepancies in actions, personality clashes, or interpersonal friction.
+
+Confronting these conflicts through active negotiation allows teams to resolve issues before they escalate, thereby minimizing the severity of the Storming stage.
+
+### The Pitfall of Compromise and the TKI Model
+
+To understand how you react to conflict, professional environments use the **Thomas-Kilmann Conflict Mode Instrument (TKI)**, which identifies five styles of conflict management: Competing, Accommodating, Avoiding, Collaborating, and Compromising.
+
+When faced with a disagreement, many teams default to **Compromising**—splitting the difference so everyone gets a little of what they want. However, recent organizational research highlights that compromise is often an "easier but suboptimal path". It acts as a temporary bandage rather than a substitute for a lasting solution.
+
+Instead of settling for a compromise (which is often a "lose-lose" scenario where no one is fully satisfied), teams should strive for true **Collaboration** (integrative negotiation). Collaboration requires high Emotional Intelligence (EQ) to separate personal ego from the problem. Through trust and EQ, team members can pursue a "win-win" solution that integrates the best parts of everyone's ideas.
+
+### Crucial Conversations and Socratic Questioning
+
+Resolving differences peacefully requires stepping into a facilitative role. When stakes are high and emotions run strong, you must first establish ground rules to **"Make It Safe"**. When team members feel psychologically safe, they can openly share their honest perspectives, filling the **"Pool of Shared Meaning"**.
+
+When navigating cognitive conflicts, you can use the **Socratic method**. The Socratic approach promotes questioning assumptions with a skeptical, yet respectful, attitude to reach the root cause of an idea. The underlying premise is that one perspective is no more valid than another until it has been rigorously explored. In this dynamic inquiry, the leader acts as a facilitator, guiding the students or team members to ask the right questions and structure their meaning effectively.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Conflict Mediator
+
+Practice your de-escalation and negotiation skills. Type a specific conflict scenario you have experienced or might experience (e.g., "My teammate keeps missing deadlines and it is affecting my grade," or "Two members of my group are arguing aggressively over which software tool to use") into the sandbox below. The AI coach will act as your guide, helping you identify the type of conflict and suggesting a Socratic facilitation strategy to resolve it without settling for a suboptimal compromise.
+
+<AiSandbox systemPrompt="You are a Conflict Management and Negotiation coach for a Rwandan youth at GTech SkillsHub. Help the user navigate a conflict scenario they provide. Guide them to identify if it is a Goal, Cognitive, or Behavioral conflict. Suggest one specific technique to 'Make It Safe' and fill the 'Pool of Shared Meaning'. Finally, ask a Socratic question they could use to move the team toward 'Collaboration' rather than a suboptimal 'Compromise'. Keep responses brief, highly practical, empathetic, and encouraging." />
+
+## Reflection
+
+### Reframing Conflict
+
+Take a few minutes to evaluate how you personally respond to tension in a team.
+
+1. **Analyze Your TKI Style:** Think of a recent disagreement you had. Did you use Competing, Accommodating, Avoiding, Collaborating, or Compromising?
+2. **Evaluate the Outcome:** If you compromised, was it a lasting solution, or just an "easier but suboptimal" path that left both sides slightly unhappy?
+3. **Commit to Regulation:** Discuss your reflection with your Habit Buddy. Commit to using one Socratic question (e.g., "Can you walk me through the assumptions behind that idea?") the next time a cognitive conflict arises to build a Pool of Shared Meaning.
+
+<Takeaways items={[
+  "Conflict is a natural and necessary part of team development that must be confronted to minimize the 'Storming' stage.",
+  "Conflicts typically stem from differing objectives (Goal), ideas (Cognitive), or actions (Behavioral).",
+  "The Thomas-Kilmann (TKI) model identifies five styles; while Compromise is common, it is often an easier but suboptimal path compared to true Collaboration.",
+  "In crucial conversations, you must 'Make It Safe' so the team can fill the 'Pool of Shared Meaning'.",
+  "Use the Socratic method to systematically question assumptions and navigate cognitive conflicts without attacking the individual."
+]} />
+
+---
+**References:**
+*   Behfar, K. J., Peterson, R. S., Mannix, E. A., & Trochim, W. M. K. (2008). The critical role of conflict resolution in teams: A close look at the links between conflict type, conflict management strategies, and team outcomes. *Journal of Applied Psychology, 93*(1), 170–188.
+*   ElHamahmy, A. (2025). Understanding Teamwork to Minimize the Storming Stage in Team Development. *International Research Journal of Modernization in Engineering Technology and Science, 7*(11).
+*   Baume, S., & Papadopoulos, Y. (2022). Against compromise in democracy? A plea for assessment. *Constellations*.
+*   Boghossian, P. (2006). The Socratic Method. *Teaching Philosophy, 25*(4), 345-359.
+*   Kilmann, R. H., & Thomas, K. W. (1977). Developing a forced-choice measure of conflict-handling behavior: The "MODE" instrument. *Educational and Psychological Measurement, 37*(2), 309–325.
+*   Patterson, K., Grenny, J., McMillan, R., & Switzler, A. (2011). *Crucial Conversations: Tools for Talking When Stakes Are High*. McGraw-Hill.
