@@ -1,0 +1,70 @@
+---
+title: "Module 18: Ethical Use of Artificial Intelligence"
+phase: 4
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-4-module-18.mp4" />
+
+## Introduction
+
+In the previous modules of Phase 4, you learned how to lead teams, collaborate effectively, and manage the inevitable conflicts that arise when humans work together. But today, the modern workforce involves collaborating not just with other humans, but with machines.
+
+Artificial Intelligence (AI) is no longer a futuristic concept; it is here, and it is reshaping the African continent. However, as modern tech implementation experts emphasize, AI is a tool, not a revolution. It is a tool of unprecedented power, and with that power comes immense responsibility, prompting nations like Kenya to draft dedicated AI Ethics and Governance Frameworks to actively tackle these challenges. Welcome to Phase 4, Module 18: **Ethical Use of Artificial Intelligence**. Today, we will explore how to harness AI responsibly, how to decolonize data biases, and why human soft skills and integrity are more critical now than ever before.
+
+## Core Concept
+
+### Decolonizing AI and Algorithmic Bias
+
+Generative AI (like the language models you interact with) is essentially an advanced pattern-recognition engine. Because AI learns from historical human data, it inevitably inherits historical human biases. If a dataset predominantly features Western cultural norms, the AI's outputs will naturally marginalize African contexts, languages, and realities.
+
+To combat this, African researchers are advocating for "decolonizing" AI ethics. This involves moving away from dominant Western epistemic regimes and grounding AI governance in African philosophical paradigms, such as **Ubuntu** ("I am because we are"), which prioritizes relational ethics and inclusive knowledge systems. Before deploying an AI tool, modern teams must evaluate the "Values In the Model" (VIM) to make the algorithm's embedded value judgments and biases explicit.
+
+### Academic and Workplace Integrity
+
+AI models do not "think" or "know" the truth; they can confidently generate completely fabricated information—a phenomenon known as an AI "hallucination." If you blindly trust an AI without verifying it, you risk spreading misinformation. Ethical AI requires you to always remain the "human in the loop," critically evaluating every output before applying it.
+
+As AI adoption accelerates, institutions across Africa—from Rwandan universities developing generative AI integration policies to the University of Cape Town (UCT)—are establishing strict guidelines for digital integrity. For example, UCT's guidelines dictate that while students may use AI tools (like Grammarly or ChatGPT) for language support, the core substance of the work must be entirely their own. Furthermore, any use of an AI tool must be transparently disclosed and explicitly cited in the references. Using AI ethically means using it to augment your thinking, not to plagiarize or replace your cognitive effort.
+
+### The Irreplaceable Value of Soft Skills
+
+In a world where AI can write a report or generate code in seconds, what is your value as a human worker?
+
+Research emphasizes that enhancing human soft skills—like critical thinking, empathy, emotional intelligence, and complex problem-solving—is an essential strategy in the era of AI. AI cannot read the tension in a room during a "Storming" phase. AI cannot exercise the moral judgment required to make a difficult community-level decision. The future belongs to those who use AI to accelerate their execution, while relying on their own deeply cultivated human intellect and cultural agility to steer the direction.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The AI Ethics Evaluator
+
+Practice identifying AI bias and maintaining integrity. Type a scenario into the sandbox below where you might be tempted to use AI to take a shortcut (e.g., "I want to use AI to write my final GTech SkillsHub project report so I don't have to do the research," or "I asked an AI for data on Rwandan agriculture and it gave me statistics that look weird"). The AI coach will help you evaluate the ethical risks, apply the VIM (Values In the Model) framework, and guide you on how to follow academic integrity guidelines.
+
+<AiSandbox systemPrompt="You are an AI Ethics and Integrity coach for a Rwandan youth at GTech SkillsHub. Help the user evaluate a scenario where they are using or considering using AI. Guide them to identify potential algorithmic biases (referencing the 'Values In the Model' framework) and the risks of hallucinations. Help them establish boundaries for academic/workplace integrity based on standard university guidelines (e.g., acknowledging use, ensuring the substance is their own). Keep responses brief, highly practical, empathetic, and encouraging, focusing on the importance of human critical thinking." />
+
+## Reflection
+
+### The "Human in the Loop" Pledge
+
+Take a few minutes to establish your own personal boundaries for using Artificial Intelligence.
+
+1. **Identify a Use Case:** Think of a specific task you do frequently (like writing emails, summarizing reading materials, or brainstorming project ideas).
+2. **Define the Boundary:** Write down a rule for yourself on how you will use AI for this task *without* compromising your integrity. (e.g., "I will use AI to brainstorm an outline, but the core substance will be my own, and I will disclose the AI's use.")
+3. **Commit to Verification:** Discuss your rule with your Habit Buddy. Commit to a specific strategy for how you will fact-check AI outputs to prevent hallucinations, especially when dealing with local community data.
+
+<Takeaways items={[
+  "AI is a powerful pattern-recognition tool, but it is a tool, not a revolution; human oversight is mandatory.",
+  "AI models inherit human biases; we must 'decolonize' AI by evaluating the 'Values In the Model' and applying frameworks like Ubuntu.",
+  "Ethical AI use requires always keeping a 'human in the loop' to critically evaluate and verify outputs.",
+  "Institutional guidelines dictate that AI can be used for support, but the core substance must be your own and its use must be explicitly cited.",
+  "In the era of AI, human soft skills like emotional intelligence, critical thinking, and empathy are your most irreplaceable assets."
+]} />
+
+---
+**References:**
+*   Condia. (n.d.). *10 African Startups Using AI to Solve Real-World Problems*.
+*   Diagne, S.B., et al. (2025). *Decolonizing Artificial Intelligence Ethics: Ubuntu as a Philosophical Paradigm for AI Governance in Africa*. University of Malta.
+*   JS Morlu Ghana. (n.d.). *Enhancing soft skills: an essential strategy in the era of AI in Africa*.
+*   Preprints.org. (n.d.). *From Innovation Signaling to Governance Readiness: Generative Artificial Intelligence Integration, Policies, Opportunities, and Challenges in Two Rwandan Universities*.
+*   Repository Home. (n.d.). *Kenya's AI Ethics and Governance Framework 2025*.
+*   Tegomoh, B. (2025). *The Public Health AI Handbook: Evaluating AI Tools for Public Health Practice*.
+*   University of Cape Town (UCT). (n.d.). *Guidelines on the Restricted Use of Artificial Intelligence in Assignments, Research Papers, Research Tasks and Dissertations*.
