@@ -1,0 +1,76 @@
+---
+title: "Module 14: Interview Skills"
+phase: 3
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-3-module-14.mp4" />
+
+## Introduction
+
+In Module 13, you learned how to translate your skills into a powerful personal brand and a compelling CV. But getting your CV noticed is only the first step. Today, recruitment platforms across Africa are increasingly utilizing technology to streamline their hiring processes. If you are invited to an interview, it means you have already passed a rigorous initial filter. The employer believes you have the technical skills; now, they want to know if you are the right fit for their team.
+
+Welcome to Phase 3, Module 14: **Interview Skills**. This module concludes the Preparation phase of our curriculum. Today, you will learn how to prepare for an interview, answer questions effectively, exhibit professional behavior in virtual environments, and master the art of storytelling to leave a lasting, positive impression on your future employers.
+
+## Core Concept
+
+### Professional Behavior and Virtual Trust Dynamics
+
+Professional behavior in an interview begins long before you log into a video call. You must research the company's mission and the specific challenges they face. Modern organizations are looking for "future ready" candidates who are creative and adaptive thinkers.
+
+Furthermore, as remote and hybrid workplaces become the norm, virtual interviews require specific attention to virtual trust dynamics. In a digital environment, overcoming communication challenges and building rapport relies heavily on emotional intelligence. You must actively demonstrate engagement through your body language, camera presence, and active listening. If you do not know the answer to a technical question, professional behavior dictates that you admit it honestly, but immediately follow up by explaining *how* you would go about finding the answer.
+
+### The Elevator Pitch and Discourse Markers
+
+"Tell me about yourself" is almost always the first question in an interview. To answer this effectively, you need an **Elevator Pitch**—a brief, persuasive speech used to spark interest in who you are and what you do.
+
+When delivering your pitch, pay attention to how you structure your spoken language. Linguistic research highlights the importance of "discourse markers" (words like *because*, *however*, or *for example*) to indicate information. These markers are crucial for structuring meaning and helping your listener navigate your narrative, yet their function in spoken interaction is often overlooked during preparation. Using them effectively demonstrates high spoken competence and clear logical thinking.
+
+### Storytelling: Structuring Your Narrative Self
+
+When answering behavioral questions (e.g., "Tell me about a time you solved a difficult problem"), you must use storytelling. Sharing autobiographical memories is a fundamental way we construct our "narrative self" and connect with others across cultural perspectives.
+
+To structure your answers, you can adapt the highly effective **Pixar Pitch** framework used by successful storytellers. The framework follows a simple, six-part narrative structure:
+1.  **Once upon a time...** (Set the scene and introduce your role).
+2.  **Every day...** (Describe the normal routine or the existing problem).
+3.  **One day...** (The inciting incident: a crisis occurred or a project was assigned).
+4.  **Because of that...** (The actions you took to address the problem).
+5.  **Because of that...** (The subsequent results of your actions).
+6.  **Until finally...** (The ultimate positive outcome and what you learned).
+
+Additionally, when it is your turn to ask the interviewer questions, or when you are tackling a complex case study, remember to sequence your thoughts logically: start specific, go broad, then probe deep. This flow ensures your interview answers remain concise, engaging, and focused on the impact of your actions.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Interview Coach
+
+Practice your storytelling and pitching skills. Type a common interview question you struggle with (e.g., "Tell me about yourself" or "Describe a time you failed") into the sandbox below. The AI coach will help you structure a compelling 60-second response using the Pixar Pitch framework, ensuring you use effective discourse markers to build a strong narrative self.
+
+<AiSandbox systemPrompt="You are an Interview Preparation and Storytelling coach for a Rwandan youth at GTech SkillsHub. Help the user draft a 60-second Elevator Pitch or practice answering a behavioral interview question using the 6-part 'Pixar Pitch' storytelling framework (Once upon a time, Every day, One day, Because of that, Because of that, Until finally). Guide them to use clear discourse markers and build virtual trust. Keep your responses brief, highly practical, empathetic, and encouraging." />
+
+## Reflection
+
+### The 60-Second Pitch Challenge
+
+Take a few minutes to synthesize your personal brand into a spoken narrative.
+
+1. **Draft Your Pitch:** Write down a 60-second elevator pitch answering the question: "Tell me about yourself and why you are a good fit for a tech-driven role."
+2. **Apply the Framework:** Think of one specific project you completed in Phase 2 (like your Python automation). Outline the story of that project using the 6 steps of the Pixar Pitch.
+3. **Practice:** Stand up and deliver your elevator pitch aloud to your Habit Buddy (or over a video call). Ask them for feedback on your emotional intelligence, tone of voice, and the clarity of your discourse markers.
+
+<Takeaways items={[
+  "If you reach the interview stage, the employer already believes you are qualified; the interview tests your adaptability and cultural fit.",
+  "Virtual interviews require high emotional intelligence to navigate trust dynamics and build rapport over a screen.",
+  "Use clear discourse markers to structure your spoken answers and demonstrate logical competence.",
+  "Use the 6-part Pixar Pitch framework and the 'Start Specific, Go Broad, Probe Deep' strategy to construct a compelling narrative self."
+]} />
+
+---
+**References:**
+*   Balbay, S., & Dogan, C. (2023). The Socratic method in developing spoken English discussion discourse markers: A case study. *African Educational Research Journal*.
+*   Fivush, R., & Haden, C.A. (2003). *Autobiographical memory and the construction of a narrative self: Developmental and cultural perspectives*. Lawrence Erlbaum Associates, Inc.
+*   IDEO.org. (2015). *The Field Guide to Human-Centered Design*.
+*   Kim, Y., & Park, H. (2022). Virtual trust dynamics and collaboration effectiveness. *Computers in Human Behavior*.
+*   Tang, C., & Lee, J. (2021). Emotional intelligence and leadership in virtual teams. *Leadership Quarterly*.
+*   Yeung, R. (2026). Future Ready Young Adults: Building Creative and Adaptive Thinkers. *Digital Commons at Buffalo State*.
