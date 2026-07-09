@@ -1,0 +1,75 @@
+---
+title: "Module 13: Personal Branding and Career Preparation"
+phase: 3
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-3-module-13.mp4" />
+
+## Introduction
+
+Over the past twelve modules, you have developed a growth mindset, learned human-centered problem solving, and built technical skills in Python and spreadsheets. However, acquiring skills is only half the journey; the other half is communicating your value to the broader world.
+
+Securing employment or launching a venture is not just about what you know—it is about how you present what you know. Today, we transition to the final step of Phase 3: **Personal Branding and Career Preparation**. We will explore how to craft a compelling professional identity, translate your hands-on experiences into a powerful Curriculum Vitae (CV), and navigate job applications by vividly connecting with your future self.
+
+## Core Concept
+
+### Identity-Based Motivation and the "Future Self"
+
+Personal branding starts with understanding who you want to become, often referred to in psychology as your "possible selves". In the context of career preparation, this relies heavily on **Identity-Based Motivation (IBM)**. Scalable IBM interventions in educational settings have demonstrated that when students deliberately connect their current actions to their future adult identities, they significantly improve their academic and professional trajectories.
+
+Your personal brand is simply the public, professional projection of this desired future self. Research shows that increasing your exposure to, and the vividness of, your "future self" directly increases your future-oriented decision-making and goal achievement. By aligning your daily habits and your public profile with a clear vision of the adult professional you want to become, you transition from merely "trying to get a job" to actively designing your career path.
+
+### Self-Determination and Decoding Job Requirements
+
+When employers write job descriptions, they often list a dizzying array of specific software requirements or degrees. However, what they are truly looking for are **"adaptive thinkers"** who possess the cognitive and emotional agility to navigate complex, rapidly changing environments.
+
+To build a brand as an adaptive thinker, you must understand the core drivers of human motivation. According to Deci and Ryan's Self-Determination Theory, optimal motivation and engagement require three basic psychological needs: **autonomy, competence, and relatedness**.
+*   **Autonomy:** Showing you can take initiative.
+*   **Competence:** Demonstrating you have the skills to solve problems.
+*   **Relatedness:** Proving you can collaborate and build trust within a team.
+
+When reading a job requirement, look past the technical jargon and ask yourself: *"How can I prove my autonomy, competence, and relatedness in this role?"*
+
+### CV Writing and Application Preparation
+
+A Curriculum Vitae (CV) is not a passive historical record of what you have done; it is a strategic, forward-looking document that proves your capability. When preparing your application, you must **translate your raw experiences into compelling, value-driven achievements**.
+
+For example, instead of writing a basic task like, *"I used Excel,"* you should frame your experience around the impact you created to highlight your competence: *"Utilized spreadsheets and data structures to automate inventory tracking, reducing errors and saving the team hours of manual work."* Align every bullet point on your CV with your identity-based goals, ensuring that each statement reinforces the professional brand you want to project to the world.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Career Prep Coach
+
+Practice communicating your value. Type a basic task you have done (e.g., "I learned Python," "I helped organize a community event," or "I use a computer for school") into the sandbox below. The AI coach will help you transform that basic task into a strong, professional CV bullet point using action verbs. Emphasize adaptive thinking and the psychological needs of autonomy, competence, and relatedness.
+
+Alternatively, you can ask the coach to help you draft a 2-sentence "About Me" personal branding statement based on your vividly imagined "future self".
+
+<AiSandbox systemPrompt="You are a Career Preparation and Personal Branding coach for a Rwandan youth at GTech SkillsHub. Help the user transform a basic task into a strong, professional CV bullet point using action verbs. Emphasize adaptive thinking and the psychological needs of autonomy, competence, and relatedness. Alternatively, help them draft a short personal branding statement based on their vivid 'future adult identity'. Keep responses brief, practical, highly empathetic, and encouraging." />
+
+## Reflection
+
+### The "Future Self" Roadmap
+
+Take a few minutes to connect your future vision with actionable career steps. This exercise synthesizes your identity exploration and career readiness.
+
+1. **Visualize Your Future Self:** Write down one highly vivid, specific "adult possible identity" you want to achieve (e.g., "I am a reliable data analyst who helps local businesses grow and supports my family").
+2. **Draft a Bullet Point:** Take one project or module you have completed in this curriculum and write a professional CV bullet point for it that demonstrates your *competence*.
+3. **Identify Forces:** Discuss your future identity with your Habit Buddy. Identify one role model who inspires this vision, and discuss how connecting with this future self changes your motivation to study this week.
+
+<Takeaways items={[
+  "Personal branding is the public expression of your 'possible selves' and your professional values.",
+  "Identity-based motivation (IBM) helps you overcome setbacks by vividly connecting your daily actions with your future adult self.",
+  "Employers seek adaptive thinkers who demonstrate autonomy, competence, and relatedness.",
+  "A strong CV translates basic tasks into impactful, problem-solving achievements using action-oriented language."
+]} />
+
+---
+**References:**
+*   Deci, E. L., & Ryan, R. M. (2000). The “what” and “why” of goal pursuits: Human needs and the self-determination of behavior. *Psychological Inquiry*.
+*   Horowitz, E., Sorensen, N., Yoder, N., & Oyserman, D. (2018). Teachers can do it: Scalable identity-based motivation intervention in the classroom. *Contemporary Educational Psychology*, 54, 12-28.
+*   Markus, H., & Nurius, P. (1986). Possible selves. *American Psychologist*, 41, 954–969.
+*   Oyserman, D., O’Donnell, S. C., Sorensen, N., & Wingert, K. M. (2021). Process matters: Teachers benefit their classrooms and students when they deliver an identity-based motivation intervention with fidelity. *Contemporary Educational Psychology*, 66, 101993.
+*   van Gelder, J., et al. (Preprint). Connecting with your future self: a smartphone and virtual reality intervention to stimulate future-orientation and goal-achievement. *JMIR Preprints*.
+*   Yeung, R. (2026). Future Ready Young Adults: Building Creative and Adaptive Thinkers. *Digital Commons at Buffalo State*.
