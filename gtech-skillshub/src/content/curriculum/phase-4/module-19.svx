@@ -1,0 +1,77 @@
+---
+title: "Module 19: Presentation and Storytelling"
+phase: 4
+time: "45 Minutes"
+requiresPython: false
+---
+
+<VideoPlayer src="/videos/phase-4-module-19.mp4" />
+
+## Introduction
+
+In Phase 4, you have learned how to lead teams, manage conflicts constructively, and ethically integrate Artificial Intelligence into your workflow. However, the most innovative technical solution or community project will struggle to gain traction if you cannot effectively share its value with others.
+
+Whether you are pitching a startup idea to investors, proposing a new community initiative, or delivering a project report, you must be able to capture attention and inspire action. Welcome to Phase 4, Module 19: **Presentation and Storytelling**. Today, we will explore how to move beyond simply reciting facts to becoming a "strategic presenter" whose message reaches far beyond the room. You will learn how to structure persuasive presentations using the PREP method, utilize Relevance Theory to master discourse markers, and leverage culturally referenced storytelling and body language to deeply engage your audience.
+
+## Core Concept
+
+### Structuring Your Presentation and Culturally Referenced Storytelling
+
+A successful presentation is never just a data dump; it is a carefully structured narrative designed to guide the audience's thinking. Effective communication requires rigorous preparation of your presentation's structure.
+
+To structure a persuasive pitch—even when speaking impromptu—professionals often rely on established frameworks like the **PREP method**:
+*   **Point:** Start by clearly stating your main idea or thesis.
+*   **Reason:** Explain *why* this point is true or important.
+*   **Example:** Provide a concrete story, data point, or real-world example to illustrate your reason.
+*   **Point:** Conclude by restating your main point to drive the message home.
+
+Furthermore, educational research emphasizes the profound impact of **culturally referenced storytelling**. A successful pitch grounds its narrative in the cultural realities and developmental context of the audience. By moving away from generic Western templates and aligning your examples with local cultural references, you significantly increase your audience's comprehension and emotional investment.
+
+### Navigating Meaning: Relevance Theory and Discourse Markers
+
+When delivering a presentation, conveying your message clearly relies heavily on how you connect your ideas. According to **Relevance Theory**, audiences process new information by evaluating its relevance—specifically, they assess whether the new item allows for a contextual implication, strengthens an existing assumption, or contradicts and eliminates a previous assumption.
+
+To help the audience make these connections, strategic presenters rely on **discourse markers**—words and phrases like *'because'*, *'however'*, or *'for example'*. These function as "information indicators" denoting either new or old information. They act as spoken signposts, structuring meaning and helping your listeners navigate between different parts of your discourse without getting lost. Mastery of these transitions projects high spoken competence and ensures your audience absorbs the relevance of your pitch.
+
+### Voice, Body Language, and Socratic Improvisation
+
+The physical delivery of your story is just as critical as the words you choose. Effective delivery relies on three core pillars: **Voice, Body Language, and Improvisation**.
+
+*   **Voice:** Your tone, volume, and pacing dictate the emotional weight of your story. Pausing before a critical point draws the audience in.
+*   **Body Language:** Non-verbal cues build immediate trust. Research in educational settings has also demonstrated the value of **Power Posing**—deliberately adopting open, expansive postures to increase participation, lower anxiety, and project confidence before and during a presentation.
+*   **Improvisation and Q&A:** No presentation goes exactly as planned, especially during Q&A sessions. When faced with difficult questions or cognitive conflict from the audience, presenters can utilize the **Socratic method**. Rather than becoming defensive, act as a facilitator: adopt a respectful, questioning attitude to explore the root cause of the audience member's assumption. This dynamic inquiry transforms a challenging Q&A into a collaborative discussion.
+
+## Interactive Practice
+
+### Safe Exploratory Learning: The Strategic Presentation Coach
+
+Practice structuring a persuasive argument. Type a topic you need to present (e.g., "I need to pitch my Capstone project about local waste management," or "I want to convince my team to adopt a new software tool") into the sandbox below. The AI coach will help you outline your pitch using the **PREP (Point, Reason, Example, Point)** framework and suggest key discourse markers (information indicators) to help you transition smoothly between your ideas.
+
+<AiSandbox systemPrompt="You are a Presentation and Storytelling coach for a Rwandan youth at GTech SkillsHub. Help the user structure a short presentation or pitch based on their topic. Guide them to use the PREP (Point, Reason, Example, Point) framework and incorporate culturally referenced storytelling. Suggest 2-3 specific 'discourse markers' to help them structure their spoken meaning clearly based on Relevance Theory. Keep responses brief, highly practical, empathetic, and encouraging." />
+
+## Reflection
+
+### The Delivery Audit
+
+Take a few minutes to evaluate your physical delivery skills before your upcoming Capstone project presentation.
+
+1. **Self-Assessment:** Which of the three delivery pillars (Voice, Body Language/Power Posing, or Socratic Improvisation) do you feel is your weakest area? Write down one reason why.
+2. **Drafting Transitions:** Look at a recent project or report you completed. Write down two sentences connecting different parts of the project, deliberately using strong discourse markers (like *"As a result"* or *"Conversely"*) to clarify the relevance of the ideas.
+3. **Peer Practice:** Stand up and deliver a 1-minute summary of your Capstone idea to your Habit Buddy. Ask them specifically to evaluate your body language and the clarity of your voice.
+
+<Takeaways items={[
+  "A strategic presenter structures their message so that its impact reaches far beyond the room.",
+  "Use frameworks like PREP (Point, Reason, Example, Point) combined with culturally referenced storytelling to build persuasive arguments.",
+  "According to Relevance Theory, audiences process information by evaluating its context; use discourse markers as information indicators to guide them.",
+  "Adopting expansive body language (Power Posing) can increase confidence and audience participation.",
+  "Use Socratic questioning during Q&A sessions to dynamically explore assumptions and handle improvisation gracefully."
+]} />
+
+---
+**References:**
+*   Balbay, S., & Dogan, C. (2023). *The Socratic method in developing spoken English discussion discourse markers: A case study*. African Educational Research Journal. (Citing Brinton, 1996 & Boghossian, 2006).
+*   BiteSize Learning. (n.d.). *The PREP framework: Communicate ideas with clarity*.
+*   JALT Publications. (n.d.). *FEATURE ARTICLE Power Posing for Increased Participation*.
+*   Kaye, S. (n.d.). *Improve your impromptu speaking with the PREP framework*.
+*   Schroeder, M., et al. (2022). *Supporting Indigenous children’s oral storytelling using a culturally referenced, developmentally based program*. The Australian Journal of Indigenous Education.
+*   Yilmaz, M. (n.d.). *DISCOURSE MARKERS IN NATIVE AND NON-NATIVE ENGLISH DISCOURSE*. AVESİS. (Citing Wilson & Sperber, 2004 - Relevance Theory).
