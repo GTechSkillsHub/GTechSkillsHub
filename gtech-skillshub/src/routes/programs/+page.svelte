@@ -2,9 +2,29 @@
 	import Reveal from '$lib/components/Reveal.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { siteData } from '$lib/data';
-	import { ArrowRight, CheckCircle2 } from 'lucide-svelte';
+	import {
+		ArrowRight,
+		CheckCircle2,
+		Laptop,
+		Code,
+		Rocket,
+		Lightbulb
+	} from 'lucide-svelte';
 
+	// Receive the live database data from +page.server.ts
+	export let data;
+	$: ({ programs } = data);
+
+	// Keep the hero text from siteData for now
 	const { hero } = siteData.programsPage;
+
+	// Map database IDs to Svelte components
+	const iconMap: Record<string, any> = {
+		'digital-skills': Laptop,
+		'coding-beginners': Code,
+		'career-dev': Rocket,
+		'emerging-tech': Lightbulb
+	};
 </script>
 
 <div class="min-h-screen overflow-x-hidden bg-slate-50 font-sans text-slate-900">
@@ -33,7 +53,7 @@
 
 	<section class="mt-12 px-6 pb-32 md:px-12">
 		<div class="mx-auto flex max-w-7xl flex-col gap-8">
-			{#each siteData.programs as program, i}
+			{#each programs as program, i}
 				<Reveal delay={i * 0.1}>
 					<a
 						href="/programs/{program.id}"
@@ -45,12 +65,12 @@
 							<div
 								class="absolute inset-0 flex items-center justify-center bg-slate-200 text-slate-400 transition-transform duration-700 group-hover:scale-105"
 							>
-								[Image: {program.image}]
+								[Image: {program.image_url}]
 							</div>
 							<div
 								class="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-blue-600 shadow-md"
 							>
-								<svelte:component this={program.icon} size={24} />
+								<svelte:component this={iconMap[program.id] || Laptop} size={24} />
 							</div>
 						</div>
 
