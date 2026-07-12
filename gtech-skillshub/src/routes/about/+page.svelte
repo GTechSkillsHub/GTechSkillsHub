@@ -4,7 +4,12 @@
 	import { siteData } from '$lib/data';
 	import { Users } from 'lucide-svelte';
 
-	const { hero, mission, vision, team } = siteData.aboutPage;
+	// Receive the live database data from +page.server.ts
+	export let data;
+	$: ({ team } = data);
+
+	// Keep the static hero, mission, and vision text from siteData
+	const { hero, mission, vision } = siteData.aboutPage;
 </script>
 
 <div class="overflow-x-hidden font-sans text-slate-900">
@@ -117,15 +122,13 @@
 						<div
 							class="group relative aspect-[3/4] overflow-hidden rounded-[2rem] bg-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl"
 						>
-							{#if member.image}
-								<!-- Display actual team member image -->
+							{#if member.image_url}
 								<img
-									src={member.image}
+									src={member.image_url}
 									alt={member.name}
 									class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 								/>
 							{:else}
-								<!-- Fallback placeholder if no image -->
 								<div
 									class="absolute inset-0 flex items-center justify-center bg-slate-300 font-medium text-slate-500"
 								>
