@@ -3,8 +3,14 @@
 	import { siteData } from '$lib/data';
 	import { ArrowRight, Calendar, Tag } from 'lucide-svelte';
 
+	// Receive the live database data from +page.server.ts
+	export let data;
+	$: ({ opportunities } = data);
+
+	// Keep the static hero text and steps from siteData for now
 	const { hero, howItWorks } = siteData.opportunitiesPage;
 </script>
+
 <div class="min-h-screen overflow-x-hidden bg-slate-50 font-sans text-slate-900">
 	<section
 		class="relative overflow-hidden rounded-b-[3rem] bg-[#0F172A] px-6 pt-48 pb-24 text-white md:px-12"
@@ -61,7 +67,7 @@
 			</Reveal>
 
 			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				{#each siteData.opportunities as opp, i}
+				{#each opportunities as opp, i}
 					<Reveal delay={i * 0.1}>
 						<div
 							class="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
@@ -70,7 +76,7 @@
 								<div
 									class="absolute inset-0 flex items-center justify-center font-bold text-slate-400"
 								>
-									[Image: {opp.image}]
+									[Image: {opp.image_url}]
 								</div>
 								<div
 									class="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold tracking-widest text-blue-600 uppercase shadow-sm backdrop-blur"
