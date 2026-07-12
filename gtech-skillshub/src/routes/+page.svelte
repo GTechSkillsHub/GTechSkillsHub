@@ -5,8 +5,11 @@
 	import { siteData } from '$lib/data';
 	import { Play, Rocket, Users, ArrowRight } from 'lucide-svelte';
 
-	// FIX: Destructure correctly based on data.ts
-	// Use 'about' instead of 'mission', and extract 'stats' from 'impact'
+	// Receive the live database data from +page.server.ts
+	export let data;
+	$: ({ programs } = data);
+
+	// Destructure correctly based on data.ts
 	const { hero, about, supporters, impact } = siteData.home;
 </script>
 
@@ -156,7 +159,7 @@
 			</Reveal>
 
 			<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-				{#each siteData.programs.slice(0, 3) as program, i}
+				{#each programs.slice(0, 3) as program, i}
 					<Reveal delay={i * 0.1}>
 						<a
 							href="/programs"
@@ -166,7 +169,7 @@
 								<div
 									class="absolute inset-0 flex items-center justify-center text-sm font-medium text-slate-400"
 								>
-									[Program Image]
+									[Image: {program.image_url}]
 								</div>
 							</div>
 							<div class="mb-4 flex items-center justify-between">
